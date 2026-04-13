@@ -1,0 +1,11 @@
+"city","state","date.opened","date.aquired.by.3M","tyoe.of.building","Address","zip.code","link","type.of.production","lon","lat"
+"lousiville","ky ","1998","2006","sales","9920 Corperate Campus Drive, Suite 2200 Lousivill, KY 40223","40223-5000","https://www.daikin.com/locations/group/north_america","air conditioning and refridgeration ",-85.5738329,38.2642016
+"plymouth ","mn ","1965","2006","manufacturing ","12600 Industrial Park Boulevard Plymouth, MN 55441","55441","","air conditioning and refridgeration ",-93.4447165,45.0025796
+"miami","fl","na","1996","sales/service","7255 Corporate Center Drive, Suite A, Miami, FL 33126 ","33126","","air conditioning and refridgeration ",-80.3164556,25.7915568
+"waller","tx","2017","2017","manufacturing ","Daikin Texas Technology Park, 19001 Kermier Road, Waller, TX 77484","77484","","air conditioning and refridgeration ",-95.8595034,30.0493702
+"new york ","ny","na","na","corperate ","425 Park Ave, 32nd Floor, New York, NY 10022","10017","","air conditioning and refridgeration ",-73.9712064,40.760559
+"orangteburg","ny ","na","1991","sales/corperate","20 Olympic Drive Orangeburg, NY 10962 ","10962","","flurochemicals",-73.98375,41.0388324
+"decatur ","al","1994","1994","manufacturing ","905 State Docks Road, Decatur, AL 35601 ","35601","","flurochemicals",-87.0416419,34.6299767
+"hanover ","ma","1991","991","manufacturing ","85 Winter Street Hanover, MA 02339 ","""02339""","","flurochemicals",-70.8702012,42.104605
+"decatur ","al","na ","2004","manufacturing ","905 State Docks Road, Decatur, AL 35601 ","35601","","flurochemicals",-87.0416419,34.6299767
+"roscoe","il","na ","na ","parts center ","6164 All World Way, Roscoe, IL 61073 ","61073","","oil hydraulics",-88.9969417,42.4620478

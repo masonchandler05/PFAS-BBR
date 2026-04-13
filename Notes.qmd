@@ -1,0 +1,22 @@
+---
+title: "Notes"
+format: html
+---
+
+Completed:
+- 119 datapoints of 5 different companies 
+- sources for address's are in the data frames and the excel sheet 
+- Called Full_Location_dataset (idk what happened to my excel data but the sheet is different so use the Full_Location_dataset data) 
+- abondoing the plant_location_data_currupt file but using it as a reference for fixing everything 
+
+Needs to be done: 
+- find missing data points from companies 
+- potentially find the info for the rest of the companies(at least find Merck)
+- potentially put the stuff about cleaing the 3M data in a different file and just load in the 3M finished data into the Plant_location_data file 
+
+
+Notes since last meeting: 
+- cannot access article you sent me 
+- having to mess with excel files a lot since all of my updates got deleted
+- realized I don't have 119 as I accidently included Arkema's locations as AGC and its closer to 85-105 depending on how many address's I can find 
+- almost lost a lot of progress of work 

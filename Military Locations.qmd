@@ -1,0 +1,91 @@
+---
+title: "Military locations"
+format: html
+editor: visual
+---
+
+## Python section of code
+
+Downloads packages in terminal
+
+```{bash}
+pip install pandas geopandas thefuzz rapidfuzz fiona shapely
+
+```
+
+Loads in csv file
+
+```{python}
+#importing pandas to use 
+import pandas as pd
+
+#loads in csv file 
+dod = pd.read_csv("pfas_progress_june_2021.csv")
+
+
+```
+
+cleaning data
+
+```{python}
+import re
+
+def clean_name(x):
+  x = str(x).lower() #puts everything in lowercase 
+  x = re.sub(r'[^a-z0-9 ]', '',x) # removes eveything but letters, numbers, and spaces 
+  x = re.sub(r'\b(ft|fort)\b', 'fort' , x) #standardizes several names to fort
+  x = re.sub(r'b(aaf|aaf |army airfield)\b', 'aaf', x) # turns several things to aaf
+  x = re.sub(r'\b(afb|air force base)\b','afb',x) # turns several things to afb 
+  x = re.sub(r'\s+','',x).strip() # fixes spacing issues
+  return x
+
+#making a new column called clean that cleans the installation_Name column 
+dod["clean"] = dod["Installation_Name"].apply(clean_name)
+dod.head()
+  
+```
+
+importing military shapefile datasets ( need shapefiles)
+
+```{python}
+#import geopandas as gpd
+#loads in the files 
+mirta = pd.read_csv("/Users/masonchandler/Downloads/mirta_-223606765265040761.csv")
+#tiger = gpd.read_file()
+#fuds = gpd.read_file()
+#bts = gpd.read_file()
+```
+
+```{python}
+
+
+# Apply the cleaning function to the MIRTA dataframe
+mirta["clean"] = mirta["Site Name"].apply(clean_name)
+
+
+
+```
+
+Matching sites
+
+```{python}
+from rapidfuzz import process
+
+def get_best_match(name,choices):
+  match = process.extractOne(name,choices,score_cutoff = 80)
+  if match:
+    return match[0], match[1]
+  else:
+    return None, None
+  
+  choices = mirta["clean"].tolist()
+  
+  dod["matched_name"], dod["match_score"] = zip(*dod["clean"].apply(lambda x: get_best_match(x,choices)))
+```
+
+merging
+
+```{python}
+merged = dod.merge(mirta, left_on="matched_name", right_on="clean", how="left", suffixes = ("_dod", "_mirta"))
+
+```

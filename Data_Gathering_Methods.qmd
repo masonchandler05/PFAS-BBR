@@ -1,0 +1,58 @@
+---
+title: "Data_Gathering_Methods"
+format: html
+---
+
+# Methodologies of Gathering Mass Data for Analysis
+
+-   This will give a full overview of how I gathered the data that is found in the file "full_pfas_manufacturing_sites"
+
+-   The key methodologies and ideas all stem from this one article found on NHI
+
+    -   Salvatore D, Mok K, Garrett KK, Poudrier G, Brown P, Birnbaum LS, Goldenman G, Miller MF, Patton S, Poehlein M, Varshavsky J, Cordner A. Presumptive Contamination: A New Approach to PFAS Contamination Based on Likely Sources. Environ Sci Technol Lett. 2022 Nov 8;9(11):983-990. doi: 10.1021/acs.estlett.2c00502. Epub 2022 Oct 12. PMID: 36398312; PMCID: PMC9648201.
+
+    -   Can find details about why these locations are treated as presumptive contamination areas in the paper
+
+## Manufacturing Plants Data / Airports
+
+-   the data comes from the EPA under the combined national zip file: <https://www.epa.gov/frs/epa-state-combined-csv-download-files?utm_source=chatgpt.com>
+
+-   pulled data from the "national_combined/NATIONAL_NAICS_FILE" and "national_combined/NATIONAL_FACILITY_FILE" to associate NAICS codes to the facility
+
+-   the presumptive contamination paper identified 11 lists of industrial facility NAICS codes and pulled the 38 codes that were found in at least 4 of the lists as there were 191 codes in total ( I filtered by the 38 NAICS codes they provided in the PDF found in the "supplementary material" section of the paper)
+
+-   in my data cleaning, 30/38 codes had at least 1 facility attached to their code that had a geolocated plant within a garenteed accuracy of 1 km
+
+-   the study used 1 km so I followed that, but we could expand the distance to gather more datapoints
+
+-   resulted in \~27000 locations
+
+-   Filtered by enviornmental interest start date which is the date the agency became interested in the facility
+
+    -   not neccesarly the open date, but likely a good approx
+
+    -   filters data down to \~20,000
+
+-   used naics code for airports and it returned 774 instead of 519 locations
+
+    -   could use Major Airports (FAA Part 139) dataset of 519 locations like they did, but the process is more complex(I'm not quite sure how they turned those into locations as they don't have addresses(locations would be rough approximations)
+
+## Water Treatment Centers
+
+-   data is found from the EPA under the Nationwide 2022 CWNS Dataset: <https://sdwis.epa.gov/ords/sfdw_pub/r/sfdw/cwns_pub/data-download?session=14893014758524>
+
+-   pulled data from "2022CWNS_NATIONAL_APR2024/FLOW" and "2022CWNS_NATIONAL_APR2024/PHYSICAL_LOCATION" to associate flow with location data
+
+-   filtered down to only major treatment centers that were identified as "Industrial Flow"
+
+-   led to \~16000 locations
+
+-   does not have date of locations opening
+
+## Fire Site Data
+
+-   80 datapoints found using same technique outlined in the paper
+
+## Full Dataset without start dates
+
+-   includes \~45000 datapoints from manufacturing, water treatment centers, airports, and military fire sites

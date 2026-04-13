@@ -1,0 +1,466 @@
+---
+title: "Locations_updates"
+format: html
+---
+
+This is the new file for finding all of the plant locations 
+
+#loads in plant locations and gets location coordinates 
+```{r}
+p_location_data <- read.csv("~/Downloads/Locations_updated.csv")
+
+library(dplyr)
+library(ggmap)
+library(tidyr)
+library(purrr)
+
+register_google(key = "AIzaSyCv5KctcPq9IS4v-etomxY__vI0l8ZBd-M" ) 
+
+p_location_data2 <- p_location_data %>%
+  mutate(geocode_result = purrr::map(Address, ~geocode(.x, source = "google"))) %>%
+  unnest(geocode_result)
+
+```
+
+#deleted old lat and lon column 
+```{r}
+p_location_data2 <- p_location_data2 %>%
+  select(-c(Lon,Lat))
+```
+
+#created for visualizing datapoints so it does not change the type of data p_location_data2 is 
+```{r}
+p_location_vis <- p_location_data2
+```
+
+# creates a data vis of all of the points 
+```{r}
+# load packages
+library(data.table)
+library(sp)
+library(sf)
+library(ggplot2)
+library(plotly) 
+library(RColorBrewer)
+
+coordinates(p_location_vis) = c("lon", "lat")
+crs.geo1 = CRS("+proj=longlat")
+proj4string(p_location_vis) = crs.geo1
+plot(p_location_vis, pch = 20, col = "steelblue")
+
+```
+
+
+
+
+
+
+# points map 
+```{r}
+library(plotly)
+
+
+colors <- as.factor(p_location_data2$Company)
+
+# Plot US map with points
+plot_geo(p_location_data2, locationmode = 'USA-states') %>%
+  add_markers(
+    x = ~lon,
+    y = ~lat,
+    color = ~Company,
+    marker = list(
+      size = 7,   # adjusts size of the dots 
+      line = list(width = 1, color = 'black')  # adjusts the outline of the points 
+    )
+  ) %>%
+  layout(
+    title = "PFAS Production Hotspots Across America",
+    geo = list(
+      scope = 'usa',           
+      projection = list(type = 'albers usa'), 
+      showland = TRUE,
+     landcolor = 'rgb(240,240,240)',
+    subunitcolor = 'rgb(200,200,200)',
+     countrycolor = 'rgb(200,200,200)'
+    ),
+    legend = list(x = 1.05, y = 1)  #adjusts legend position
+  )
+
+```
+
+
+# better filled map 
+```{r}
+library(ggplot2)
+library(sf)
+library(tigris)
+library(dplyr)
+library(plotly)
+library(grid)
+library(gridExtra)
+library(jpeg)
+library(png)
+
+options(tigris_use_cache = TRUE)
+
+# Get county boundaries for the entire US
+counties <- counties(cb = TRUE, resolution = "20m", year = 2021)
+
+# Get state boundaries
+states <- states(cb = TRUE, resolution = "20m", year = 2021)
+
+# Filter to continental US only
+continental_counties <- counties %>%
+  filter(!STATEFP %in% c("02", "15", "60", "66", "69", "72", "78"))
+
+continental_states <- states %>%
+  filter(!STATEFP %in% c("02", "15", "60", "66", "69", "72", "78"))
+
+# Convert your plant location data to sf object
+plants_sf <- st_as_sf(p_location_data2, 
+                      coords = c("lon", "lat"), 
+                      crs = 4326)
+
+# Ensure CRS match
+continental_counties <- st_transform(continental_counties, crs = 4326)
+continental_states <- st_transform(continental_states, crs = 4326)
+
+# Spatial join
+plants_with_counties <- st_join(plants_sf, continental_counties)
+
+# Get unique counties with plants
+counties_with_plants <- plants_with_counties %>%
+  st_drop_geometry() %>%
+  select(GEOID, Company) %>%
+  distinct()
+
+# Join back to county polygons
+counties_filled <- continental_counties %>%
+  left_join(counties_with_plants, by = "GEOID")
+
+# Create ggplot
+p <- ggplot() +
+  geom_sf(data = counties_filled, 
+          aes(fill = Company), 
+          color = "black", 
+          size = 0.05) +
+  geom_sf(data = continental_states, 
+          fill = NA, 
+          color = "black", 
+          size = 0.25) +
+  scale_fill_discrete(na.value = "#f5f1e7") +
+  coord_sf(xlim = c(-125, -66), ylim = c(24, 50), expand = FALSE) +
+  theme_void() +
+  labs(title = "PFAS Production Hotspots Across America",
+       fill = "Company") +
+  theme(
+    legend.position = "right",
+    plot.title = element_text(size = 16, hjust = 0.5, margin = margin(b = 10))
+  )
+
+# Load the JPG image
+img <- readPNG("N.png")  # Change to your image path
+img_grob <- rasterGrob(img, interpolate = TRUE)
+
+# Combine map and image
+combined <- gridExtra::grid.arrange(p, img_grob, nrow = 2, heights = c(6, 1))
+
+# Display
+plot(combined)
+
+
+
+```
+
+
+
+# plotly map 
+```{r}
+library(ggplot2)
+library(sf)
+library(tigris)
+library(dplyr)
+library(plotly)
+library(grid)
+library(gridExtra)
+library(jpeg)
+library(htmltools)
+
+# Set options to avoid unnecessary messages
+options(tigris_use_cache = TRUE)
+
+# Get county boundaries for the entire US
+counties <- counties(cb = TRUE, resolution = "20m", year = 2021)
+
+# Get state boundaries
+states <- states(cb = TRUE, resolution = "20m", year = 2021)
+
+# Filter to continental US only
+continental_counties <- counties %>%
+  filter(!STATEFP %in% c("02", "15", "60", "66", "69", "72", "78"))
+
+continental_states <- states %>%
+  filter(!STATEFP %in% c("02", "15", "60", "66", "69", "72", "78"))
+
+# Convert your plant location data to sf object
+plants_sf <- st_as_sf(p_location_data2, 
+                      coords = c("lon", "lat"), 
+                      crs = 4326)
+
+# Ensure CRS match
+continental_counties <- st_transform(continental_counties, crs = 4326)
+continental_states <- st_transform(continental_states, crs = 4326)
+
+# Spatial join
+plants_with_counties <- st_join(plants_sf, continental_counties)
+
+# Get unique counties with plants
+counties_with_plants <- plants_with_counties %>%
+  st_drop_geometry() %>%
+  select(GEOID, Company) %>%
+  distinct()
+
+# Join back to county polygons
+counties_filled <- continental_counties %>%
+  left_join(counties_with_plants, by = "GEOID")
+
+# Create ggplot
+p <- ggplot() +
+  geom_sf(data = counties_filled, 
+          aes(fill = Company), 
+          color = "black", 
+          size = 0.05) +
+  geom_sf(data = continental_states, 
+          fill = NA, 
+          color = "black", 
+          size = 0.25) +
+  scale_fill_discrete(na.value = "#f5f1e7") +
+  coord_sf(xlim = c(-125, -66 ), ylim = c(24, 50), expand = FALSE) + # -66
+  theme_void() +
+  labs(title = "PFAS Production Hotspots Across America",
+       fill = "Company") +
+  theme(
+    legend.position = "right",
+    plot.title = element_text(size = 16, hjust = 0.5, margin = margin(b = 10))
+  )
+
+# Convert to plotly
+plotly_map <- ggplotly(p, tooltip = "fill")
+
+# Load the JPG image and convert to base64
+img_path <- "N.png"  # Change to your image path
+img_base64 <- base64enc::base64encode(img_path)
+
+# Add image as an annotation at the bottom
+plotly_with_img <- plotly_map %>%
+  layout(
+    images = list(
+      list(
+        source = paste0("data:image/png;base64,", img_base64),
+        xref = "paper",
+        yref = "paper",
+        x = .56,
+        y = -0.15,
+        sizex = 1,
+        sizey = 0.2,
+        xanchor = "center",
+        yanchor = "top"
+      )
+    ),
+    margin = list(b = 125)  # Add bottom margin for image
+  )
+
+# Display
+plotly_with_img
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#getting military installation data 
+
+```{r}
+library(dplyr)
+fire_sites <- read_csv("~/Downloads/List-of-military-fire-and-crash-training-sites-2014 (1).csv")
+pfas_progress <- read_csv("~/Downloads/PROGRESS-AT-INSTALLATIONS-BEING-ASSESSED-FOR-PFAS-USE-OR-POTENTIAL-RELEASE.csv")
+pfas_prog_internal_clean <- read.csv("pfas_progress_june_2021.csv")
+#fire_sites_clean <- fire_sites %>%
+  
+#pfas_progress_clean <- pfas_progress %>%
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Building Plotly map through ggplot with counties 
+```{r}
+library(tidycensus)
+# installing api key 
+census_api_key("29a0b950ad6549f8dc16707914d212045d3b5f3a", install = TRUE)
+```
+
+```{r}
+library(plotly)
+library(tidycensus)
+library(tidyverse)
+library(sf)
+library(geojsonsf)
+
+# Your existing code for census data
+#census_api_key("29a0b950ad6549f8dc16707914d212045d3b5f3a", install = TRUE)
+
+# Get County Data with population and calculate density
+county_data <- get_acs(
+  geography = "county",
+  variables = "B01003_001",  # Total population
+  year = 2022,
+  survey = "acs5",
+  geometry = TRUE,
+  keep_geo_vars = TRUE 
+) %>%
+  rename(population = estimate) %>%
+  # Calculate population density (people per square mile)
+  mutate(
+    area_sq_miles = as.numeric(st_area(geometry)) / 2589988.11, # Convert sq meters to sq miles
+    density = population / area_sq_miles
+  )
+
+# Convert to GeoJSON for Plotly
+county_geojson <- geojson_sf(county_data)
+
+# Your original point data preparation
+# Convert company to factor
+colors <- as.factor(p_location_data2$Company)
+
+# Create the combined map
+plot_geo() %>%
+  # Add county density choropleth
+  add_trace(
+    data = county_data,
+    type = "choropleth",
+    geojson = county_geojson,
+    locations = ~GEOID,
+    z = ~density,
+    colorscale = "Blues",
+    featureidkey = "properties.GEOID",
+    showscale = TRUE,
+    name = "Population Density",
+    hovertemplate = paste(
+      "<b>%{text}</b><br>",
+      "Density: %{z:.1f} people/sq mi<extra></extra>"
+    ),
+    text = ~paste(NAME, "County")
+  ) %>%
+  # Add company points
+  add_markers(
+    data = p_location_data2,
+    x = ~lon,
+    y = ~lat,
+    color = ~Company,
+    marker = list(
+      size = 7,
+      line = list(width = 1, color = 'black')
+    ),
+    name = "Company Locations",
+    hovertemplate = paste(
+      "<b>%{text}</b><br>",
+      "Company: %{marker.color}<extra></extra>"
+    ),
+    text = ~paste("Location:", ifelse("Location" %in% names(p_location_data2), Location, "Unknown"))
+  ) %>%
+  layout(
+    geo = list(
+      scope = 'usa',
+      projection = list(type = 'albers usa'),
+      showland = TRUE,
+      landcolor = 'rgb(240,240,240)',
+      subunitcolor = 'rgb(200,200,200)',
+      countrycolor = 'rgb(200,200,200)'
+    ),
+    legend = list(
+      x = 1.05,
+      y = 1,
+      title = list(text = "Companies")
+    ),
+    title = "Company Locations Overlaid on Population Density"
+  )
+```
+
+
+
+

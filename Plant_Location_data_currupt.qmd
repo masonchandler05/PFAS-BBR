@@ -1,0 +1,259 @@
+---
+title: "3M_location_data"
+format: html
+---
+
+################################
+YOU CAN NOT RUN THIS ALL OF THE FILES GOT MESSED UP AND REVERTED!!!
+IT WILL RUIN EVERYTHING!!!!
+################################
+
+
+
+# reading in 3M locations 
+```{r}
+location_data_3M_update <- read.csv("~/Downloads/Microplastics_site R.csv",stringsAsFactors = FALSE)
+library(dplyr)
+library(stringr)
+```
+# zip code manipulation 3M locations 
+```{r}
+location_data_3M_update <- location_data_3M_update %>% 
+  mutate(zip.code = gsub("[^0-9]", "", zip.code)) %>% # takes out non numbers 
+  mutate(zip.code = substr(zip.code, 1, 5)) # only includes first 5 numbers 
+
+
+```
+
+add leading 0 to zip codes to 3M addresses 
+```{r}
+location_data_3M_update$zip.code[9] <- "01824"
+location_data_3M_update$zip.code[19] <- "08822"
+```
+
+#changing data set 
+```{r}
+library(dplyr)
+
+# Join the datasets and add full_address as "Address" column
+location_data_3M_update <- location_data_3M_update %>%
+  left_join(
+    location_data_3M %>% select(zip.code, full_address), 
+    by = "zip.code"
+  ) %>%
+  rename(Address = full_address)
+
+# Alternative approach: If you want to be more explicit about column selection
+location_data_3M_update <- location_data_3M_update %>%
+  left_join(
+    location_data_3M %>% 
+      select(zip.code, full_address) %>%
+      rename(Address = full_address), 
+    by = "zip.code"
+  )
+
+# If you want to handle cases where zip codes might not match perfectly
+# and want to see which ones didn't match:
+location_data_3M_update <- location_data_3M_update %>%
+  left_join(
+    location_data_3M %>% 
+      select(zip.code, full_address) %>%
+      distinct(zip.code, .keep_all = TRUE),  # Remove any duplicate zip codes
+    by = "zip.code"
+  ) %>%
+  rename(Address = full_address)
+
+# Check for any missing addresses after the join
+missing_addresses <- sum(is.na(location_data_3M_update$Address))
+cat("Number of records without matching addresses:", missing_addresses, "\n")
+
+# Display summary of the join operation
+cat("Total records in updated dataset:", nrow(location_data_3M_update), "\n")
+cat("Records with addresses:", sum(!is.na(location_data_3M_update$Address)), "\n")
+
+# Show sample of the updated data
+head(location_data_3M_update %>% select(zip.code, Address))
+
+
+
+```
+
+
+#getting lat and lon of 3M locations 
+```{r}
+library(dplyr)
+library(ggmap)
+library(tidyr)
+library(purrr)
+
+
+# Update row 37 of the Address column
+location_data_3M_update[37, "Address"] <- "19901 Nordhoff Street"
+
+# Register Google API
+register_google(key = "AIzaSyCv5KctcPq9IS4v-etomxY__vI0l8ZBd-M")
+
+# Solution: Filter out NA values before geocoding
+location_data_3M_update <- location_data_3M_update %>%
+  # Filter out rows where Address is NA or empty
+  filter(!is.na(Address) & trimws(Address) != "") %>%
+  # Now geocode the valid addresses
+  mutate(geocode_result = purrr::map(Address, ~geocode(.x, source = "google"))) %>%
+  unnest(geocode_result)
+
+# Alternative: Use a safer geocoding function that handles NA values
+safe_geocode <- function(address) {
+  # Check if address is NA or empty
+  if(is.na(address) || trimws(address) == "") {
+    return(data.frame(lon = NA, lat = NA))
+  }
+  
+  tryCatch({
+    Sys.sleep(0.1)  # Rate limiting
+    result <- geocode(address, source = "google")
+    return(result)
+  }, error = function(e) {
+    message(paste("Geocoding failed for:", substr(address, 1, 50)))
+    return(data.frame(lon = NA, lat = NA))
+  })
+}
+
+# Use the safe geocoding function (keeps all rows, geocodes valid ones)
+location_data_3M_update <- location_data_3M_update %>%
+  mutate(geocode_result = purrr::map(Address, safe_geocode)) %>%
+  unnest(geocode_result)
+
+# If you want to see which rows had NA addresses before filtering
+na_addresses <- location_data_3M_update %>%
+  mutate(row_number = row_number()) %>%
+  filter(is.na(Address) | trimws(Address) == "") %>%
+  select(row_number, Address)
+
+if(nrow(na_addresses) > 0) {
+  cat("Rows with missing addresses:\n")
+  print(na_addresses)
+}
+
+```
+
+
+Loading in solvay data
+```{r}
+location_data_solvay <- read.csv("~/Downloads/Microplastics site R Solvay .csv")
+```
+
+
+```{r}
+library(dplyr)
+library(ggmap)
+library(tidyr)
+library(purrr)
+
+register_google(key = "AIzaSyCv5KctcPq9IS4v-etomxY__vI0l8ZBd-M" ) 
+
+location_data_solvay <- location_data_solvay %>%
+  mutate(geocode_result = purrr::map(Address, ~geocode(.x, source = "google"))) %>%
+  unnest(geocode_result)
+```
+
+
+load in daikin data 
+```{r}
+location_data_daikin <- read.csv("~/Downloads/Microplastics site R Daikin.csv")
+```
+
+```{r}
+library(dplyr)
+library(ggmap)
+library(tidyr)
+library(purrr)
+
+register_google(key = "AIzaSyCv5KctcPq9IS4v-etomxY__vI0l8ZBd-M" ) 
+
+location_data_daikin <- location_data_daikin %>%
+  mutate(geocode_result = purrr::map(Address, ~geocode(.x, source = "google"))) %>%
+  unnest(geocode_result)
+```
+
+# AGC data 
+```{r}
+location_data_AGC <- read.csv("~/Downloads/Microplastics site R AGC.csv")
+```
+
+```{r}
+library(dplyr)
+library(ggmap)
+library(tidyr)
+library(purrr)
+
+register_google(key = "AIzaSyCv5KctcPq9IS4v-etomxY__vI0l8ZBd-M" ) 
+
+location_data_AGC <- location_data_AGC %>%
+  mutate(geocode_result = purrr::map(Address, ~geocode(.x, source = "google"))) %>%
+  unnest(geocode_result)
+```
+
+#Arkema Data 
+```{r}
+location_data_Arkema <- read.csv("~/Downloads/Microplastics site R Arkema.csv")
+```
+
+```{r}
+library(dplyr)
+library(ggmap)
+library(tidyr)
+library(purrr)
+
+register_google(key = "AIzaSyCv5KctcPq9IS4v-etomxY__vI0l8ZBd-M" ) 
+
+location_data_Arkema <- location_data_Arkema %>%
+  mutate(geocode_result = purrr::map(Address, ~geocode(.x, source = "google"))) %>%
+  unnest(geocode_result)
+
+```
+
+
+
+# merging together datasets 
+```{r}
+library(dplyr)
+
+# Combine all dataframes with company identifier
+Full_location_dataset  <- bind_rows(
+  location_data_3M_update %>% select(city, state, lon, lat) %>% mutate(company = "3M"),
+  location_data_AGC %>% select(city, state, lon, lat) %>% mutate(company = "AGC"),
+  location_data_Arkema %>% select(city, state, lon, lat) %>% mutate(company = "Arkema"),
+  location_data_daikin %>% select(city, state, lon, lat) %>% mutate(company = "Daikin"),
+  location_data_solvay %>% select(city, state, lon, lat) %>% mutate(company = "Solvay")
+) %>%
+  # Remove rows with missing coordinates
+  filter(!is.na(lon), !is.na(lat)) %>%
+  # Reorder columns to put company first
+  select(company, city, state, lon, lat)
+
+```
+
+
+Not needed just wanted to look at it 
+#visualizing plant locations 
+```{r}
+# load packages
+library(data.table)
+library(sp)
+library(sf)
+library(ggplot2)
+library(plotly) 
+
+
+# make spacial coordinates (from youtube video)
+coordinates(Full_location_dataset) = c("lon", "lat")
+crs.geo1 = CRS("+proj=longlat")
+proj4string(Full_location_dataset) = crs.geo1
+plot(Full_location_dataset, pch = 20, col = "steelblue")
+```
+
+
+
+
+
+

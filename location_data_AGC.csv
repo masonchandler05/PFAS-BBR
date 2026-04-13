@@ -1,0 +1,77 @@
+"city","state","date.opened","date.aquired.by.arkema","tyoe.of.building","Address","zip.code","link","lon","lat"
+"alsip","illinois","2004","2004","manufacturing","12840 S Pulaski Road, Alsip, IL 60803 ",27511,"https://www.arkema.com/usa/en/united-states/headquarters/cary-nc-hq/",-87.722495,41.658798
+"ashland","ohio","1969","2022","manufacturing","",29706,"https://www.arkema.com/usa/en/united-states/headquarters/Chester-sc-hq/",NA,NA
+"axis","alabama","2017","2004","manufacturing","13755 Hwy 43 N, Axis, AL 36505",77507,"https://www.arkema.com/usa/en/united-states/headquarters/clear-lake-tx/",-88.0272647,30.9297926
+"bayport","texas","2012","2012","manufacturing","4631 Old Highway 146, Suite B, Seabrook, TX 77586 ",19341,"https://www.arkema.com/usa/en/united-states/headquarters/exton-pa-hq/",-95.0201978,29.6030913
+"beuamont","texas","1979","2004","manufacturing","2810 Gulf States Road, Beaumont, TX 77701 ",19406,"https://www.arkema.com/usa/en/united-states/headquarters/king-of-prussia-pa-hq/",-94.0585077,30.0600891
+"birdsboro","pennyslvania","1971","2015","manufacturing","1112 Lincoln Road, Birdsboro PA 19508 ",33860,"https://www.arkema.com/usa/en/united-states/headquarters/mulberry-florida/",-75.8231344,40.2758454
+"boulder","colorado","202","2020","r&d center","",53226,"https://www.arkema.com/usa/en/united-states/headquarters/wauwatosa-wi-hq/",NA,NA
+"calhoun","georgia","1998","2022","manufacturing","129 Nance Road, GA 30701",19406,"https://www.arkema.com/usa/en/united-states/headquarters/radnor-pa-hq-1/",-84.93575,34.564842
+"calumet city","illinois","2015","2015","manufacturing","",80301,"https://www.arkema.com/usa/en/united-states/research-and-development-centers-1/boulder-co/",NA,NA
+"calvert city","kentucky","1949","2004","manufacturing","4444 Industrial Parkway, Calvert City, KY 42029",74136,"https://www.arkema.com/usa/en/united-states/research-and-development-centers-1/tulsa-ok-rd/",-88.3668452,37.0531749
+"cary","north carolina","1984","n/a","headquarters & r&d center","410 Gregson Drive, Cary, NC 27511",60803,"https://www.arkema.com/usa/en/united-states/production-centers/alsip-il/",-78.8123787,35.734748
+"chatham","virginia","1969","2022","manufacturing","601 Tightsqueeze Idustrial Road, Chatham, VA 24531 ",44805,"https://www.arkema.com/usa/en/united-states/production-centers/ashland-oh/",-79.4106089,36.781203
+"chester","south carolina","1988","2022","headquarters","547 Ecology Lane, Chester, SC 29706 ",36505,"https://www.arkema.com/usa/en/united-states/production-centers/axis-al/",-81.1382034,34.7051153
+"chester","south carolina","1985","n/a","manufacturing","547 Ecology Lane, Chester, SC 29706 ",77586,"https://www.arkema.com/usa/en/united-states/production-centers/bayport-tx/",-81.1382034,34.7051153
+"clear lake","texas","2010","2010","headquarters","9502B Bayport Boulevard, Pasadena, TX 77507 ",77701,"https://www.arkema.com/usa/en/united-states/production-centers/beaumont-tx/",-95.0643937,29.6219044
+"clear lake","texas","n/a","2010","manufacturing","9502B Bayport Boulevard, Pasadena, TX 77507 ",19508,"https://www.arkema.com/usa/en/united-states/production-centers/birdsboro-pa/",-95.0643937,29.6219044
+"columbus","ohio","1998","2022","manufacturing","",30701,"https://www.arkema.com/usa/en/united-states/production-centers/calhoun-ga-pd/",NA,NA
+"convent","louisiana","1989","2004","manufacturing","",60409,"https://www.arkema.com/usa/en/united-states/production-centers/calument-city-il-pd/",NA,NA
+"conyers","georgia","1994","2008","manufacturing","1500 Parker Road, GA 30094 ",42029,"https://www.arkema.com/usa/en/united-states/production-centers/calvert-city-ky/",-84.0195281,33.6488815
+"crosby","texas","2004","2004","manufacturing","18000 Crosby Eastgate Road, Crosby, TX 77532",24531,"https://www.arkema.com/usa/en/united-states/production-centers/chatham-va/",-95.022797,29.9486868
+"dallas","texas","2015","2015","manufacturing","5111 Catron Drive, TX, 75227",29706,"https://www.arkema.com/usa/en/united-states/production-centers/chester-sc/",-96.675396,32.7865197
+"dalton","georgia","2015","2015","manufacturing","198 Nexus Drive, GA 30721",77507,"https://www.arkema.com/usa/en/united-states/production-centers/clear-lake-tx/",-84.980275,34.665487
+"exton","pennyslvania","2018","2022","headquarters & r&d center","502 Thomas Jones Way, Exton, PA 19341",43223,"https://www.arkema.com/usa/en/united-states/production-centers/columbus-oh/",-75.6545149,40.0212472
+"fort worth","texas","2015","2015","manufacturing","",70723,"https://www.arkema.com/usa/en/united-states/production-centers/convent-Louisiana/",NA,NA
+"franklin","virginia","1940","1993","manufacturing","27123 Shady Brook Trail, Courtland, VA 23837",30094,"https://www.arkema.com/usa/en/united-states/production-centers/conyers-georgia/",-77.0001358,36.6505264
+"geneseo","new york","1953","n/a","manufacturing","3289 Genesee Street, Piffard, NY 14533",77532,"https://www.arkema.com/usa/en/united-states/production-centers/crosby-tx/",-77.8472386,42.8293207
+"grand rapids","michigan","2022","2022","manufacturing","1415 Steele Avenue SW #1, Grand Rapids, MI 49507",75227,"https://www.arkema.com/usa/en/united-states/production-centers/dallas-tx/",-85.6761621,42.937715
+"greenville","south carolina","2016","2016","manufacturing","6997 Pelham Road 29615 ",30721,"https://www.arkema.com/usa/en/united-states/production-centers/dalton-ga/",-82.2439887,34.854916
+"houston ","texas","","","manufacturing","2231 Haden Road, Houston, TX 77003",23837,"http://arkema.com/usa/en/united-states/production-centers/franklin-va/",-95.1761201,29.7591975
+"king of prussia","pennyslvania","1992","1985"," r&d center","900 First Avenue, King of Prussia , PA 19406",76106,"https://www.arkema.com/usa/en/united-states/production-centers/fort-worth-tx-pd/",-75.4049725,40.0962148
+"king of prussia","pennyslvania","1992","1985","headquarters","155 King of Prussia Road, Randor, PA ",76106,"https://www.arkema.com/usa/en/united-states/production-centers/fort-worth-tx-pd/",-75.3729773,40.0604878
+"louisville","kentucky","2022","2022","manufacturing","7401 Intermodel Drive 40258 ",14533,"https://www.arkema.com/usa/en/united-states/production-centers/geneseo-ny/",-85.8930617,38.1595127
+"memphis","tenessee","2004","2004","manufacturing","2571 Fite Road, Memphis, TN 38127",49507,"https://www.arkema.com/usa/en/united-states/production-centers/grand-rapids-mi/",-89.9796862,35.2670541
+"middleton","massachussetts","1959","2022","manufacturing","",29615,"https://www.arkema.com/usa/en/united-states/production-centers/greenvile-sc-pd/",NA,NA
+"mulberry","florida","1967","2019","headquarters & r&d center","",77015,"https://www.arkema.com/usa/en/united-states/production-centers/houston-tx-pd/",NA,NA
+"north kansas city","missouri","2002","2004","manufacturing","901 East 16th Avenue, North Kansas City, MO 64116 ",40258,"https://www.arkema.com/usa/en/united-states/production-centers/louisville-kt-pd/",-94.5689338,39.1370849
+"paulsboro","new jersey","1985","n/a","manufacturing","2000 Nolte Avenue, NJ 08066",38127,"https://www.arkema.com/usa/en/united-states/production-centers/memphis-tn/",-75.2071998,39.8189068
+"petersburg","virginia","2019","2019","manufacturing","",1949,"https://www.arkema.com/usa/en/united-states/production-centers/middleton-ma/",NA,NA
+"piedmont","south carolina","1969","2022","manufacturing","",64116,"https://www.arkema.com/usa/en/united-states/production-centers/north-kansas-city-mo/",NA,NA
+"pineville","louisiana","1994","2008","manufacturing","7591 Esler Field Road, Pineville, LA 71360",8066,"https://www.arkema.com/usa/en/united-states/production-centers/paulsboro-nj-pd/",-92.309377,31.397916
+"radnor","pennyslvania","2024","2024","headquarters (not a production plant)","",23842,"https://www.arkema.com/usa/en/united-states/production-centers/petersburg-va-pd/",NA,NA
+"soda springs","idaho","1964","2022","manufacturing","",29673,"https://www.arkema.com/usa/en/united-states/production-centers/piedmont-sc-pd/",NA,NA
+"st charles","louisiana","1960","2004","manufacturing","355 Highway 3142, Hahnville, LA 70057",71360,"https://www.arkema.com/usa/en/united-states/production-centers/pineville-la/",-90.4539518,29.9843609
+"temecula","california","1964","2022","manufacturing","",83276,"https://www.arkema.com/usa/en/united-states/production-centers/soda-springs-id/",NA,NA
+"torrance","california","1969","2010","manufacturing","",70057,"https://www.arkema.com/usa/en/united-states/production-centers/st-charles-la/",NA,NA
+"tulsa ","oklahoma","2010","2010","r&d center","",92590,"https://www.arkema.com/usa/en/united-states/production-centers/temecula-ca-pd/",NA,NA
+"vanceboro","north carolina","1969","1988","manufacturing","",90503,"https://www.arkema.com/usa/en/united-states/production-centers/torrance-ca/",NA,NA
+"wauwatosa","wisconsin","2015","2015","headquarters & r&d center","1301 N 113th St, WI 53226",28586,"https://www.arkema.com/usa/en/united-states/production-centers/vanceboro-nc/",-88.0542218,43.0462947
+"west chester","pennyslvania","1967","2004","manufacturing","610 South Bolmar Street, West Chester, PA 19382",19382,"https://www.arkema.com/usa/en/united-states/production-centers/west-chester-pa/",-75.5888193,39.9561512
+"white city","oregon","1995","2022","manufacturing","",97503,"https://www.arkema.com/usa/en/united-states/production-centers/white-city-or/",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA
+"","","","","","",NA,"",NA,NA

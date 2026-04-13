@@ -1,0 +1,54 @@
+---
+title: "Thinking through regressions"
+format: html
+---
+
+What I have done
+
+-   Pulled UMCR_5(2023-2025) data from EPA on water treatment facilities PFAS levels
+
+-   Ran regressions on all PFAS objects against the nearest distance from a presumptive pfas source
+
+-   Ran regressions on all PFAS objects against whether its within a buffer distance from a presumptive pfas source
+
+Results:
+
+-   most results do not support the idea of being closer increases pfas
+
+-   most show a small percentage increase in pfas by being further away or being outside of the buffer range
+
+    -   all results showed very small changes in pfas
+
+Errors:
+
+-   Lots of things in the error term that I have not considered so the model isn't valid/accurate in the first place
+
+-   the locations of drinking water locations are only based upon 5 digit zip code so there is a lot of error there
+
+-   on average, every location shows roughly 4 zip codes of location which are all included in the regression
+
+Ideas:
+
+-   pull in all UMCR datasets from 2000 for more samples
+
+-   find how to get more accuracte locations if possible
+
+-   get some important covariates for the dataset ( some are included in the dataset but i could get other like populations ect)
+
+-   run regression on number of facilities within each km range
+
+Bigger potential ideas:
+
+-   try and understand water flows to where contamination be pushed to
+
+-   build a model that takes in closest x locations and weights them by an exponential distance decay (I was looking up spatial lag models)
+
+-   because we have years for all data sources, we could make a DiD model
+
+Uche Ideas:
+
+-   control for naics codes
+
+-   control for county fixed effects
+
+-   look at closests x distances

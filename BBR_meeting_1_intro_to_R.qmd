@@ -1,0 +1,16 @@
+---
+title: "BBR_meeting_1_intro_to_R"
+format: html
+---
+
+```{r}
+#reading in the file 
+Nebraska_data <- read.csv("~/Downloads/NE Place of Performance.csv")
+head(Nebraska_data)
+
+# library 
+library(tidyverse)
+head
+
+```
+

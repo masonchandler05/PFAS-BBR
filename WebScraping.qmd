@@ -1,0 +1,804 @@
+```{r}
+
+```
+
+---
+title: "Web Scraping"
+format: html
+editor: visual
+---
+
+```{r}
+url <- "https://opendata.dc.gov/api/download/v1/items/1d7c9d0e3aac49c1aa88d377a3bae430/kml?layers=4"
+filename <- "~/Downloads/Grocery_Store_Locations.xml"
+
+if(!file.exists(filename)) {
+  download.file(url, destfile = filename, mode = "wb")
+}
+
+xml_text <- readLines(filename)
+xml_tbl <- data.frame(line = 1:length(xml_text), 
+                      xml = xml_text)
+```
+
+```{r}
+library(xml2)
+
+url <- "https://en.wikipedia.org/wiki/HTML"
+
+doc <- read_html(url)
+
+xml_children(doc)
+```
+
+```{r}
+url <- "https://www.3m.com/3M/en_US/plant-locations-us/"
+
+webpage <- read_htlm(url)
+
+web_data <- webpage %>% 
+  html_nodes("")
+
+```
+
+```{r}
+#install.packages("rvest")
+#install.packages("xml2", type = "binary")
+
+library(rvest)
+library(dplyr)
+library(xml2)
+
+# Replace with the real URL
+url <- "https://www.3m.com/3M/en_US/plant-locations-us/"
+page <- read_html(url)
+
+# Pull all the links for plant locations
+links <- page %>%
+  html_nodes("ul.MMM--vList a") %>%   # all <a> inside the state lists
+  html_attr("href") %>% 
+  unique()
+
+links
+
+```
+
+```{r}
+# Improved R script to webscrape 3M Plant Locations page with error handling
+# Install required packages if not already installed
+if (!require(rvest)) install.packages("rvest")
+if (!require(dplyr)) install.packages("dplyr")
+if (!require(httr)) install.packages("httr")
+
+# Load required libraries
+library(rvest)
+library(dplyr)
+library(httr)
+
+# Define the URL
+url <- "https://www.3m.com/3M/en_US/plant-locations-us/"
+
+# Method 1: Try with httr::GET and user agent (most reliable)
+tryCatch({
+  cat("Attempting Method 1: Using httr::GET with user agent...\n")
+  
+  # Create a user agent to mimic a browser
+  user_agent <- "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  
+  # Use httr::GET with timeout and user agent
+  response <- httr::GET(url, 
+                       httr::user_agent(user_agent),
+                       httr::timeout(30))
+  
+  # Check if request was successful
+  httr::stop_for_status(response)
+  
+  # Read HTML from response
+  webpage <- read_html(response)
+  
+  cat("Method 1 successful!\n")
+  method_used <- "httr::GET with user agent"
+  
+}, error = function(e) {
+  cat("Method 1 failed:", e$message, "\n")
+  
+  # Method 2: Try with basic read_html and longer timeout
+  tryCatch({
+    cat("Attempting Method 2: Basic read_html with retry...\n")
+    
+    # Set timeout options
+    options(timeout = 120)  # 2 minute timeout
+    
+    # Basic read_html attempt
+    webpage <- read_html(url)
+    
+    cat("Method 2 successful!\n")
+    method_used <- "basic read_html"
+    
+  }, error = function(e2) {
+    cat("Method 2 failed:", e2$message, "\n")
+    
+    # Method 3: Try with curl
+    tryCatch({
+      cat("Attempting Method 3: Using curl...\n")
+      
+      if (!require(curl)) install.packages("curl")
+      library(curl)
+      
+      # Use curl to get the page
+      con <- curl(url, handle = new_handle(useragent = user_agent,
+                                          timeout = 30,
+                                          connecttimeout = 10))
+      webpage <- read_html(con)
+      
+      cat("Method 3 successful!\n")
+      method_used <- "curl"
+      
+    }, error = function(e3) {
+      cat("All methods failed. Error:", e3$message, "\n")
+      cat("\nTroubleshooting suggestions:\n")
+      cat("1. Check your internet connection\n")
+      cat("2. Try running the script from a different network\n")
+      cat("3. The website might be blocking automated requests\n")
+      cat("4. Try again later as the server might be temporarily down\n")
+      stop("Unable to connect to the website")
+    })
+  })
+})
+
+# If we get here, one of the methods worked
+cat("\nSuccessfully connected using:", method_used, "\n\n")
+
+# Extract all links (href attributes from <a> tags)
+all_links <- webpage %>%
+  html_nodes("a") %>%
+  html_attr("href")
+
+# Remove NA values and empty strings
+all_links <- all_links[!is.na(all_links) & all_links != ""]
+
+# Print the total number of links found
+cat("Total number of links found:", length(all_links), "\n\n")
+
+# Display the first few links
+cat("First 10 links:\n")
+print(head(all_links, 10))
+
+# Extract link data with text
+link_data <- webpage %>%
+  html_nodes("a") %>%
+  {data.frame(
+    url = html_attr(., "href"),
+    text = html_text(., trim = TRUE),
+    stringsAsFactors = FALSE
+  )} %>%
+  filter(!is.na(url) & url != "")
+
+# Display link data structure
+cat("\n\nLink data structure:\n")
+str(link_data)
+
+# Save results to CSV files
+write.csv(all_links, "3m_page_links.csv", row.names = FALSE)
+write.csv(link_data, "3m_page_links_with_text.csv", row.names = FALSE)
+
+cat("\n\nResults saved to:")
+cat("\n- 3m_page_links.csv")
+cat("\n- 3m_page_links_with_text.csv\n")
+
+# Display some sample results
+cat("\nSample links with text (first 5):\n")
+print(head(link_data, 5))
+
+# Return the links vector
+#return(all_links)
+
+all_links_df <- data.frame(url = all_links, stringsAsFactors = FALSE)
+# Alternative: Filter by pattern instead of exact match
+filtered_plant_links <- all_links_df %>%
+  filter(grepl("/3M/en_US/plant-locations-us/[a-zA-Z]+/$", url))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###############################################################################
+
+# above works correctly and below kind of works. It mainly pulled the addresses but not in a great way 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Function to scrape address information from 3M plant location pages
+scrape_plant_addresses <- function(plant_urls_df) {
+  
+  # Create empty dataframe to store results
+  address_data <- data.frame(
+    url = character(),
+    plant_name = character(),
+    division = character(),
+    street_address = character(),
+    city_state_zip = character(),
+    full_address = character(),
+    stringsAsFactors = FALSE
+  )
+  
+  # Loop through each URL
+  for(i in 1:nrow(plant_urls_df)) {
+    
+    current_url <- plant_urls_df$url[i]
+    full_url <- paste0("https://www.3m.com", current_url)
+    
+    cat("Scraping:", full_url, "\n")
+    
+    tryCatch({
+      # Add delay to be respectful to the server
+      Sys.sleep(2)
+      
+      # Try multiple methods to get the webpage
+      webpage <- NULL
+      
+      # Method 1: httr::GET with user agent
+      tryCatch({
+        user_agent <- "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        response <- httr::GET(full_url, 
+                             httr::user_agent(user_agent),
+                             httr::timeout(30))
+        httr::stop_for_status(response)
+        webpage <- read_html(response)
+      }, error = function(e) {
+        # Method 2: Basic read_html
+        webpage <<- read_html(full_url)
+      })
+      
+      if(!is.null(webpage)) {
+        # Extract all text content
+        page_text <- webpage %>% html_text()
+        
+        # Method 1: Look for address pattern using regex
+        # Pattern: Plant Name + Division + Street + City, State ZIP
+        address_pattern <- "(3M [A-Za-z ]+)\\n([A-Za-z ]+Division)\\n([0-9]+ [A-Za-z0-9 ]+)\\n([A-Za-z ]+, [A-Z]{2} [0-9]{5})"
+        
+        address_match <- str_match(page_text, address_pattern)
+        
+        if(!is.na(address_match[1])) {
+          # If pattern match found
+          plant_name <- trimws(address_match[2])
+          division <- trimws(address_match[3])
+          street <- trimws(address_match[4])
+          city_state_zip <- trimws(address_match[5])
+          full_addr <- paste(plant_name, division, street, city_state_zip, sep = "\n")
+          
+        } else {
+          # Method 2: Look for structured address elements
+          # Extract plant name (usually "3M [City]")
+          plant_name_match <- str_extract(page_text, "3M [A-Za-z]+(?=\\n)")
+          
+          # Look for division names
+          division_match <- str_extract(page_text, "[A-Za-z ]+Division(?=\\n)")
+          
+          # Look for street address pattern
+          street_match <- str_extract(page_text, "[0-9]+ [A-Za-z0-9 ]+(?=\\n)")
+          
+          # Look for city, state zip pattern
+          city_match <- str_extract(page_text, "[A-Za-z ]+, [A-Z]{2} [0-9]{5}")
+          
+          plant_name <- ifelse(is.na(plant_name_match), "", trimws(plant_name_match))
+          division <- ifelse(is.na(division_match), "", trimws(division_match))
+          street <- ifelse(is.na(street_match), "", trimws(street_match))
+          city_state_zip <- ifelse(is.na(city_match), "", trimws(city_match))
+          
+          full_addr <- paste(
+            ifelse(plant_name != "", plant_name, ""),
+            ifelse(division != "", division, ""),
+            ifelse(street != "", street, ""),
+            ifelse(city_state_zip != "", city_state_zip, ""),
+            sep = ifelse(c(plant_name, division, street, city_state_zip) != "", "\n", "")
+          )
+          full_addr <- gsub("\n+", "\n", full_addr)
+          full_addr <- gsub("^\n|\n$", "", full_addr)
+        }
+        
+        # Add to results dataframe
+        address_data <- rbind(address_data, data.frame(
+          url = current_url,
+          plant_name = plant_name,
+          division = division,
+          street_address = street,
+          city_state_zip = city_state_zip,
+          full_address = full_addr,
+          stringsAsFactors = FALSE
+        ))
+        
+        cat("Success: Found address for", current_url, "\n")
+        
+      } else {
+        cat("Failed to load webpage for", current_url, "\n")
+        # Add empty row for failed scrapes
+        address_data <- rbind(address_data, data.frame(
+          url = current_url,
+          plant_name = NA,
+          division = NA,
+          street_address = NA,
+          city_state_zip = NA,
+          full_address = NA,
+          stringsAsFactors = FALSE
+        ))
+      }
+      
+    }, error = function(e) {
+      cat("Error scraping", current_url, ":", e$message, "\n")
+      # Add empty row for errors
+      address_data <- rbind(address_data, data.frame(
+        url = current_url,
+        plant_name = NA,
+        division = NA,
+        street_address = NA,
+        city_state_zip = NA,
+        full_address = paste("Error:", e$message),
+        stringsAsFactors = FALSE
+      ))
+    })
+  }
+  
+  return(address_data)
+}
+
+# Load required libraries
+if (!require(stringr)) install.packages("stringr")
+library(stringr)
+
+# Run the scraper on filtered plant links
+cat("Starting address scraping process...\n")
+plant_addresses <- scrape_plant_addresses(filtered_plant_links)
+
+# Display results
+cat("\nScraping complete! Results:\n")
+print(plant_addresses)
+
+# Save to CSV
+write.csv(plant_addresses, "3m_plant_addresses.csv", row.names = FALSE)
+cat("\nResults saved to 3m_plant_addresses.csv\n")
+
+# Display summary
+cat("\nSummary:\n")
+cat("Total URLs processed:", nrow(plant_addresses), "\n")
+cat("Successful scrapes:", sum(!is.na(plant_addresses$plant_name)), "\n")
+cat("Failed scrapes:", sum(is.na(plant_addresses$plant_name)), "\n")
+
+
+
+
+```
+
+```         
+```
+
+```{r}
+# Function to scrape address information from 3M plant location pages
+scrape_plant_addresses <- function(plant_urls_df) {
+  
+  # Create empty dataframe to store results
+  address_data <- data.frame(
+    url = character(),
+    plant_name = character(),
+    division = character(),
+    street_address = character(),
+    city_state_zip = character(),
+    full_address = character(),
+    stringsAsFactors = FALSE
+  )
+  
+  # Loop through each URL
+  for(i in 1:nrow(plant_urls_df)) {
+    
+    current_url <- plant_urls_df$url[i]
+    full_url <- paste0("https://www.3m.com", current_url)
+    
+    cat("Scraping:", full_url, "\n")
+    
+    tryCatch({
+      # Add delay to be respectful to the server
+      Sys.sleep(2)
+      
+      # Try multiple methods to get the webpage
+      webpage <- NULL
+      
+      # Method 1: httr::GET with user agent
+      tryCatch({
+        user_agent <- "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        response <- httr::GET(full_url, 
+                             httr::user_agent(user_agent),
+                             httr::timeout(30))
+        httr::stop_for_status(response)
+        webpage <- read_html(response)
+      }, error = function(e) {
+        # Method 2: Basic read_html
+        webpage <<- read_html(full_url)
+      })
+      
+      if(!is.null(webpage)) {
+        # Extract all text content
+        page_text <- webpage %>% html_text()
+        
+        # Method 1: Look for address pattern using regex
+        # Pattern: Plant Name + Division + Street + City, State ZIP
+        address_pattern <- "(3M [A-Za-z ]+)\\n([A-Za-z ]+Division)\\n([0-9]+ [A-Za-z0-9 ]+)\\n([A-Za-z ]+, [A-Z]{2} [0-9]{5})"
+        
+        address_match <- str_match(page_text, address_pattern)
+        
+        if(!is.na(address_match[1])) {
+          # If pattern match found
+          plant_name <- trimws(address_match[2])
+          division <- trimws(address_match[3])
+          street <- trimws(address_match[4])
+          city_state_zip <- trimws(address_match[5])
+          full_addr <- paste(plant_name, division, street, city_state_zip, sep = "\n")
+          
+        } else {
+          # Method 2: Look for structured address elements
+          # Extract plant name (usually "3M [City]")
+          plant_name_match <- str_extract(page_text, "3M [A-Za-z]+(?=\\n)")
+          
+          # Look for division names
+          division_match <- str_extract(page_text, "[A-Za-z ]+Division(?=\\n)")
+          
+          # Look for street address pattern
+          street_match <- str_extract(page_text, "[0-9]+ [A-Za-z0-9 ]+(?=\\n)")
+          
+          # Look for city, state zip pattern
+          city_match <- str_extract(page_text, "[A-Za-z ]+, [A-Z]{2} [0-9]{5}")
+          
+          plant_name <- ifelse(is.na(plant_name_match), "", trimws(plant_name_match))
+          division <- ifelse(is.na(division_match), "", trimws(division_match))
+          street <- ifelse(is.na(street_match), "", trimws(street_match))
+          city_state_zip <- ifelse(is.na(city_match), "", trimws(city_match))
+          
+          full_addr <- paste(
+            ifelse(plant_name != "", plant_name, ""),
+            ifelse(division != "", division, ""),
+            ifelse(street != "", street, ""),
+            ifelse(city_state_zip != "", city_state_zip, ""),
+            sep = ifelse(c(plant_name, division, street, city_state_zip) != "", "\n", "")
+          )
+          full_addr <- gsub("\n+", "\n", full_addr)
+          full_addr <- gsub("^\n|\n$", "", full_addr)
+        }
+        
+        # Add to results dataframe
+        address_data <- rbind(address_data, data.frame(
+          url = current_url,
+          plant_name = plant_name,
+          division = division,
+          street_address = street,
+          city_state_zip = city_state_zip,
+          full_address = full_addr,
+          stringsAsFactors = FALSE
+        ))
+        
+        cat("Success: Found address for", current_url, "\n")
+        
+      } else {
+        cat("Failed to load webpage for", current_url, "\n")
+        # Add empty row for failed scrapes
+        address_data <- rbind(address_data, data.frame(
+          url = current_url,
+          plant_name = NA,
+          division = NA,
+          street_address = NA,
+          city_state_zip = NA,
+          full_address = NA,
+          stringsAsFactors = FALSE
+        ))
+      }
+      
+    }, error = function(e) {
+      cat("Error scraping", current_url, ":", e$message, "\n")
+      # Add empty row for errors
+      address_data <- rbind(address_data, data.frame(
+        url = current_url,
+        plant_name = NA,
+        division = NA,
+        street_address = NA,
+        city_state_zip = NA,
+        full_address = paste("Error:", e$message),
+        stringsAsFactors = FALSE
+      ))
+    })
+  }
+  
+  return(address_data)
+}
+
+# Load required libraries
+if (!require(stringr)) install.packages("stringr")
+library(stringr)
+
+# Run the scraper on filtered plant links
+cat("Starting address scraping process...\n")
+plant_addresses <- scrape_plant_addresses(filtered_plant_links)
+
+# Display results
+cat("\nScraping complete! Results:\n")
+print(plant_addresses)
+
+# Save to CSV
+write.csv(plant_addresses, "3m_plant_addresses.csv", row.names = FALSE)
+cat("\nResults saved to 3m_plant_addresses.csv\n")
+
+# Display summary
+cat("\nSummary:\n")
+cat("Total URLs processed:", nrow(plant_addresses), "\n")
+cat("Successful scrapes:", sum(!is.na(plant_addresses$plant_name)), "\n")
+cat("Failed scrapes:", sum(is.na(plant_addresses$plant_name)), "\n")
+
+```
+
+```{r}
+# Function to clean full_address by removing "3M location" part
+clean_plant_addresses <- function(plant_address_df) {
+  # Make a copy of the dataframe to avoid modifying the original
+  cleaned_df <- plant_address_df
+  
+  # Remove "3M location" from full_address column
+  # This handles various cases like "3M location", "3M Location", etc.
+  cleaned_df$full_address <- gsub("3M [Ll]ocation\\s*", "", cleaned_df$full_address, perl = TRUE)
+  
+  # Also remove it from the beginning of lines (after newlines)
+  cleaned_df$full_address <- gsub("\\n3M [Ll]ocation\\s*", "\\n", cleaned_df$full_address, perl = TRUE)
+  
+  # Clean up any extra whitespace or newlines that might be left
+  cleaned_df$full_address <- gsub("^\\s*\\n", "", cleaned_df$full_address, perl = TRUE)  # Remove leading newlines
+  cleaned_df$full_address <- gsub("\\n\\s*$", "", cleaned_df$full_address, perl = TRUE)  # Remove trailing newlines
+  cleaned_df$full_address <- gsub("\\n\\n+", "\\n", cleaned_df$full_address, perl = TRUE)  # Remove multiple newlines
+  cleaned_df$full_address <- trimws(cleaned_df$full_address)  # Remove leading/trailing whitespace
+  
+  return(cleaned_df)
+}
+
+# Clean the addresses
+cleaned_plant_addresses <- clean_plant_addresses(plant_addresses)
+
+# Save the cleaned version
+write.csv(cleaned_plant_addresses, "3m_plant_addresses_cleaned.csv", row.names = FALSE)
+
+```
+
+```{r}
+# Load required libraries
+required_packages <- c("rvest", "httr", "stringr", "magrittr")
+for(pkg in required_packages) {
+  if (!require(pkg, character.only = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  }
+}
+
+# Function to scrape information under "Contact 3M [city] plant" headings
+scrape_contact_3m_plant <- function(cleaned_plant_addresses) {
+  
+  # Validate input
+  if(!"url" %in% colnames(cleaned_plant_addresses)) {
+    stop("Input dataframe must have a 'url' column")
+  }
+  
+  # Pre-allocate list for results
+  contact_list <- vector("list", nrow(cleaned_plant_addresses))
+  
+  # Loop through each URL
+  for(i in 1:nrow(cleaned_plant_addresses)) {
+    
+    current_url <- cleaned_plant_addresses$url[i]
+    full_url <- paste0("https://www.3m.com", current_url)
+    
+    cat("Scraping contact info from:", full_url, "\n")
+    
+    tryCatch({
+      # Add delay to be respectful to the server
+      Sys.sleep(2)
+      
+      # Get the webpage
+      webpage <- NULL
+      
+      # Try httr::GET first with user agent
+      tryCatch({
+        user_agent <- "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        response <- httr::GET(full_url, 
+                             httr::user_agent(user_agent),
+                             httr::timeout(30))
+        httr::stop_for_status(response)
+        webpage <- rvest::read_html(response)
+      }, error = function(e) {
+        # Fallback to basic read_html
+        webpage <<- rvest::read_html(full_url)
+      })
+      
+      if(!is.null(webpage)) {
+        
+        # Get all page text
+        all_text <- webpage %>% html_text()
+        
+        # Method 1: Look for specific "Contact 3M [city] plant" heading patterns
+        contact_patterns <- c(
+          "Contact 3M [A-Za-z\\s]+ plant[\\s\\S]*?(?=\\n\\n\\n|Contact 3M|$)",
+          "Contact 3M [A-Za-z\\s]+[\\s\\S]*?(?=\\n\\n\\n|Contact 3M|$)",
+          "Contact\\s+3M\\s+[A-Za-z\\s]+\\s+plant[\\s\\S]*?(?=\\n\\n\\n|Contact\\s+3M|$)",
+          "Contact\\s+3M\\s+[A-Za-z\\s]+[\\s\\S]*?(?=\\n\\n\\n|Contact\\s+3M|$)"
+        )
+        
+        contact_info_text <- ""
+        matched_heading <- ""
+        
+        # Try each pattern to find the contact section
+        for(pattern in contact_patterns) {
+          matches <- str_extract_all(all_text, pattern, simplify = FALSE)[[1]]
+          if(length(matches) > 0) {
+            # Take the first match or combine if multiple
+            contact_info_text <- paste(matches, collapse = "\n\n")
+            # Extract the heading from the match
+            heading_match <- str_extract(contact_info_text, "Contact 3M [A-Za-z\\s]+ ?plant|Contact\\s+3M\\s+[A-Za-z\\s]+\\s*plant?")
+            if(!is.na(heading_match)) {
+              matched_heading <- heading_match
+            }
+            break
+          }
+        }
+        
+        # Method 2: If no specific pattern found, look for any heading containing "Contact" and "3M"
+        if(contact_info_text == "") {
+          # Look for headings (h1-h6 tags) that contain "Contact" and "3M"
+          headings <- webpage %>% html_nodes("h1, h2, h3, h4, h5, h6") %>% html_text()
+          
+          for(heading in headings) {
+            if(grepl("Contact.*3M|3M.*Contact", heading, ignore.case = TRUE)) {
+              matched_heading <- heading
+              
+              # Try to extract content following this heading
+              heading_pattern <- paste0(regex(heading, ignore_case = TRUE), "[\\s\\S]*?(?=\\n\\n\\n|<h[1-6]|$)")
+              heading_match <- str_extract(all_text, heading_pattern)
+              if(!is.na(heading_match)) {
+                contact_info_text <- heading_match
+                break
+              }
+            }
+          }
+        }
+        
+        # Method 3: Fallback - look for any text section containing both "Contact" and plant-related terms
+        if(contact_info_text == "") {
+          fallback_patterns <- c(
+            "Contact[\\s\\S]*?plant[\\s\\S]*?(?=\\n\\n\\n|$)",
+            "plant[\\s\\S]*?Contact[\\s\\S]*?(?=\\n\\n\\n|$)",
+            "Contact[\\s\\S]*?facility[\\s\\S]*?(?=\\n\\n\\n|$)"
+          )
+          
+          for(pattern in fallback_patterns) {
+            match <- str_extract(all_text, pattern)
+            if(!is.na(match)) {
+              contact_info_text <- match
+              matched_heading <- "Contact section (fallback)"
+              break
+            }
+          }
+        }
+        
+        # Clean up the extracted text
+        if(contact_info_text != "") {
+          contact_info_text <- gsub("\\s+", " ", contact_info_text)  # Normalize whitespace
+          contact_info_text <- gsub("\\n+", "\n", contact_info_text)  # Remove extra newlines
+          contact_info_text <- trimws(contact_info_text)
+        }
+        
+        # Extract specific contact details from the found text
+        phone_pattern <- "(?:Phone|Tel|Call)[:\\s]*([0-9\\-\\(\\)\\s\\.\\+]{10,})"
+        email_pattern <- "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})"
+        fax_pattern <- "(?:Fax)[:\\s]*([0-9\\-\\(\\)\\s\\.\\+]{10,})"
+        
+        phone <- str_extract(contact_info_text, phone_pattern)
+        email <- str_extract(contact_info_text, email_pattern) 
+        fax <- str_extract(contact_info_text, fax_pattern)
+        
+        # Store results
+        contact_list[[i]] <- data.frame(
+          url = current_url,
+          full_url = full_url,
+          matched_heading = ifelse(matched_heading == "", "No heading found", matched_heading),
+          contact_section_full = contact_info_text,
+          phone = ifelse(is.na(phone), "", trimws(gsub("(?:Phone|Tel|Call)[:\\s]*", "", phone))),
+          email = ifelse(is.na(email), "", trimws(email)),
+          fax = ifelse(is.na(fax), "", trimws(gsub("(?:Fax)[:\\s]*", "", fax))),
+          extraction_success = ifelse(contact_info_text != "", "Success", "Failed"),
+          stringsAsFactors = FALSE
+        )
+        
+        cat("Success: Found contact section for", current_url, "\n")
+        
+      } else {
+        cat("Failed to load webpage for", current_url, "\n")
+        contact_list[[i]] <- data.frame(
+          url = current_url,
+          full_url = full_url,
+          matched_heading = "Failed to load webpage",
+          contact_section_full = "",
+          phone = "",
+          email = "",
+          fax = "",
+          extraction_success = "Failed - Page Load Error",
+          stringsAsFactors = FALSE
+        )
+      }
+      
+    }, error = function(e) {
+      cat("Error scraping", current_url, ":", e$message, "\n")
+      contact_list[[i]] <- data.frame(
+        url = current_url,
+        full_url = full_url,
+        matched_heading = paste("Error:", e$message),
+        contact_section_full = "",
+        phone = "",
+        email = "", 
+        fax = "",
+        extraction_success = "Failed - Error",
+        stringsAsFactors = FALSE
+      )
+    })
+  }
+  
+  # Convert list to dataframe
+  contact_data <- do.call(rbind, contact_list)
+  return(contact_data)
+}
+
+# Usage:
+cat("Starting to scrape Contact 3M [city] plant sections...\n")
+plant_contact_info <- scrape_contact_3m_plant(cleaned_plant_addresses)
+
+# Display results
+cat("\nScraping complete! Results:\n")
+print(plant_contact_info)
+
+# Save to CSV
+write.csv(plant_contact_info, "3m_plant_contact_sections.csv", row.names = FALSE)
+cat("\nResults saved to 3m_plant_contact_sections.csv\n")
+
+# Display summary
+cat("\nSummary:\n")
+cat("Total URLs processed:", nrow(plant_contact_info), "\n")
+cat("Successful extractions:", sum(plant_contact_info$extraction_success == "Success"), "\n")
+cat("Failed extractions:", sum(plant_contact_info$extraction_success != "Success"), "\n")
+
+# Show sample of found headings
+cat("\nSample of matched headings:\n")
+successful_matches <- plant_contact_info[plant_contact_info$extraction_success == "Success", ]
+if(nrow(successful_matches) > 0) {
+  print(head(successful_matches[, c("url", "matched_heading")], 5))
+}
+
+# Show sample of extracted contact details
+cat("\nSample contact details:\n")
+contacts_with_info <- successful_matches[successful_matches$phone != "" | successful_matches$email != "", ]
+if(nrow(contacts_with_info) > 0) {
+  print(head(contacts_with_info[, c("url", "phone", "email", "fax")], 3))
+}
+
+```

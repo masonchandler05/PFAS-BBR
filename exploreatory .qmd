@@ -1,0 +1,171 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## 
+
+```{r}
+# Make sure you have these libraries installed
+# install.packages("ggplot2")
+# install.packages("plotly")
+# install.packages("dplyr")
+
+census_api_key("29a0b950ad6549f8dc16707914d212045d3b5f3a", install = TRUE)
+
+
+library(ggplot2)
+library(plotly)
+library(dplyr)
+
+# --- 1. Load Map Data ---
+# ggplot2 comes with built-in map data for states and counties
+county_map_data <- map_data("county")
+state_map_data <- map_data("state")
+
+# --- 2. Recreate your sample location data ---
+# (Using sample data for a reproducible example)
+p_location_data2 <- data.frame(
+  stringsAsFactors = FALSE,
+  Company = c("3M", "DuPont", "3M", "Chemours", "DuPont"),
+  lat = c(34.20, 39.65, 35.10, 34.82, 33.74),
+  lon = c(-84.01, -75.66, -89.97, -79.33, -84.38)
+)
+
+# --- 3. Build the map with ggplot2 ---
+p <- ggplot() +
+  # Add county boundaries (thin, light gray lines)
+  geom_polygon(
+    data = county_map_data,
+    aes(x = long, y = lat, group = group),
+    fill = "gray95", # Light fill for counties
+    color = "white"   # White lines between counties
+  ) +
+  # Add state boundaries (thicker, darker lines)
+  geom_polygon(
+    data = state_map_data,
+    aes(x = long, y = lat, group = group),
+    fill = NA, # No fill
+    color = "gray60", # Darker line for states
+    linewidth = 0.6 # Use linewidth instead of size for polygons
+  ) +
+  # Add your location markers on top
+  geom_point(
+    data = p_location_data2,
+    aes(x = lon, y = lat, color = Company,
+        # Custom data for the hover text
+        text = paste("Company:", Company)),
+    size = 3,
+    alpha = 0.8
+  ) +
+  # Use an appropriate map projection
+  coord_map("albers", lat0 = 39, lat1 = 45) +
+  # Clean up the theme for a map-like appearance
+  theme_void() +
+  theme(legend.position = "right") # Adjust legend position
+
+# --- 4. Convert the ggplot object to an interactive plotly object ---
+# Use the tooltip argument to specify what to show on hover
+ggplotly(p, tooltip = c("text"))
+
+
+
+```
+
+```{r}
+# Make sure you have these libraries installed
+# install.packages("ggplot2")
+# install.packages("plotly")
+# install.packages("dplyr")
+# install.packages("tidycensus")
+# install.packages("sf")
+
+#census_api_key("29a0b950ad6549f8dc16707914d212045d3b5f3a", install = TRUE)
+
+library(ggplot2)
+library(plotly)
+library(dplyr)
+library(tidycensus)
+library(sf)
+
+# --- 1. Get Population Density Data from Census ---
+county_density <- get_acs(
+  geography = "county",
+  variables = "B01003_001",  # Total population variable
+  year = 2022,
+  survey = "acs5",
+  geometry = TRUE
+) %>%
+  rename(population = estimate) %>%
+  # Calculate population density (people per square mile)
+  mutate(
+    area_sq_miles = as.numeric(st_area(geometry)) / 2589988.11, # Convert from sq meters to sq miles
+    density = population / area_sq_miles
+  ) %>%
+  # Convert to same coordinate system as map_data
+  st_transform(crs = 4326) %>%
+  # Extract centroid coordinates for plotting
+  mutate(
+    long = st_coordinates(st_centroid(geometry))[,1],
+    lat = st_coordinates(st_centroid(geometry))[,2]
+  )
+
+# --- 2. Load Map Data ---
+# ggplot2 comes with built-in map data for states and counties
+county_map_data <- map_data("county")
+state_map_data <- map_data("state")
+
+# --- 3. Recreate your sample location data ---
+p_location_data2 <- data.frame(
+  stringsAsFactors = FALSE,
+  Company = c("3M", "DuPont", "3M", "Chemours", "DuPont"),
+  lat = c(34.20, 39.65, 35.10, 34.82, 33.74),
+  lon = c(-84.01, -75.66, -89.97, -79.33, -84.38)
+)
+
+# --- 4. Build the map with ggplot2 ---
+p <- ggplot() +
+  # Add county density as filled polygons
+  geom_sf(
+    data = county_density,
+    aes(fill = density, 
+        text = paste(NAME, "<br>Density:", round(density, 1), "people/sq mi")),
+    color = "white",
+    size = 0.2
+  ) +
+  # Add state boundaries (thicker, darker lines)
+  geom_polygon(
+    data = state_map_data,
+    aes(x = long, y = lat, group = group),
+    fill = NA,
+    color = "gray40",
+    linewidth = 0.6
+  ) +
+  # Add your location markers on top
+  geom_point(
+    data = p_location_data2,
+    aes(x = lon, y = lat, color = Company,
+        text = paste("Company:", Company, "<br>Lat:", lat, "<br>Lon:", lon)),
+    size = 3,
+    alpha = 0.8
+  ) +
+  # Color scale for population density
+  scale_fill_viridis_c(
+    name = "Population Density\n(people/sq mi)",
+    option = "plasma",
+    trans = "log10",  # Log scale for better visualization
+    labels = scales::comma
+  ) +
+  # Color scale for companies
+  scale_color_brewer(name = "Company", palette = "Set1") +
+  # Clean up the theme for a map-like appearance
+  theme_void() +
+  theme(legend.position = "right")
+
+# --- 5. Convert the ggplot object to an interactive plotly object ---
+ggplotly(p, tooltip = c("text")) %>%
+  layout(
+    title = "Company Locations and Population Density by County"
+  )
+```

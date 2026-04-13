@@ -1,0 +1,120 @@
+"company","city","state","lon","lat"
+"3M","aberdeen ","south dakota ",-98.4754318,45.4447353
+"3M","alexandria ","Minnesota ",-95.3758747,45.8692906
+"3M","ames ","iowa",-93.5789516,42.0296535
+"3M","angelton","texas",-95.4137866,29.1685699
+"3M","brookings ","south dakota ",-96.7641529,44.2960754
+"3M","brownwood ","texas ",-98.9970085,31.6728344
+"3M","chelmsford ","massachusets ",-71.3228476,42.595357
+"3M","columbia ","missouri",-92.2752266,39.004378
+"3M","corona","california",-117.5115725,33.8460872
+"3M","cumberland ","wisconsin",-92.0177221,45.5403083
+"3M","cynthiana ","kentuky ",-84.2943896,38.3744316
+"3M","dekalb ","illinois",-88.7354252,41.9105473
+"3M","detriot ","michigan ",-83.0033482,42.4488791
+"3M","fairmont ","Minnesota ",-94.4462323,43.6589549
+"3M","flemington","new jersey ",-74.817226,40.5154704
+"3M","greenville ","south carolina ",-82.3601071,34.7482376
+"3M","guin ","alabama",-87.8987096,33.9659222
+"3M","hartford city ","indiana",-85.3701605,40.4513095
+"3M","hutinson ","Minnesota ",-94.363169,44.881666
+"3M","indianapolis  ","indiana",-86.2750622,39.8958983
+"3M","irvine ","california",-117.8434483,33.6920803
+"3M","knoxville ","iowa ",-93.0658504,41.3206249
+"3M","little rock ","arkanas",-92.2391889,34.7089131
+"3M","medina ","ohio ",-81.8935859,41.1142305
+"3M","menomonie","wisconsin",-91.8844809,44.9002144
+"3M","methuen ","massachusets ",-71.2374982,42.6914309
+"3M","monrovia ","california",-118.003317,34.1151158
+"3M","nevada","missouri",-94.3321114,37.8341063
+"3M","new ulm ","Minnesota ",-94.4740458,44.3312313
+"3M","newark ","deleware",-75.7318095,39.6513026
+"3M","northridge ","california",-118.5672392,34.2344142
+"3M","pittsboro","north carolina ",-79.2359355,35.7647922
+"3M","prarie du chien ","wisconsin",-91.138993,43.0610482
+"3M","springfeild ","missouri",-93.2275701,37.2139333
+"3M","tonawanda","new york ",-78.9192598,42.9753936
+"3M","valley ","nebraska ",-96.3378952,41.3076629
+"AGC","alsip","illinois",-87.722495,41.658798
+"AGC","axis","alabama",-88.0272647,30.9297926
+"AGC","bayport","texas",-95.0201978,29.6030913
+"AGC","beuamont","texas",-94.0585077,30.0600891
+"AGC","birdsboro","pennyslvania",-75.8231344,40.2758454
+"AGC","calhoun","georgia",-84.93575,34.564842
+"AGC","calvert city","kentucky",-88.3668452,37.0531749
+"AGC","cary","north carolina",-78.8123787,35.734748
+"AGC","chatham","virginia",-79.4106089,36.781203
+"AGC","chester","south carolina",-81.1382034,34.7051153
+"AGC","chester","south carolina",-81.1382034,34.7051153
+"AGC","clear lake","texas",-95.0643937,29.6219044
+"AGC","clear lake","texas",-95.0643937,29.6219044
+"AGC","conyers","georgia",-84.0195281,33.6488815
+"AGC","crosby","texas",-95.022797,29.9486868
+"AGC","dallas","texas",-96.675396,32.7865197
+"AGC","dalton","georgia",-84.980275,34.665487
+"AGC","exton","pennyslvania",-75.6545149,40.0212472
+"AGC","franklin","virginia",-77.0001358,36.6505264
+"AGC","geneseo","new york",-77.8472386,42.8293207
+"AGC","grand rapids","michigan",-85.6761621,42.937715
+"AGC","greenville","south carolina",-82.2439887,34.854916
+"AGC","houston ","texas",-95.1761201,29.7591975
+"AGC","king of prussia","pennyslvania",-75.4049725,40.0962148
+"AGC","king of prussia","pennyslvania",-75.3729773,40.0604878
+"AGC","louisville","kentucky",-85.8930617,38.1595127
+"AGC","memphis","tenessee",-89.9796862,35.2670541
+"AGC","north kansas city","missouri",-94.5689338,39.1370849
+"AGC","paulsboro","new jersey",-75.2071998,39.8189068
+"AGC","pineville","louisiana",-92.309377,31.397916
+"AGC","st charles","louisiana",-90.4539518,29.9843609
+"AGC","wauwatosa","wisconsin",-88.0542218,43.0462947
+"AGC","west chester","pennyslvania",-75.5888193,39.9561512
+"Arkema","alsip","illinois",-87.722495,41.658798
+"Arkema","axis","alabama",-88.0272647,30.9297926
+"Arkema","bayport","texas",-95.0201978,29.6030913
+"Arkema","beuamont","texas",-94.0585077,30.0600891
+"Arkema","birdsboro","pennyslvania",-75.8231344,40.2758454
+"Arkema","calhoun","georgia",-84.93575,34.564842
+"Arkema","calvert city","kentucky",-88.3668452,37.0531749
+"Arkema","cary","north carolina",-78.8123787,35.734748
+"Arkema","chatham","virginia",-79.4106089,36.781203
+"Arkema","chester","south carolina",-81.1382034,34.7051153
+"Arkema","chester","south carolina",-81.1382034,34.7051153
+"Arkema","clear lake","texas",-95.0643937,29.6219044
+"Arkema","clear lake","texas",-95.0643937,29.6219044
+"Arkema","conyers","georgia",-84.0195281,33.6488815
+"Arkema","crosby","texas",-95.022797,29.9486868
+"Arkema","dallas","texas",-96.675396,32.7865197
+"Arkema","dalton","georgia",-84.980275,34.665487
+"Arkema","exton","pennyslvania",-75.6545149,40.0212472
+"Arkema","franklin","virginia",-77.0001358,36.6505264
+"Arkema","geneseo","new york",-77.8472386,42.8293207
+"Arkema","grand rapids","michigan",-85.6761621,42.937715
+"Arkema","greenville","south carolina",-82.2439887,34.854916
+"Arkema","houston ","texas",-95.1761201,29.7591975
+"Arkema","king of prussia","pennyslvania",-75.4049725,40.0962148
+"Arkema","king of prussia","pennyslvania",-75.3729773,40.0604878
+"Arkema","louisville","kentucky",-85.8930617,38.1595127
+"Arkema","memphis","tenessee",-89.9796862,35.2670541
+"Arkema","north kansas city","missouri",-94.5689338,39.1370849
+"Arkema","paulsboro","new jersey",-75.2071998,39.8189068
+"Arkema","pineville","louisiana",-92.309377,31.397916
+"Arkema","st charles","louisiana",-90.4539518,29.9843609
+"Arkema","wauwatosa","wisconsin",-88.0542218,43.0462947
+"Arkema","west chester","pennyslvania",-75.5888193,39.9561512
+"Daikin","lousiville","ky ",-85.5738329,38.2642016
+"Daikin","plymouth ","mn ",-93.4447165,45.0025796
+"Daikin","miami","fl",-80.3164556,25.7915568
+"Daikin","waller","tx",-95.8595034,30.0493702
+"Daikin","new york ","ny",-73.9712064,40.760559
+"Daikin","orangteburg","ny ",-73.98375,41.0388324
+"Daikin","decatur ","al",-87.0416419,34.6299767
+"Daikin","hanover ","ma",-70.8702012,42.104605
+"Daikin","decatur ","al",-87.0416419,34.6299767
+"Daikin","roscoe","il",-88.9969417,42.4620478
+"Solvay","alorton","il",-90.1261329,38.5977543
+"Solvay","chicago heights ","il ",-87.6173139,41.5121317
+"Solvay","cincinnati ","oh ",-84.4824776,39.1731201
+"Solvay","south la porte","tx ",-95.0891304,29.7179474
+"Solvay","green river","wy",-109.759895,41.4993094
+"Solvay","longview ","wa",-122.984448,46.1375187
+"Solvay","parachute","co",-108.0903516,39.4742222
