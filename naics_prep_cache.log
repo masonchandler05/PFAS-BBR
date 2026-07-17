@@ -1,0 +1,33 @@
+[prep] sourcing clean_data_construction.R (this is the slow part)...
+
+All model outputs written to: model_outputs 
+Files written:
+ - hydro_exposure_by_system.csv
+ - pfas_compound_summary.csv
+ - results_buffer_wide.csv
+ - results_buffer.csv
+ - results_compound_specific_naics.csv
+ - results_did_by_compound.csv
+ - results_did_pooled.csv
+ - results_hydro_euclid_baseline.csv
+ - results_hydro_headline_pfos_pfoa.csv
+ - results_hydro_upstream_baseline.csv
+ - results_hydro_upstream_pre2002_baseline.csv
+ - results_hydro_upstream_pre2002_zipfe.csv
+ - results_hydro_upstream_zipfe.csv
+ - results_idw_baseline.csv
+ - results_idw_post2002_zipfe.csv
+ - results_idw_pre2002_zipfe.csv
+ - results_idw_zipfe.csv
+ - results_ols_baseline.csv
+ - results_ols_zipfe.csv
+ - results_post2002_dist_zipfe.csv
+ - results_pre_vs_post2002_idw.csv
+ - results_pre2002_zipfe.csv
+ - results_spatial_pfos.csv
+ - results_tri_baseline.csv
+ - results_tri_zipfe.csv
+ - sample_summary.csv
+There were 13 warnings (use warnings() to see them)
+[prep] base pipeline built in 26.9 min
+[prep] cache written: model_outputs/naics_inputs.rds (2032 water systems x 21479 facilities)

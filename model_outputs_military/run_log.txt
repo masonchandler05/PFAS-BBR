@@ -1,0 +1,510 @@
+points by source:
+
+airport milbase milfire milsusp 
+    774     737     305      91 
+
+location sets:
+                    location_set n_sources n_points_raw n_points n_deduped
+                         airport         1          774      774         0
+                         milfire         1          305      305         0
+                         milsusp         1           91       91         0
+                         milbase         1          737      737         0
+                 airport+milfire         2         1079     1041        38
+                 airport+milsusp         2          865      852        13
+                 airport+milbase         2         1511     1448        63
+                 milfire+milsusp         2          396      380        16
+                 milfire+milbase         2         1042      879       163
+                 milsusp+milbase         2          828      791        37
+         airport+milfire+milsusp         3         1170     1106        64
+         airport+milfire+milbase         3         1816     1581       235
+         airport+milsusp+milbase         3         1602     1496       106
+         milfire+milsusp+milbase         3         1133      931       202
+ airport+milfire+milsusp+milbase         4         1907     1625       282
+
+ 720 regressions saved to model_outputs_military/results_military_afff_combinations.csv 
+
+############ SIGNIFICANT + POSITIVE (p<.05, supports hypothesis) ############
+ outcome                    location_set radius_km spec estimate  p.value sig
+    PFBA                         airport         5  cov   0.3500 2.99e-04 ***
+    PFBA                         airport         5  raw   0.8030 1.38e-13 ***
+    PFBA                         airport        10  cov   0.1790 1.08e-04 ***
+    PFBA                         airport        10  raw   0.3670 7.42e-13 ***
+    PFBA                         airport        25  cov   0.0880 1.13e-04 ***
+    PFBA                         airport        25  raw   0.1700 2.35e-13 ***
+    PFBA                 airport+milbase         5  cov   0.3000 6.03e-04 ***
+    PFBA                 airport+milbase         5  raw   0.6150 1.94e-10 ***
+    PFBA                 airport+milbase        10  cov   0.1470 5.17e-04 ***
+    PFBA                 airport+milbase        10  raw   0.2820 1.22e-09 ***
+    PFBA                 airport+milbase        25  cov   0.0735 1.18e-03 ***
+    PFBA                 airport+milbase        25  raw   0.1420 5.75e-10 ***
+    PFBA                 airport+milfire         5  cov   0.3210 5.51e-04 ***
+    PFBA                 airport+milfire         5  raw   0.7100 1.71e-11 ***
+    PFBA                 airport+milfire        10  cov   0.1580 4.18e-04 ***
+    PFBA                 airport+milfire        10  raw   0.3030 1.37e-09 ***
+    PFBA                 airport+milfire        25  cov   0.0777 5.38e-04 ***
+    PFBA                 airport+milfire        25  raw   0.1430 5.96e-10 ***
+    PFBA         airport+milfire+milbase         5  cov   0.2950 6.14e-04 ***
+    PFBA         airport+milfire+milbase         5  raw   0.5870 7.46e-10 ***
+    PFBA         airport+milfire+milbase        10  cov   0.1420 6.96e-04 ***
+    PFBA         airport+milfire+milbase        10  raw   0.2580 1.29e-08 ***
+    PFBA         airport+milfire+milbase        25  cov   0.0710 1.61e-03 ***
+    PFBA         airport+milfire+milbase        25  raw   0.1320 4.75e-09 ***
+    PFBA         airport+milfire+milsusp         5  cov   0.3030 7.45e-04 ***
+    PFBA         airport+milfire+milsusp         5  raw   0.6240 4.81e-10 ***
+    PFBA         airport+milfire+milsusp        10  cov   0.1470 6.73e-04 ***
+    PFBA         airport+milfire+milsusp        10  raw   0.2650 3.45e-08 ***
+    PFBA         airport+milfire+milsusp        25  cov   0.0742 6.67e-04 ***
+    PFBA         airport+milfire+milsusp        25  raw   0.1310 6.60e-09 ***
+    PFBA airport+milfire+milsusp+milbase         5  cov   0.3010 3.38e-04 ***
+    PFBA airport+milfire+milsusp+milbase         5  raw   0.5510 1.21e-09 ***
+    PFBA airport+milfire+milsusp+milbase        10  cov   0.1470 3.39e-04 ***
+    PFBA airport+milfire+milsusp+milbase        10  raw   0.2520 1.18e-08 ***
+    PFBA airport+milfire+milsusp+milbase        25  cov   0.0746 7.80e-04 ***
+    PFBA airport+milfire+milsusp+milbase        25  raw   0.1320 3.63e-09 ***
+    PFBA                 airport+milsusp         5  cov   0.3260 4.67e-04 ***
+    PFBA                 airport+milsusp         5  raw   0.7030 8.91e-12 ***
+    PFBA                 airport+milsusp        10  cov   0.1640 2.45e-04 ***
+    PFBA                 airport+milsusp        10  raw   0.3240 6.07e-11 ***
+    PFBA                 airport+milsusp        25  cov   0.0812 2.45e-04 ***
+    PFBA                 airport+milsusp        25  raw   0.1540 1.41e-11 ***
+    PFBA         airport+milsusp+milbase         5  cov   0.3040 3.35e-04 ***
+    PFBA         airport+milsusp+milbase         5  raw   0.5740 3.69e-10 ***
+    PFBA         airport+milsusp+milbase        10  cov   0.1520 2.50e-04 ***
+    PFBA         airport+milsusp+milbase        10  raw   0.2730 1.27e-09 ***
+    PFBA         airport+milsusp+milbase        25  cov   0.0769 5.67e-04 ***
+    PFBA         airport+milsusp+milbase        25  raw   0.1410 4.38e-10 ***
+   PFHpA                         milsusp         5  cov   1.1500 4.83e-03 ***
+   PFHpA                         milsusp         5  raw   0.5880 1.37e-02  **
+   PFHpA                         milsusp        10  cov   0.5580 1.52e-02  **
+   PFHpA                         milsusp        25  cov   0.3030 3.71e-02  **
+    PFOA         airport+milsusp+milbase        10  cov   0.0575 2.58e-02  **
+    PFOA                         milbase         5  cov   0.2400 2.95e-02  **
+    PFOA                         milsusp         5  cov   0.5230 1.50e-02  **
+    PFOA                         milsusp         5  raw   0.5870 3.25e-03 ***
+    PFOA                         milsusp        10  cov   0.3030 1.23e-02  **
+    PFOA                         milsusp        10  raw   0.2970 5.34e-03 ***
+    PFOA                 milsusp+milbase         5  cov   0.2610 5.05e-03 ***
+    PFOA                 milsusp+milbase         5  raw   0.1550 4.21e-02  **
+    PFOA                 milsusp+milbase        10  cov   0.1090 1.57e-02  **
+    PFOS                         airport         5  raw   0.1810 6.74e-03 ***
+    PFOS                         airport        10  cov   0.0847 2.14e-02  **
+    PFOS                         airport        10  raw   0.1460 4.74e-06 ***
+    PFOS                         airport        25  cov   0.0454 1.18e-02  **
+    PFOS                         airport        25  raw   0.0766 1.63e-07 ***
+    PFOS                 airport+milbase         5  cov   0.1790 3.77e-03 ***
+    PFOS                 airport+milbase         5  raw   0.2190 5.73e-05 ***
+    PFOS                 airport+milbase        10  cov   0.1090 3.18e-04 ***
+    PFOS                 airport+milbase        10  raw   0.1500 5.55e-09 ***
+    PFOS                 airport+milbase        25  cov   0.0542 9.97e-04 ***
+    PFOS                 airport+milbase        25  raw   0.0797 2.28e-09 ***
+    PFOS                 airport+milfire         5  raw   0.1490 1.63e-02  **
+    PFOS                 airport+milfire        10  raw   0.1300 8.62e-06 ***
+    PFOS                 airport+milfire        25  cov   0.0386 2.62e-02  **
+    PFOS                 airport+milfire        25  raw   0.0692 4.86e-07 ***
+    PFOS         airport+milfire+milbase         5  cov   0.1460 1.63e-02  **
+    PFOS         airport+milfire+milbase         5  raw   0.1860 3.98e-04 ***
+    PFOS         airport+milfire+milbase        10  cov   0.0890 2.75e-03 ***
+    PFOS         airport+milfire+milbase        10  raw   0.1300 1.76e-07 ***
+    PFOS         airport+milfire+milbase        25  cov   0.0451 6.01e-03 ***
+    PFOS         airport+milfire+milbase        25  raw   0.0702 7.85e-08 ***
+    PFOS         airport+milfire+milsusp         5  cov   0.1320 4.33e-02  **
+    PFOS         airport+milfire+milsusp         5  raw   0.2180 1.65e-04 ***
+    PFOS         airport+milfire+milsusp        10  cov   0.0931 3.59e-03 ***
+    PFOS         airport+milfire+milsusp        10  raw   0.1500 2.46e-08 ***
+    PFOS         airport+milfire+milsusp        25  cov   0.0480 3.89e-03 ***
+    PFOS         airport+milfire+milsusp        25  raw   0.0751 1.02e-08 ***
+    PFOS airport+milfire+milsusp+milbase         5  cov   0.1520 9.44e-03 ***
+    PFOS airport+milfire+milsusp+milbase         5  raw   0.1910 1.63e-04 ***
+    PFOS airport+milfire+milsusp+milbase        10  cov   0.0901 1.85e-03 ***
+    PFOS airport+milfire+milsusp+milbase        10  raw   0.1290 9.17e-08 ***
+    PFOS airport+milfire+milsusp+milbase        25  cov   0.0461 4.38e-03 ***
+    PFOS airport+milfire+milsusp+milbase        25  raw   0.0703 4.91e-08 ***
+    PFOS                 airport+milsusp         5  cov   0.1720 1.32e-02  **
+    PFOS                 airport+milsusp         5  raw   0.2570 3.87e-05 ***
+    PFOS                 airport+milsusp        10  cov   0.1140 1.01e-03 ***
+    PFOS                 airport+milsusp        10  raw   0.1750 3.74e-09 ***
+    PFOS                 airport+milsusp        25  cov   0.0549 1.52e-03 ***
+    PFOS                 airport+milsusp        25  raw   0.0847 1.21e-09 ***
+    PFOS         airport+milsusp+milbase         5  cov   0.1830 2.24e-03 ***
+    PFOS         airport+milsusp+milbase         5  raw   0.2190 2.68e-05 ***
+    PFOS         airport+milsusp+milbase        10  cov   0.1090 2.29e-04 ***
+    PFOS         airport+milsusp+milbase        10  raw   0.1470 3.65e-09 ***
+    PFOS         airport+milsusp+milbase        25  cov   0.0549 7.50e-04 ***
+    PFOS         airport+milsusp+milbase        25  raw   0.0794 1.64e-09 ***
+    PFOS                         milbase         5  cov   0.4200 4.46e-04 ***
+    PFOS                         milbase         5  raw   0.3200 9.61e-04 ***
+    PFOS                         milbase        10  cov   0.2020 3.20e-04 ***
+    PFOS                         milbase        10  raw   0.1870 1.84e-05 ***
+    PFOS                         milbase        25  cov   0.0559 2.84e-02  **
+    PFOS                         milbase        25  raw   0.0658 5.58e-04 ***
+    PFOS                 milfire+milbase         5  cov   0.2760 1.21e-02  **
+    PFOS                 milfire+milbase         5  raw   0.2140 1.40e-02  **
+    PFOS                 milfire+milbase        10  cov   0.1300 1.14e-02  **
+    PFOS                 milfire+milbase        10  raw   0.1340 6.15e-04 ***
+    PFOS                 milfire+milbase        25  raw   0.0456 7.43e-03 ***
+    PFOS                 milfire+milsusp         5  raw   0.3300 5.23e-03 ***
+    PFOS                 milfire+milsusp        10  cov   0.1570 2.93e-02  **
+    PFOS                 milfire+milsusp        10  raw   0.2050 1.45e-04 ***
+    PFOS                 milfire+milsusp        25  raw   0.0784 4.49e-04 ***
+    PFOS         milfire+milsusp+milbase         5  cov   0.2800 5.01e-03 ***
+    PFOS         milfire+milsusp+milbase         5  raw   0.2270 3.93e-03 ***
+    PFOS         milfire+milsusp+milbase        10  cov   0.1330 5.15e-03 ***
+    PFOS         milfire+milsusp+milbase        10  raw   0.1360 1.68e-04 ***
+    PFOS         milfire+milsusp+milbase        25  raw   0.0507 2.12e-03 ***
+    PFOS                         milsusp         5  cov   1.0300 1.94e-05 ***
+    PFOS                         milsusp         5  raw   1.0500 1.60e-07 ***
+    PFOS                         milsusp        10  cov   0.6400 1.53e-06 ***
+    PFOS                         milsusp        10  raw   0.6790 2.45e-10 ***
+    PFOS                         milsusp        25  cov   0.3480 4.23e-06 ***
+    PFOS                         milsusp        25  raw   0.3710 2.53e-10 ***
+    PFOS                 milsusp+milbase         5  cov   0.3920 2.44e-04 ***
+    PFOS                 milsusp+milbase         5  raw   0.3070 3.45e-04 ***
+    PFOS                 milsusp+milbase        10  cov   0.1920 1.83e-04 ***
+    PFOS                 milsusp+milbase        10  raw   0.1780 7.01e-06 ***
+    PFOS                 milsusp+milbase        25  cov   0.0614 1.20e-02  **
+    PFOS                 milsusp+milbase        25  raw   0.0688 1.68e-04 ***
+   PFPeA                         airport         5  raw   0.1250 4.20e-02  **
+   PFPeA                         airport        10  cov   0.0681 4.74e-02  **
+   PFPeA                         airport        10  raw   0.0686 2.30e-02  **
+   PFPeA                         airport        25  raw   0.0328 2.19e-02  **
+   PFPeA                 airport+milbase         5  raw   0.1380 1.07e-02  **
+   PFPeA                 airport+milbase        10  raw   0.0823 2.05e-03 ***
+   PFPeA                 airport+milbase        25  cov   0.0369 2.98e-02  **
+   PFPeA                 airport+milbase        25  raw   0.0467 8.52e-04 ***
+   PFPeA                 airport+milfire        10  raw   0.0573 4.22e-02  **
+   PFPeA                 airport+milfire        25  raw   0.0283 3.93e-02  **
+   PFPeA         airport+milfire+milbase         5  raw   0.1090 3.66e-02  **
+   PFPeA         airport+milfire+milbase        10  raw   0.0652 1.10e-02  **
+   PFPeA         airport+milfire+milbase        25  raw   0.0384 4.81e-03 ***
+   PFPeA         airport+milfire+milsusp         5  raw   0.1240 2.37e-02  **
+   PFPeA         airport+milfire+milsusp        10  raw   0.0638 1.73e-02  **
+   PFPeA         airport+milfire+milsusp        25  raw   0.0304 2.36e-02  **
+   PFPeA airport+milfire+milsusp+milbase         5  raw   0.1200 1.47e-02  **
+   PFPeA airport+milfire+milsusp+milbase        10  raw   0.0688 5.00e-03 ***
+   PFPeA airport+milfire+milsusp+milbase        25  raw   0.0397 2.96e-03 ***
+   PFPeA                 airport+milsusp         5  raw   0.1410 1.58e-02  **
+   PFPeA                 airport+milsusp        10  raw   0.0743 1.04e-02  **
+   PFPeA                 airport+milsusp        25  raw   0.0331 1.81e-02  **
+   PFPeA         airport+milsusp+milbase         5  raw   0.1460 3.95e-03 ***
+   PFPeA         airport+milsusp+milbase        10  raw   0.0842 9.28e-04 ***
+   PFPeA         airport+milsusp+milbase        25  cov   0.0353 3.43e-02  **
+   PFPeA         airport+milsusp+milbase        25  raw   0.0474 5.53e-04 ***
+   PFPeA                         milbase        10  raw   0.1020 3.35e-02  **
+   PFPeA                         milbase        25  raw   0.0436 3.90e-02  **
+   PFPeA                 milsusp+milbase         5  raw   0.1980 1.87e-02  **
+   PFPeA                 milsusp+milbase        10  raw   0.0984 1.71e-02  **
+   PFPeA                 milsusp+milbase        25  raw   0.0437 2.62e-02  **
+ nobs
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  240
+  240
+  240
+  240
+  700
+  700
+  700
+  700
+  700
+  700
+  700
+  700
+  700
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  845
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+  925
+
+############ SIGNIFICANT but WRONG-SIGNED (p<.05, negative) ############
+ outcome                    location_set radius_km spec estimate  p.value sig
+    PFBA                         milfire        10  raw  -0.5380 6.34e-04 ***
+    PFBA                         milfire        25  cov  -0.2640 4.82e-04 ***
+    PFBA                         milfire        25  raw  -0.2780 1.72e-07 ***
+    PFBA                 milfire+milsusp        10  raw  -0.4210 3.67e-04 ***
+    PFBA                 milfire+milsusp        25  cov  -0.1560 4.84e-03 ***
+    PFBA                 milfire+milsusp        25  raw  -0.2210 7.78e-08 ***
+    PFBA                         milsusp        10  raw  -0.4830 4.19e-02  **
+    PFBA                         milsusp        25  raw  -0.5190 1.49e-05 ***
+    PFBS                         airport        25  raw  -0.0435 7.51e-03 ***
+    PFBS                 airport+milbase         5  raw  -0.1410 2.94e-02  **
+    PFBS                 airport+milbase        10  raw  -0.0777 1.12e-02  **
+    PFBS                 airport+milbase        25  raw  -0.0512 9.91e-04 ***
+    PFBS                 airport+milfire         5  raw  -0.1600 2.50e-02  **
+    PFBS                 airport+milfire        10  raw  -0.0973 3.60e-03 ***
+    PFBS                 airport+milfire        25  raw  -0.0596 1.59e-04 ***
+    PFBS         airport+milfire+milbase         5  raw  -0.1560 1.45e-02  **
+    PFBS         airport+milfire+milbase        10  raw  -0.0887 3.11e-03 ***
+    PFBS         airport+milfire+milbase        25  raw  -0.0583 1.41e-04 ***
+    PFBS         airport+milfire+milsusp         5  raw  -0.1560 2.16e-02  **
+    PFBS         airport+milfire+milsusp        10  raw  -0.0902 4.23e-03 ***
+    PFBS         airport+milfire+milsusp        25  raw  -0.0539 3.94e-04 ***
+    PFBS airport+milfire+milsusp+milbase         5  raw  -0.1400 2.05e-02  **
+    PFBS airport+milfire+milsusp+milbase        10  raw  -0.0793 5.66e-03 ***
+    PFBS airport+milfire+milsusp+milbase        25  raw  -0.0524 4.65e-04 ***
+    PFBS                 airport+milsusp        10  raw  -0.0683 4.20e-02  **
+    PFBS                 airport+milsusp        25  raw  -0.0407 9.73e-03 ***
+    PFBS         airport+milsusp+milbase         5  raw  -0.1260 4.00e-02  **
+    PFBS         airport+milsusp+milbase        10  raw  -0.0690 1.82e-02  **
+    PFBS         airport+milsusp+milbase        25  raw  -0.0458 2.59e-03 ***
+    PFBS                         milbase         5  raw  -0.3070 2.03e-02  **
+    PFBS                         milbase        10  raw  -0.1600 7.32e-03 ***
+    PFBS                         milbase        25  raw  -0.0920 2.22e-04 ***
+    PFBS                         milfire         5  raw  -0.6890 4.27e-03 ***
+    PFBS                         milfire        10  cov  -0.3770 1.52e-02  **
+    PFBS                         milfire        10  raw  -0.4130 1.73e-04 ***
+    PFBS                         milfire        25  cov  -0.2140 1.52e-04 ***
+    PFBS                         milfire        25  raw  -0.2040 4.67e-07 ***
+    PFBS                 milfire+milbase         5  raw  -0.3320 8.61e-03 ***
+    PFBS                 milfire+milbase        10  raw  -0.1690 2.08e-03 ***
+    PFBS                 milfire+milbase        25  raw  -0.0890 7.18e-05 ***
+    PFBS                 milfire+milsusp         5  raw  -0.4000 1.51e-02  **
+    PFBS                 milfire+milsusp        10  raw  -0.2310 2.11e-03 ***
+    PFBS                 milfire+milsusp        25  cov  -0.1210 5.47e-03 ***
+    PFBS                 milfire+milsusp        25  raw  -0.1300 2.42e-05 ***
+    PFBS         milfire+milsusp+milbase         5  raw  -0.2410 2.36e-02  **
+    PFBS         milfire+milsusp+milbase        10  raw  -0.1320 6.18e-03 ***
+    PFBS         milfire+milsusp+milbase        25  raw  -0.0758 3.24e-04 ***
+    PFBS                 milsusp+milbase         5  raw  -0.2170 4.93e-02  **
+    PFBS                 milsusp+milbase        10  raw  -0.1220 1.84e-02  **
+    PFBS                 milsusp+milbase        25  raw  -0.0768 8.89e-04 ***
+   PFHxA                         milfire         5  cov  -0.3400 4.03e-02  **
+   PFHxA                         milfire        10  cov  -0.2970 1.33e-03 ***
+   PFHxA                         milfire        10  raw  -0.1570 1.99e-02  **
+   PFHxA                         milfire        25  cov  -0.1640 1.52e-04 ***
+   PFHxA                         milfire        25  raw  -0.0760 8.68e-03 ***
+   PFHxA                 milfire+milsusp        25  cov  -0.0850 1.41e-02  **
+   PFHxS                         airport        10  raw  -0.0649 4.48e-02  **
+   PFHxS                         airport        25  raw  -0.0426 5.05e-03 ***
+   PFHxS                 airport+milfire        25  cov  -0.0412 2.58e-02  **
+   PFHxS                 airport+milfire        25  raw  -0.0397 4.77e-03 ***
+   PFHxS         airport+milfire+milsusp        25  cov  -0.0392 2.63e-02  **
+   PFHxS         airport+milfire+milsusp        25  raw  -0.0360 8.04e-03 ***
+   PFHxS                 airport+milsusp        25  raw  -0.0403 6.04e-03 ***
+   PFHxS                         milfire        25  cov  -0.1060 2.01e-02  **
+   PFHxS                 milfire+milsusp        25  cov  -0.0679 4.40e-02  **
+    PFOA                         milfire        25  cov  -0.0732 3.40e-02  **
+   PFPeA                         milfire        10  cov  -0.2840 2.86e-03 ***
+   PFPeA                         milfire        25  cov  -0.1660 1.26e-04 ***
+   PFPeA                 milfire+milsusp        10  cov  -0.1760 2.16e-02  **
+   PFPeA                 milfire+milsusp        25  cov  -0.1040 2.74e-03 ***
+ nobs
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  572
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  916
+  794
+  794
+  794
+  794
+  794
+  794
+  678
+  678
+  678
+  678
+  678
+  678
+  678
+  678
+  678
+  700
+  925
+  925
+  925
+  925

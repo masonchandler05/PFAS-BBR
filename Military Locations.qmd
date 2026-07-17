@@ -20,7 +20,7 @@ Loads in csv file
 import pandas as pd
 
 #loads in csv file 
-dod = pd.read_csv("pfas_progress_june_2021.csv")
+dod = pd.read_csv("PFAS_Project_Data/military/pfas_progress_june_2021.csv")
 
 
 ```
@@ -50,7 +50,7 @@ importing military shapefile datasets ( need shapefiles)
 ```{python}
 #import geopandas as gpd
 #loads in the files 
-mirta = pd.read_csv("/Users/masonchandler/Downloads/mirta_-223606765265040761.csv")
+mirta = pd.read_csv("PFAS_Project_Data/military/mirta_-223606765265040761.csv")
 #tiger = gpd.read_file()
 #fuds = gpd.read_file()
 #bts = gpd.read_file()

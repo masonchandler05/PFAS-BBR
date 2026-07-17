@@ -323,7 +323,7 @@ plotly_with_img
 library(dplyr)
 fire_sites <- read_csv("~/Downloads/List-of-military-fire-and-crash-training-sites-2014 (1).csv")
 pfas_progress <- read_csv("~/Downloads/PROGRESS-AT-INSTALLATIONS-BEING-ASSESSED-FOR-PFAS-USE-OR-POTENTIAL-RELEASE.csv")
-pfas_prog_internal_clean <- read.csv("pfas_progress_june_2021.csv")
+pfas_prog_internal_clean <- read.csv("PFAS_Project_Data/military/pfas_progress_june_2021.csv")
 #fire_sites_clean <- fire_sites %>%
   
 #pfas_progress_clean <- pfas_progress %>%

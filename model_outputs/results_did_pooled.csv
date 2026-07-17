@@ -1,0 +1,3 @@
+"model","term","estimate","std.error","statistic","p.value","n"
+"pooled: delta IDW exposure","delta_idw",0.000180222747385461,0.0033886148607362,0.0531847833973987,0.957585362171735,15570
+"pooled: new facility <=10km (binary)","new_fac_10km",-0.00291621940296026,0.00206396444293739,-1.41292133832013,0.157698852337927,15570

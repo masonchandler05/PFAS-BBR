@@ -5,9 +5,9 @@ library(zipcodeR)
 library(dplyr)
 
 # loads in datasets 
-UCMR_5 <- fread("~/Downloads/ucmr5-occurrence-data/UCMR5_All.csv")
-UCMR_5_locations <- fread("~/Downloads/ucmr5-occurrence-data/UCMR5_ZIPCodes.txt")
-UCMR_5_other_data <- fread("~/Downloads/ucmr5-occurrence-data/UCMR5_AddtlDataElem.txt")
+UCMR_5 <- fread("PFAS_Project_Data/ucmr5/UCMR5_All.csv")
+UCMR_5_locations <- fread("PFAS_Project_Data/ucmr5/UCMR5_ZIPCodes.txt")
+UCMR_5_other_data <- fread("PFAS_Project_Data/ucmr5/UCMR5_AddtlDataElem.txt")
 
 head(UCMR_5_other_data)
 

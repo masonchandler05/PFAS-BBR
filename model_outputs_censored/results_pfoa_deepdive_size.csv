@@ -1,0 +1,6 @@
+"term","estimate","std.error","p.value","nobs","compound","model"
+"idw__ind_tierweighted__10km",0.0826534758890245,0.0109943816286955,5.57089733234241e-14,26223,"PFOA","baseline"
+"idw__ind_tierweighted__10km",0.0827686420646942,0.01126159649637,1.9874641340047e-13,26223,"PFOA","+ system size (L/S)"
+"size_large",-0.00209080019909465,0.0462815475897205,0.963967282184346,26223,"PFOA","+ system size (L/S)"
+"idw__ind_tierweighted__10km",0.0525680420128927,0.0141172987268444,0.000196354141164178,14867,"PFOA","large systems only"
+"idw__ind_tierweighted__10km",0.150703128552926,0.0163624168685089,3.25147977531984e-20,11356,"PFOA","small systems only"

@@ -4,13 +4,16 @@ library(sf)
 library(broom)
 library(tigris)
 
+# NAICS PFAS-likelihood tiers + build_weighted_idw() helper (single source of truth)
+source("naics_tiers.R", chdir = TRUE)
+
 # =============================================================================
 # UCMR5 water sampling data
 # =============================================================================
 
-UCMR_5          <- fread("~/Downloads/ucmr5-occurrence-data/UCMR5_All.csv")
-UCMR_5_locations <- fread("~/Downloads/ucmr5-occurrence-data/UCMR5_ZIPCodes.txt")
-UCMR_5_other_data <- fread("~/Downloads/ucmr5-occurrence-data/UCMR5_AddtlDataElem.txt")
+UCMR_5          <- fread("PFAS_Project_Data/ucmr5/UCMR5_All.csv")
+UCMR_5_locations <- fread("PFAS_Project_Data/ucmr5/UCMR5_ZIPCodes.txt")
+UCMR_5_other_data <- fread("PFAS_Project_Data/ucmr5/UCMR5_AddtlDataElem.txt")
 
 # Build wide covariate indicators (one row per PWSID)
 dt <- as.data.table(UCMR_5_other_data)
@@ -52,7 +55,7 @@ UCMR5_wide <- UCMR_5 %>%
 # =============================================================================
 
 echo_raw <- fread(
-  "~/Downloads/epa_pws_coordinates/ECHO_EXPORTER.csv",
+  "PFAS_Project_Data/echo/ECHO_EXPORTER.csv",
   select = c("FAC_LAT", "FAC_LONG", "SDWA_IDS")
 )
 echo_raw <- echo_raw[SDWA_IDS != "" & !is.na(FAC_LAT) & !is.na(FAC_LONG)]
@@ -82,15 +85,15 @@ UCMR5_wide_filter_multiple_zip_codes <- UCMR5_wide %>%
   filter(!is.na(lon) & !is.na(lat)) %>%
   left_join(UCMR5_covariates, by = "PWSID") %>%
   left_join(echo_with_zip %>% select(PWSID, ZIPCODE), by = "PWSID") %>%
-  distinct(PWSID, .keep_all = TRUE)
+  distinct(PWSID, FacilityID, .keep_all = TRUE)
 
 # =============================================================================
 # Manufacturing site locations
 # =============================================================================
 
-facilities    <- fread("~/Downloads/national_combined/NATIONAL_FACILITY_FILE.CSV")
-naics_codes   <- fread("~/Downloads/national_combined/NATIONAL_NAICS_FILE.CSV")
-enviornmental <- fread("~/Downloads/national_combined/NATIONAL_ENVIRONMENTAL_INTEREST_FILE.CSV")
+facilities    <- fread("PFAS_Project_Data/frs/NATIONAL_FACILITY_FILE.CSV")
+naics_codes   <- fread("PFAS_Project_Data/frs/NATIONAL_NAICS_FILE.CSV")
+enviornmental <- fread("PFAS_Project_Data/frs/NATIONAL_ENVIRONMENTAL_INTEREST_FILE.CSV")
 
 enviornmental1 <- enviornmental %>%
   filter(str_length(START_DATE) > 5, !is.na(START_DATE))
@@ -131,8 +134,8 @@ Pfas_dataset_with_dates <- pfas_dataset %>%
 # Industrial water treatment locations
 # =============================================================================
 
-water_flow                <- read.csv("~/Downloads/2022CWNS_NATIONAL_APR2024/FLOW.csv")
-water_treatment_locations <- read.csv("~/Downloads/2022CWNS_NATIONAL_APR2024/PHYSICAL_LOCATION.csv")
+water_flow                <- read.csv("PFAS_Project_Data/cwns/FLOW.csv")
+water_treatment_locations <- read.csv("PFAS_Project_Data/cwns/PHYSICAL_LOCATION.csv")
 
 industrial_water_treatment_centers <- water_flow %>%
   filter(FLOW_TYPE == "Industrial Flow") %>%
@@ -146,8 +149,8 @@ water_treatment_industrial_final_dataset <- water_treatment_locations %>%
 # Military fire site locations
 # =============================================================================
 
-dod   <- read.csv("pfas_progress_june_2021.csv")
-mirta <- read.csv("~/Downloads/mirta_-223606765265040761.csv")
+dod   <- read.csv("PFAS_Project_Data/military/pfas_progress_june_2021.csv")
+mirta <- read.csv("PFAS_Project_Data/military/mirta_-223606765265040761.csv")
 
 fireSite <- mirta %>%
   mutate(Installation_Name = Site.Name) %>%
@@ -209,6 +212,30 @@ analysis_data <- UCMR5_wide_filter_multiple_zip_codes %>%
   mutate(
     idw_exposure_10km        = apply(dist_matrix2,    1, idw_10),
     idw_pre2002_exposure_10km = apply(dist_matrix_2002, 1, idw_10)
+  )
+
+# -----------------------------------------------------------------------------
+# Refined NAICS-aware exposures (see NAICS_findings.md)
+#   idw_tierweighted_10km : "Spec D" -- each facility scaled by its NAICS PFAS-
+#                           likelihood weight (tier1=1.0, tier2=0.5, tier3=0.15).
+#                           Best PFOS specification in the experiments.
+#   idw_airport_10km      : AFFF/airport-only (NAICS 488119) -- dominant single
+#                           PFOS mechanism.
+# Columns of dist_matrix2 align 1:1 with rows of Pfas_dataset_with_dates.
+# -----------------------------------------------------------------------------
+.fac_code    <- as.character(Pfas_dataset_with_dates$NAICS_CODE)
+.fac_pre2002 <- !is.na(Pfas_dataset_with_dates$START_DATE_FORMAT) &
+                Pfas_dataset_with_dates$START_DATE_FORMAT < as.Date("2002-01-01")
+.idx         <- match(.fac_code, naics_meta$code)
+.fac_weight  <- naics_meta$weight[.idx]; .fac_weight[is.na(.fac_weight)] <- 0
+.fac_airport <- as.numeric(!is.na(naics_meta$sector[.idx]) & naics_meta$sector[.idx] == "airport")
+
+analysis_data <- analysis_data %>%
+  mutate(
+    idw_tierweighted_10km         = build_weighted_idw(dist_matrix2, .fac_weight),
+    idw_airport_10km              = build_weighted_idw(dist_matrix2, .fac_airport),
+    idw_tierweighted_pre2002_10km = build_weighted_idw(dist_matrix2, .fac_weight  * .fac_pre2002),
+    idw_airport_pre2002_10km      = build_weighted_idw(dist_matrix2, .fac_airport * .fac_pre2002)
   )
 
 analysis_data_buffer <- analysis_data %>%
@@ -350,12 +377,40 @@ results_idw_pre2002 <- bind_rows(lapply(log_vars, function(var) {
   select(outcome, estimate, std.error, statistic, p.value, adj.r.squared, nobs) %>%
   arrange(p.value)
 
+# Refined-exposure models with ZIPCODE fixed effects:
+#   log(PFAS) ~ <refined exposure> + factor(ZIPCODE)
+.fe_refined <- function(exposure) {
+  bind_rows(lapply(log_vars, function(var) {
+    md <- analysis_data %>%
+      select(all_of(c(var, exposure, "ZIPCODE"))) %>%
+      filter(!is.na(.data[[var]]), !is.na(.data[[exposure]]), !is.na(ZIPCODE))
+    if (nrow(md) < 10) return(NULL)
+    fit <- lm(as.formula(paste0("`", var, "` ~ ", exposure, " + factor(ZIPCODE)")), data = md)
+    bind_cols(
+      tidy(fit)   %>% filter(term == exposure) %>% mutate(outcome = var),
+      glance(fit) %>% select(r.squared, adj.r.squared, nobs)
+    )
+  })) %>%
+    select(outcome, estimate, std.error, statistic, p.value, adj.r.squared, nobs) %>%
+    arrange(p.value)
+}
+
+results_idw_tierweighted         <- .fe_refined("idw_tierweighted_10km")
+results_idw_airport              <- .fe_refined("idw_airport_10km")
+results_idw_tierweighted_pre2002 <- .fe_refined("idw_tierweighted_pre2002_10km")
+results_idw_airport_pre2002      <- .fe_refined("idw_airport_pre2002_10km")
+
 # =============================================================================
 # Export all model result tables to CSV
 # =============================================================================
 
-out_dir <- "~/Downloads/BBR/model_outputs"
+out_dir <- "model_outputs"
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+write.csv(results_idw_tierweighted,         file.path(out_dir, "results_idw_tierweighted_zipfe.csv"),         row.names = FALSE)
+write.csv(results_idw_airport,              file.path(out_dir, "results_idw_airport_zipfe.csv"),              row.names = FALSE)
+write.csv(results_idw_tierweighted_pre2002, file.path(out_dir, "results_idw_tierweighted_pre2002_zipfe.csv"), row.names = FALSE)
+write.csv(results_idw_airport_pre2002,      file.path(out_dir, "results_idw_airport_pre2002_zipfe.csv"),      row.names = FALSE)
 
 write.csv(results,                   file.path(out_dir, "results_ols_baseline.csv"),          row.names = FALSE)
 write.csv(results_fixed_effects,     file.path(out_dir, "results_ols_zipfe.csv"),              row.names = FALSE)

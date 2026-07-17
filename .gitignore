@@ -2,3 +2,15 @@
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
+
+# ── Large public datasets: fetched by download_data.R from official sources ──
+# (See PFAS_Project_Data/DATA_SOURCES.md. The small CWNS / DoD / MIRTA files
+#  ARE tracked so the repo is replicable without them.)
+PFAS_Project_Data/ucmr5/
+PFAS_Project_Data/ucmr3/
+PFAS_Project_Data/echo/
+PFAS_Project_Data/frs/
+PFAS_Project_Data/tri/
+PFAS_Project_Data/ucmr5_full/
+model_outputs/naics_inputs.rds

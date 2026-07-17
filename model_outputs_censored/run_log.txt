@@ -1,0 +1,96 @@
+768 model rows saved to model_outputs_censored/results_industrial_all_margins.csv 
+
+#### supports (expected sign, p<.05) / contradicts (sig, wrong sign) ####
+ compound support_detect contradict_detect n_detect support_tobit
+     PFBA             24                 0       32            19
+     PFBS              2                26       32             2
+    PFHpA              0                12       32             0
+    PFHxA              0                 4       32             0
+    PFHxS              4                 6       32             0
+     PFOA             25                 0       32            20
+     PFOS             21                 0       32            21
+    PFPeA              0                 3       32             0
+ contradict_tobit n_tobit support_intensive contradict_intensive n_intensive
+                0      32                 4                    2          32
+               27      32                 2                   17          32
+                9      32                 0                    2          32
+                8      32                 0                    0          32
+                8      32                 0                   25          32
+                0      32                 0                    3          32
+                0      32                 2                    4          32
+                4      32                 0                    0          32
+
+#### exposure families x margin: PFOS + PFOA (tobit vs intensive, 10km/base) ####
+ compound                exposure spec    margin  estimate p.value sig
+     PFOA    idw__all_equal__10km  cov    detect  1.04e-02 3.2e-02  **
+     PFOA    idw__all_equal__10km  cov intensive -2.98e-03 7.4e-01    
+     PFOA    idw__all_equal__10km  cov     tobit  1.84e-02 9.3e-02   *
+     PFOA    idw__all_equal__10km  raw    detect  1.39e-02 7.8e-04 ***
+     PFOA    idw__all_equal__10km  raw intensive -9.64e-03 1.9e-01    
+     PFOA    idw__all_equal__10km  raw     tobit  2.62e-02 6.6e-03 ***
+     PFOA     idw__post2002__10km  cov    detect  1.22e-02 2.3e-02  **
+     PFOA     idw__post2002__10km  cov intensive -5.53e-03 5.7e-01    
+     PFOA     idw__post2002__10km  cov     tobit  2.08e-02 8.6e-02   *
+     PFOA     idw__post2002__10km  raw    detect  1.52e-02 7.9e-04 ***
+     PFOA     idw__post2002__10km  raw intensive -1.26e-02 1.1e-01    
+     PFOA     idw__post2002__10km  raw     tobit  2.71e-02 9.8e-03 ***
+     PFOA      idw__pre2002__10km  cov    detect  1.33e-02 1.1e-02  **
+     PFOA      idw__pre2002__10km  cov intensive -1.26e-03 8.9e-01    
+     PFOA      idw__pre2002__10km  cov     tobit  2.40e-02 4.1e-02  **
+     PFOA      idw__pre2002__10km  raw    detect  1.62e-02 1.7e-04 ***
+     PFOA      idw__pre2002__10km  raw intensive -3.62e-03 6.3e-01    
+     PFOA      idw__pre2002__10km  raw     tobit  3.34e-02 7.8e-04 ***
+     PFOA idw__tierweighted__10km  cov    detect  2.29e-02 1.7e-03 ***
+     PFOA idw__tierweighted__10km  cov intensive  3.06e-04 9.8e-01    
+     PFOA idw__tierweighted__10km  cov     tobit  4.47e-02 5.8e-03 ***
+     PFOA idw__tierweighted__10km  raw    detect  2.52e-02 4.1e-05 ***
+     PFOA idw__tierweighted__10km  raw intensive -9.53e-03 3.5e-01    
+     PFOA idw__tierweighted__10km  raw     tobit  4.90e-02 5.2e-04 ***
+     PFOA              nearest_km  cov    detect -6.13e-05 3.2e-04 ***
+     PFOA              nearest_km  cov intensive -1.44e-05 7.4e-01    
+     PFOA              nearest_km  cov     tobit -1.66e-04 2.6e-04 ***
+     PFOA              nearest_km  raw    detect -4.55e-05 1.1e-04 ***
+     PFOA              nearest_km  raw intensive  4.66e-06 9.1e-01    
+     PFOA              nearest_km  raw     tobit -1.46e-04 1.7e-04 ***
+     PFOA             within_10km  cov    detect  6.17e-02 4.1e-02  **
+     PFOA             within_10km  cov intensive -7.36e-02 1.8e-01    
+     PFOA             within_10km  cov     tobit  9.83e-02 1.6e-01    
+     PFOA             within_10km  raw    detect  7.46e-02 6.5e-03 ***
+     PFOA             within_10km  raw intensive -1.14e-01 2.1e-02  **
+     PFOA             within_10km  raw     tobit  1.17e-01 7.1e-02   *
+     PFOS    idw__all_equal__10km  cov    detect  2.13e-02 2.5e-05 ***
+     PFOS    idw__all_equal__10km  cov intensive  1.38e-03 9.0e-01    
+     PFOS    idw__all_equal__10km  cov     tobit  5.10e-02 2.5e-04 ***
+     PFOS    idw__all_equal__10km  raw    detect  8.70e-03 4.2e-02  **
+     PFOS    idw__all_equal__10km  raw intensive  6.59e-03 4.4e-01    
+     PFOS    idw__all_equal__10km  raw     tobit  2.57e-02 3.0e-02  **
+     PFOS     idw__post2002__10km  cov    detect  2.65e-02 1.9e-06 ***
+     PFOS     idw__post2002__10km  cov intensive  2.74e-03 8.1e-01    
+     PFOS     idw__post2002__10km  cov     tobit  6.49e-02 2.1e-05 ***
+     PFOS     idw__post2002__10km  raw    detect  1.19e-02 1.1e-02  **
+     PFOS     idw__post2002__10km  raw intensive  1.17e-02 2.0e-01    
+     PFOS     idw__post2002__10km  raw     tobit  3.66e-02 4.5e-03 ***
+     PFOS      idw__pre2002__10km  cov    detect  2.46e-02 5.6e-06 ***
+     PFOS      idw__pre2002__10km  cov intensive  8.31e-03 4.7e-01    
+     PFOS      idw__pre2002__10km  cov     tobit  6.24e-02 2.9e-05 ***
+     PFOS      idw__pre2002__10km  raw    detect  8.43e-03 5.9e-02   *
+     PFOS      idw__pre2002__10km  raw intensive  1.28e-02 1.4e-01    
+     PFOS      idw__pre2002__10km  raw     tobit  2.84e-02 2.1e-02  **
+     PFOS idw__tierweighted__10km  cov    detect  3.21e-02 2.3e-05 ***
+     PFOS idw__tierweighted__10km  cov intensive  1.94e-02 2.1e-01    
+     PFOS idw__tierweighted__10km  cov     tobit  8.53e-02 3.6e-05 ***
+     PFOS idw__tierweighted__10km  raw    detect  1.86e-02 3.6e-03 ***
+     PFOS idw__tierweighted__10km  raw intensive  1.77e-02 1.5e-01    
+     PFOS idw__tierweighted__10km  raw     tobit  5.66e-02 1.2e-03 ***
+     PFOS              nearest_km  cov    detect -1.13e-05 5.3e-01    
+     PFOS              nearest_km  cov intensive  8.34e-05 2.4e-02  **
+     PFOS              nearest_km  cov     tobit  3.02e-05 5.3e-01    
+     PFOS              nearest_km  raw    detect -1.07e-07 9.9e-01    
+     PFOS              nearest_km  raw intensive  5.89e-05 1.7e-02  **
+     PFOS              nearest_km  raw     tobit  3.14e-05 3.5e-01    
+     PFOS             within_10km  cov    detect  6.39e-02 4.3e-02  **
+     PFOS             within_10km  cov intensive -1.24e-01 5.9e-02   *
+     PFOS             within_10km  cov     tobit  8.09e-02 3.5e-01    
+     PFOS             within_10km  raw    detect  2.20e-02 4.4e-01    
+     PFOS             within_10km  raw intensive -1.11e-01 5.6e-02   *
+     PFOS             within_10km  raw     tobit -2.30e-03 9.8e-01    

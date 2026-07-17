@@ -1,0 +1,63 @@
+"term","estimate","std.error","p.value","compound","model","nobs"
+"idw__ind_all_equal__10km",0.00118396146084307,0.0098808590246528,0.904622777387086,"PFOA","industry alone + density",25866
+"log_popden",0.170396326025875,0.0183206314025266,1.39407367836629e-20,"PFOA","industry alone + density",25866
+"idw__ind_tierweighted__10km",-0.00764756890501961,0.0140120322093012,0.585213151211421,"PFOA","tierweighted alone + density",25866
+"log_popden",0.177102040007397,0.0186218145366423,1.89819539156503e-21,"PFOA","tierweighted alone + density",25866
+"idw__ind_all_equal__10km",0.00671837457965721,0.0130477369272212,0.606617821559574,"PFOA","industry + placebo + density",25866
+"idw_placebo_10km",-0.00899247265579611,0.0136625646401063,0.510420318028665,"PFOA","industry + placebo + density",25866
+"log_popden",0.17106594322174,0.0183116169580913,9.45889883812071e-21,"PFOA","industry + placebo + density",25866
+"idw__ind_all_equal__10km",0.015109054139554,0.0136088820212333,0.266897869049316,"PFOS","industry alone + density",25866
+"log_popden",0.166367379251765,0.0227390512416891,2.54763010807034e-13,"PFOS","industry alone + density",25866
+"idw__ind_tierweighted__10km",0.0139295301295991,0.0194190131612978,0.473180366804304,"PFOS","tierweighted alone + density",25866
+"log_popden",0.173373490713389,0.0227275909220738,2.37820093377513e-14,"PFOS","tierweighted alone + density",25866
+"idw__ind_all_equal__10km",-0.00405071230181917,0.0164493346851308,0.805485718015047,"PFOS","industry + placebo + density",25866
+"idw_placebo_10km",0.0311112375603632,0.0162927562727391,0.0561958858088444,"PFOS","industry + placebo + density",25866
+"log_popden",0.164084176145732,0.0227770486005659,5.8503058110028e-13,"PFOS","industry + placebo + density",25866
+"idw__mil_milsusp__10km",0.101109478218192,0.169722186529108,0.551352148974666,"PFOS","milsusp alone + density",25866
+"log_popden",0.18087873886943,0.0173486892349186,1.88514933519034e-25,"PFOS","milsusp alone + density",25866
+"idw__mil_milsusp__10km",0.070532390295222,0.167642131620437,0.673950874265859,"PFOS","milsusp + placebo + industry + density",25866
+"idw_placebo_10km",0.0304970310957051,0.0161834558580353,0.0595031490532149,"PFOS","milsusp + placebo + industry + density",25866
+"idw__ind_all_equal__10km",-0.00410932426493656,0.0164452815644692,0.802681217511631,"PFOS","milsusp + placebo + industry + density",25866
+"log_popden",0.163093344061572,0.022987062430852,1.2934594729267e-12,"PFOS","milsusp + placebo + industry + density",25866
+"idw__mil_milsusp__10km",0.117727224214143,0.155348798512509,0.44855567307006,"PFHxS","milsusp alone + density",25865
+"log_popden",0.125837003567616,0.0193162425084848,7.28984422875005e-11,"PFHxS","milsusp alone + density",25865
+"idw__mil_milsusp__10km",0.0892502263972261,0.154332091339097,0.563061690750607,"PFHxS","milsusp + placebo + industry + density",25865
+"idw_placebo_10km",0.0159526346288021,0.0176968571436377,0.367355030704702,"PFHxS","milsusp + placebo + industry + density",25865
+"idw__ind_all_equal__10km",0.016678238836519,0.0191672538946269,0.384222630885549,"PFHxS","milsusp + placebo + industry + density",25865
+"log_popden",0.0966688372936424,0.0277827367881443,0.000502431039298299,"PFHxS","milsusp + placebo + industry + density",25865
+"idw__mil_milfire__10km",0.0690762931848004,0.0922592501610659,0.454026330204102,"PFOS","milfire alone + density",25866
+"log_popden",0.179476693126946,0.017481396271643,9.95257988367706e-25,"PFOS","milfire alone + density",25866
+"idw__mil_milfire__10km",0.0460006585376095,0.0940302957910392,0.624692296261793,"PFOS","milfire + placebo + industry + density",25866
+"idw_placebo_10km",0.0301508229111114,0.0163954269551548,0.065918480835099,"PFOS","milfire + placebo + industry + density",25866
+"idw__ind_all_equal__10km",-0.00445465973278598,0.0164970104083809,0.787138479116347,"PFOS","milfire + placebo + industry + density",25866
+"log_popden",0.162860591219281,0.0227676855122808,8.4810970788112e-13,"PFOS","milfire + placebo + industry + density",25866
+"idw__mil_milfire__10km",0.0533776281888537,0.08465121217041,0.528328570204544,"PFHxS","milfire alone + density",25865
+"log_popden",0.125792678876546,0.0198158394821841,2.18008372044197e-10,"PFHxS","milfire alone + density",25865
+"idw__mil_milfire__10km",0.025391486542325,0.0858293640372029,0.767354698825781,"PFHxS","milfire + placebo + industry + density",25865
+"idw_placebo_10km",0.0160944476092145,0.0178143523838515,0.366285000674103,"PFHxS","milfire + placebo + industry + density",25865
+"idw__ind_all_equal__10km",0.0165611092738369,0.0191748340340493,0.387758298262723,"PFHxS","milfire + placebo + industry + density",25865
+"log_popden",0.0973713950719388,0.0277617699424342,0.000452522901599169,"PFHxS","milfire + placebo + industry + density",25865
+"idw__mil_milbase__10km",0.0281043360935073,0.0508948114110158,0.580808356541189,"PFOS","milbase alone + density",25866
+"log_popden",0.180499797904656,0.0174035427721463,3.34446761050893e-25,"PFOS","milbase alone + density",25866
+"idw__mil_milbase__10km",0.0185042803466197,0.050960508522462,0.716522566796508,"PFOS","milbase + placebo + industry + density",25866
+"idw_placebo_10km",0.0307301166447363,0.0162495755812466,0.0586065264215981,"PFOS","milbase + placebo + industry + density",25866
+"idw__ind_all_equal__10km",-0.00437232473498087,0.016468245982315,0.7906240560395,"PFOS","milbase + placebo + industry + density",25866
+"log_popden",0.163035355617472,0.0228881962791764,1.05511316559963e-12,"PFOS","milbase + placebo + industry + density",25866
+"idw__mil_milbase__10km",0.031153071416352,0.0466137060197299,0.503926619311155,"PFHxS","milbase alone + density",25865
+"log_popden",0.125607141734086,0.0193714652889704,8.92439490773046e-11,"PFHxS","milbase alone + density",25865
+"idw__mil_milbase__10km",0.0192964674216357,0.0469472447226509,0.681054575597057,"PFHxS","milbase + placebo + industry + density",25865
+"idw_placebo_10km",0.0161764942506802,0.0177232288254687,0.361385404581806,"PFHxS","milbase + placebo + industry + density",25865
+"idw__ind_all_equal__10km",0.0165169440547507,0.0192186082392432,0.390106320930949,"PFHxS","milbase + placebo + industry + density",25865
+"log_popden",0.0968769152088756,0.0276049297229407,0.000449108213297719,"PFHxS","milbase + placebo + industry + density",25865
+"idw__mil_airport__10km",0.0185671397517125,0.0421015712983377,0.659207033502992,"PFOS","airport alone + density",25866
+"log_popden",0.179428256129008,0.0196956667908851,8.2353767780595e-20,"PFOS","airport alone + density",25866
+"idw__mil_airport__10km",-0.00494006959411227,0.0443811194885085,0.911370397478636,"PFOS","airport + placebo + industry + density",25866
+"idw_placebo_10km",0.0313343016594548,0.0162533537039575,0.0538716911350323,"PFOS","airport + placebo + industry + density",25866
+"idw__ind_all_equal__10km",-0.00366739603750482,0.0168904523481091,0.828108321377317,"PFOS","airport + placebo + industry + density",25866
+"log_popden",0.164461973797052,0.0233268032277347,1.78476741583051e-12,"PFOS","airport + placebo + industry + density",25866
+"idw__mil_airport__10km",0.13389646284452,0.0431641101578717,0.00192197002298227,"PFHxS","airport alone + density",25865
+"log_popden",0.102567244143119,0.0225202710154083,5.25250802937261e-06,"PFHxS","airport alone + density",25865
+"idw__mil_airport__10km",0.116618903535268,0.0443550775670185,0.00855829816396464,"PFHxS","airport + placebo + industry + density",25865
+"idw_placebo_10km",0.01116687202729,0.0178466288025213,0.531503043864385,"PFHxS","airport + placebo + industry + density",25865
+"idw__ind_all_equal__10km",0.00696141285270973,0.0196298802224662,0.722864186415205,"PFHxS","airport + placebo + industry + density",25865
+"log_popden",0.0901409654326413,0.0281919086482268,0.00138669810859142,"PFHxS","airport + placebo + industry + density",25865

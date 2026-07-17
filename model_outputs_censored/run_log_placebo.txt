@@ -1,0 +1,54 @@
+placebo facility pool: 11867 
+placebo facilities used: 11867 | sectors: 311,321,337,312 
+placebo chunk 1 / 14 
+placebo chunk 2 / 14 
+placebo chunk 3 / 14 
+placebo chunk 4 / 14 
+placebo chunk 5 / 14 
+placebo chunk 6 / 14 
+placebo chunk 7 / 14 
+placebo chunk 8 / 14 
+placebo chunk 9 / 14 
+placebo chunk 10 / 14 
+placebo chunk 11 / 14 
+placebo chunk 12 / 14 
+placebo chunk 13 / 14 
+placebo chunk 14 / 14 
+Warning message:
+In left_join(., env %>% select(REGISTRY_ID, START_DATE), by = "REGISTRY_ID") :
+  Detected an unexpected many-to-many relationship between `x` and `y`.
+ℹ Row 1 of `x` matches multiple rows in `y`.
+ℹ Row 27 of `y` matches multiple rows in `x`.
+ℹ If a many-to-many relationship is expected, set `relationship =
+  "many-to-many"` to silence this warning.
+
+#### PLACEBO TEST (10km, bucket B, tobit+cov, clustered) ####
+ compound                           model                        term estimate
+     PFOA        real PFAS-industry alone    idw__ind_all_equal__10km  0.06700
+     PFOA                   placebo alone            idw_placebo_10km  0.06130
+     PFOA                           joint    idw__ind_all_equal__10km  0.06580
+     PFOA                           joint            idw_placebo_10km  0.00189
+     PFOS        real PFAS-industry alone    idw__ind_all_equal__10km  0.07010
+     PFOS                   placebo alone            idw_placebo_10km  0.08030
+     PFOS                           joint    idw__ind_all_equal__10km  0.04440
+     PFOS                           joint            idw_placebo_10km  0.04010
+     PFOA joint (tierweighted vs placebo) idw__ind_tierweighted__10km  0.05910
+     PFOA joint (tierweighted vs placebo)            idw_placebo_10km  0.02880
+     PFOS joint (tierweighted vs placebo) idw__ind_tierweighted__10km  0.04710
+     PFOS joint (tierweighted vs placebo)            idw_placebo_10km  0.05420
+ beta_perSD  p.value
+    0.17000 1.37e-16
+    0.12500 4.56e-11
+    0.16700 2.94e-08
+    0.00386 8.90e-01
+    0.17800 2.82e-10
+    0.16400 9.04e-11
+    0.11300 2.56e-03
+    0.08200 1.43e-02
+    0.10100 6.71e-05
+    0.05880 2.22e-02
+    0.08030 1.53e-02
+    0.11100 4.79e-04
+
+corr(real, placebo) = 0.792 
+Saved: model_outputs_censored/results_industrial_placebo.csv

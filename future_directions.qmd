@@ -1,0 +1,440 @@
+---
+title: "Future Research Directions: PFAS Industrial Proximity and Drinking Water Contamination"
+author: "Mason Chandler"
+institution: "Big Blue Research (BBR) Scholars Program, University of Nebraska–Lincoln"
+date: "June 2026"
+format: html
+editor_options:
+  markdown:
+    wrap: 72
+---
+
+## Overview
+
+The current analysis establishes a cross-sectional foundation: using
+UCMR5 data on 1,060 public water systems matched to a national database
+of PFAS-adjacent industrial facilities, eight econometric specifications
+find weak and inconsistent evidence that simple geographic proximity to
+facilities predicts drinking water PFAS concentrations. The clearest
+positive finding — PFOS in the IDW baseline (β = +0.031, p = 0.028) —
+is consistent with the core hypothesis but does not survive within-ZCTA
+identification.
+
+This document outlines the most promising methodological extensions that
+could generate stronger, more causally credible evidence for or against
+the hypothesis that **industrial PFAS facility proximity causally elevates
+drinking water contamination**. Each direction identifies the core
+limitation it addresses, the data or methods required, and what a
+positive result would look like.
+
+---
+
+## 1. Difference-in-Differences Across UCMR Rounds
+
+### The limitation it addresses
+The current analysis is purely cross-sectional: one snapshot of PFAS
+concentrations (UCMR5, 2023–2025) compared against current facility
+proximity. Cross-sectional designs cannot separate the effect of
+facilities from time-invariant geographic characteristics — geology,
+regional hydrology, population density — that simultaneously determine
+where factories locate and where water systems draw from. A
+difference-in-differences (DiD) design removes all time-invariant
+confounding by using each water system as its own control over time.
+
+### The idea
+Three rounds of UCMR data are publicly available with partial overlap in
+monitored compounds:
+
+| Round | Years | Key PFAS Compounds |
+|-------|-------|-------------------|
+| UCMR3 | 2013–2015 | PFOA, PFOS, PFHxS, PFNA, PFHpA, PFBS |
+| UCMR4 | 2018–2020 | PFOA, PFOS (continued) |
+| UCMR5 | 2023–2025 | Full 29-compound panel |
+
+By matching water systems across rounds via PWSID, a panel dataset can
+be constructed where each system appears up to three times. A DiD
+specification would then exploit variation in *when* a new PFAS-adjacent
+facility opened near a given water system:
+
+$$\log(PFAS_{it}) = \alpha_i + \gamma_t + \beta \cdot \text{NewFacility}_{it} + \varepsilon_{it}$$
+
+where $\alpha_i$ are water system fixed effects (absorbing all
+time-invariant geography), $\gamma_t$ are time fixed effects (absorbing
+national trends), and $\text{NewFacility}_{it}$ is an indicator for
+whether a new PFAS-adjacent facility opened within a given radius of
+system $i$ between rounds $t-1$ and $t$.
+
+### What a positive result looks like
+After a new facility opens near a water system, PFAS concentrations in
+that system rise relative to control systems that did not receive a new
+nearby facility — and this within-system increase is not explained by
+treatment changes.
+
+### Data requirements
+- UCMR3 and UCMR4 data (publicly available from EPA)
+- Facility start dates from the FRS database (already in hand)
+- PWSID crosswalk across UCMR rounds
+
+### Key challenge
+UCMR3 and UCMR4 covered fewer systems and fewer compounds than UCMR5,
+so the matched panel will be smaller and compound coverage will be
+limited. Staggered adoption DiD methods (Callaway & Sant'Anna 2021,
+Sun & Abraham 2021) would be appropriate given that facilities open in
+different years across the sample.
+
+### R implementation sketch
+```r
+library(did)       # Callaway & Sant'Anna estimator
+library(fixest)    # High-dimensional FE
+
+# After building panel:
+# panel has columns: PWSID, round, log_PFAS, treatment_year, controls
+
+# Callaway & Sant'Anna DiD
+cs_did <- att_gt(
+  yname   = "log_PFOS",
+  tname   = "round",
+  idname  = "PWSID",
+  gname   = "treatment_year",
+  data    = panel_data,
+  control_group = "notyettreated"
+)
+aggte(cs_did, type = "simple")
+```
+
+---
+
+## 2. Hydrological Flow-Path Distances
+
+### The limitation it addresses
+Euclidean (straight-line) distance is a fundamental misspecification of
+how PFAS actually reaches a water system. PFAS moves through groundwater
+plumes and surface water drainage networks — a facility 50 km upstream
+on the same river is a far more dangerous contamination source than one
+2 km away with no hydraulic connection. All eight models in the current
+analysis use Euclidean distance, which adds substantial noise to the
+exposure variable and likely attenuates true effects.
+
+### The idea
+The USGS **National Hydrography Dataset Plus** (NHDPlus) provides a
+complete, routed network of U.S. surface water flowlines with
+upstream-downstream connectivity. For each water system, the true
+exposure measure should capture:
+
+1. **Whether a facility is hydraulically connected** (upstream in the
+   same catchment)
+2. **How far upstream** it is along the flow path
+3. **The ratio of facility drainage area to total catchment area**
+   (dilution factor)
+
+A hydrological IDW index would replace Euclidean distance $d_{ij}$ with
+flow-path distance $f_{ij}$, restricted to facilities that are
+demonstrably upstream:
+
+$$\text{HydroIDW}_i = \sum_{j \in \text{upstream}} \exp\!\left(-\frac{f_{ij}}{\lambda}\right)$$
+
+This would dramatically sharpen the exposure measure by excluding
+facilities with no plausible hydraulic pathway to the water system.
+
+### Data requirements
+- NHDPlus V2 (available from USGS)
+- Water system intake locations (more precise than treatment plant
+  addresses — would require EPA or state records)
+- `nhdplusTools` R package for flow-path routing
+
+### R implementation sketch
+```r
+library(nhdplusTools)
+library(sf)
+
+# Get catchment for each water system
+catchment <- get_nldi_basin(
+  nldi_feature = list(featureSource = "comid", featureID = comid_i)
+)
+
+# Find all PFAS facilities within the upstream catchment
+upstream_facilities <- st_filter(pfas_dataset_sf, catchment)
+
+# Compute flow-path distance for each upstream facility
+flow_distances <- get_path_lengths(
+  network = nhdplus_network,
+  from    = facility_comids,
+  to      = water_system_comid
+)
+```
+
+### Key challenge
+Water system intake locations (where raw water is drawn) are often
+different from treatment plant addresses (what ECHO geocodes). Surface
+water intakes are the relevant location for contamination exposure, but
+this data requires state-level records or EPA's Safe Drinking Water
+Information System (SDWIS) intake files, which are not uniformly
+geocoded.
+
+---
+
+## 3. Source Water (Pre-Treatment) Concentrations
+
+### The limitation it addresses
+The most fundamental problem in the current analysis is **treatment
+confounding**: UCMR5 measures PFAS at the tap, *after* treatment. The
+most industrially exposed utilities have the most sophisticated
+treatment, suppressing the observed signal. This means the current
+analysis systematically understates the relationship between industrial
+proximity and actual contamination burden. Measuring PFAS in *source
+water* before treatment removes this entire confounder.
+
+### The idea
+Several states — Minnesota, Michigan, Massachusetts, California, New
+Jersey — have conducted source water PFAS monitoring programs that
+measure concentrations at intake points before treatment processes.
+Compiling these state datasets and merging them with UCMR5 PWSIDs would
+allow:
+
+1. A direct replication of the current analysis with pre-treatment
+   concentrations as the outcome
+2. A comparison of proximity effects in source vs. finished water to
+   directly quantify the magnitude of treatment confounding
+
+If the hypothesis is correct, proximity effects should be **substantially
+larger and more consistent** in source water models than in the
+finished-water models estimated here.
+
+### Data requirements
+- State source water monitoring data (varies by state — Minnesota DNR,
+  Michigan EGLE, and NJDEP have the most complete programs)
+- PWSID crosswalk between state records and UCMR5
+
+### Key challenge
+State source water programs use different sampling protocols, detection
+limits, and compound panels than UCMR5, requiring careful harmonization.
+Coverage is also geographically uneven — states without active programs
+would be excluded.
+
+---
+
+## 4. Facility-Level Emissions Data
+
+### The limitation it addresses
+The current facility database classifies sites as "PFAS-adjacent" based
+on NAICS industry code — a binary, coarse measure. Not every petroleum
+refinery emits PFAS; not every electroplating facility discharges into
+groundwater. This misclassification adds noise that attenuates
+coefficients. Replacing the binary NAICS indicator with a continuous,
+facility-specific PFAS emission or use intensity measure would sharpen
+the exposure variable.
+
+### The idea
+Two data sources could provide facility-level emissions intensity:
+
+**EPA Toxics Release Inventory (TRI):** As of 2020, certain PFAS
+compounds are required to be reported under TRI. The TRI database
+contains facility-specific annual release quantities (in pounds) for
+air, water, and land releases. A TRI-weighted IDW index would replace
+the binary facility indicator with actual reported emissions:
+
+$$\text{TRI-IDW}_i = \sum_j \frac{\text{Emissions}_j}{\exp(d_{ij}/\lambda)}$$
+
+**State Discharge Permits (NPDES):** EPA's ECHO database contains
+National Pollutant Discharge Elimination System permit records. States
+that have begun requiring PFAS effluent monitoring in industrial
+discharge permits (Minnesota, Michigan, Maine) provide facility-level
+PFAS concentrations in treated wastewater — a direct measure of
+discharge intensity.
+
+### R implementation sketch
+```r
+# TRI PFAS releases (post-2020)
+tri_pfas <- fread("PFAS_Project_Data/tri/tri_2023.csv") %>%
+  filter(CAS_NUMBER %in% pfas_cas_codes) %>%
+  group_by(FACILITY_ID, LATITUDE, LONGITUDE) %>%
+  summarise(total_release_lbs = sum(TOTAL_RELEASES, na.rm = TRUE))
+
+# Emission-weighted IDW
+emission_idw <- function(water_coord, facility_data, lambda = 10000) {
+  dists <- st_distance(water_coord, facility_data) %>% as.numeric()
+  sum(facility_data$total_release_lbs * exp(-dists / lambda))
+}
+```
+
+### Key challenge
+TRI PFAS reporting only began in 2020 and covers a limited set of
+compounds. Many PFAS-emitting facilities are exempt from TRI reporting
+thresholds. Coverage will improve in future years but is currently
+incomplete.
+
+---
+
+## 5. Post-2002 Facility Database
+
+### The limitation it addresses
+The current pre-2002 specifications were designed to capture the legacy
+contamination footprint, but the results for PFPeA and PFHxA suggest
+these short-chain compounds are associated with *contemporary*
+post-2002 replacement chemistries — not legacy manufacturing. The
+current facility database does not distinguish between legacy and modern
+PFAS chemistries, making it a blunt instrument for compounds that have
+become prevalent only recently.
+
+### The idea
+Construct a complementary exposure index restricted to facilities with
+`START_DATE >= 2002-01-01`. This captures the contemporary manufacturing
+footprint that replaced PFOS/PFOA production. Compare:
+
+| Model | Facility Sample | Best Predicted Compounds |
+|-------|----------------|--------------------------|
+| Pre-2002 IDW | Facilities started before 2002 | PFOS, PFOA (legacy) |
+| Post-2002 IDW | Facilities started 2002 or after | PFPeA, PFHxA, PFBS (replacement) |
+| Full IDW | All facilities | Mixed |
+
+If the hypothesis is correct, the post-2002 IDW should show positive
+associations for the short-chain replacement compounds that the pre-2002
+measure cannot capture — directly explaining the counterintuitive
+negative signs seen in the current analysis.
+
+### R implementation sketch
+```r
+# Already have Pfas_dataset_with_dates — just split by date
+pfas_post2002 <- Pfas_dataset_with_dates %>%
+  filter(START_DATE_FORMAT >= as.Date("2002-01-01"))
+
+df1_sf_post2002 <- st_as_sf(pfas_post2002,
+                             coords = c("LONGITUDE83", "LATITUDE83"),
+                             crs = 4326)
+
+dist_matrix_post2002 <- st_distance(df2_sf, df1_sf_post2002)
+
+UCMR5_wide_filter_multiple_zip_codes$nearest_distance_post2002_m <-
+  apply(dist_matrix_post2002, 1, min)
+
+analysis_data <- analysis_data %>%
+  mutate(
+    idw_post2002_exposure_10km = apply(dist_matrix_post2002, 1, idw_10)
+  )
+```
+
+This extension requires no new data and could be implemented
+immediately as a robustness check on the current codebase.
+
+---
+
+## 6. Spatial Regression and Geographic Spillovers
+
+### The limitation it addresses
+Standard OLS assumes that observations are independent. PFAS
+contamination is spatially autocorrelated — a water system with high
+PFAS is likely located near other water systems with high PFAS, for
+reasons related to shared geology, shared source water, or proximity to
+the same facility. Ignoring this spatial dependence produces
+inefficient estimates and can bias inference.
+
+### The idea
+Spatial econometric models explicitly model geographic dependence:
+
+**Spatial Lag Model (SLM):** Allows the PFAS concentration at one
+water system to be partially determined by concentrations at nearby
+systems — capturing diffusion and shared contamination.
+
+$$\log(PFAS_i) = \rho W \log(PFAS_j) + \beta X_i + \varepsilon_i$$
+
+**Spatial Error Model (SEM):** Models spatial autocorrelation in the
+error term, producing correct standard errors without assuming a
+specific spillover mechanism.
+
+**Geographically Weighted Regression (GWR):** Estimates
+location-specific coefficients, allowing the proximity-PFAS
+relationship to vary across regions. A facility near a highly
+permeable sand aquifer in New Jersey may have a much stronger effect
+than the same facility near consolidated bedrock in New England.
+
+### R implementation sketch
+```r
+library(spdep)
+library(spatialreg)
+
+# Build spatial weights matrix
+coords_sf <- st_as_sf(analysis_data, coords = c("lon", "lat"), crs = 4326)
+nb       <- dnearneigh(coords_sf, 0, 50000)  # within 50 km
+listw    <- nb2listw(nb, style = "W")
+
+# Moran's I test for spatial autocorrelation
+moran.test(analysis_data$log_PFOS, listw)
+
+# Spatial lag model
+slm <- lagsarlm(log_PFOS ~ nearest_distance_m,
+                data  = analysis_data,
+                listw = listw)
+summary(slm)
+```
+
+---
+
+## 7. Compound-Specific NAICS Refinement
+
+### The limitation it addresses
+The current 39-NAICS facility database treats all PFAS-adjacent
+industries as equivalent sources for all PFAS compounds. In reality,
+different industries emit different PFAS compound profiles:
+semiconductor fabs (NAICS 334413) primarily use PFPeA and PFHxA;
+metal plating (NAICS 332812, 332813) is associated with PFOS-based
+chemistry; textile coating (NAICS 313320) uses fluoropolymer
+dispersions associated with PFOA. Assigning compound-specific
+exposure measures would sharpen the signal-to-noise ratio for each
+outcome.
+
+### The idea
+Build compound-specific facility subsets based on documented
+PFAS chemistry by NAICS code, then estimate separate exposure
+measures for each PFAS compound:
+
+| Compound | Most Relevant NAICS Codes |
+|----------|--------------------------|
+| PFOS | 332812, 332813, 334413, 488119 (electroplating, airports/AFFF) |
+| PFOA | 313320, 325510, 325612 (textile coating, paint/varnish) |
+| PFHxA, PFPeA | 334413, 334419 (semiconductor manufacturing) |
+| PFBS | 325199, 325998 (industrial chemicals, PFBS-based replacement) |
+| PFBA | 322220, 323111 (food packaging, printing) |
+
+A compound-specific IDW index would only sum exposure over facilities
+in the relevant industries for each regression, rather than treating
+all 39 NAICS codes as equivalent sources for every PFAS compound.
+
+---
+
+## 8. Summary Priority Table
+
+| Direction | New Data Needed | Implementation Difficulty | Expected Impact on Hypothesis |
+|-----------|----------------|--------------------------|-------------------------------|
+| DiD across UCMR rounds | UCMR3/UCMR4 (available) | Medium | **High** — removes all time-invariant confounding |
+| Hydrological distances | NHDPlus + intake locations | High | **High** — corrects fundamental exposure misspecification |
+| Source water concentrations | State monitoring data | High | **Very High** — eliminates treatment confounding entirely |
+| Facility-level TRI emissions | TRI database (available) | Low–Medium | **Medium** — sharpens exposure variable |
+| Post-2002 facility index | No new data needed | **Low** | **Medium** — explains short-chain compound patterns |
+| Spatial regression | No new data needed | **Low** | Low–Medium — corrects standard errors |
+| Compound-specific NAICS | Literature review | Low | **Medium** — reduces exposure noise |
+
+---
+
+## Recommended Next Step
+
+The highest-impact extension requiring no new data is the **post-2002
+facility index** (Direction 5) — it can be implemented immediately in
+`clean_data_construction.R` by filtering `Pfas_dataset_with_dates` on
+`START_DATE_FORMAT >= "2002-01-01"` and recomputing the distance matrix
+and IDW index. If post-2002 IDW shows positive associations for PFPeA
+and PFHxA — the compounds with counterintuitive negative signs in the
+current pre-2002 models — it would directly support the source-substitution
+interpretation and demonstrate that the facility database's temporal
+stratification is doing real identificatory work.
+
+The highest-impact extension requiring new data is **source water
+concentrations** (Direction 3). A multi-state compilation of pre-treatment
+PFAS monitoring data would allow a direct test of the hypothesis
+uncontaminated by treatment investment geography — and would be a
+meaningful contribution to the environmental economics literature
+regardless of outcome.
+
+---
+
+*Prepared as part of the Big Blue Research (BBR) Scholars Program,
+University of Nebraska–Lincoln, June 2026.*

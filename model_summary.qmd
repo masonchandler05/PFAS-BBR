@@ -1,0 +1,30 @@
+---
+title: "Model Specifications"
+format: html
+---
+
+```{r}
+#| echo: false
+#| message: false
+library(tidyverse)
+library(knitr)
+
+tibble(
+  `Table`              = c("results", "results_fixed_effects", "results_buffer", "results_wide", "results_idw", "results_pre2002", "results_idw_fixed_effects", "results_idw_pre2002"),
+  `Outcome`            = rep("log(PFAS compound)", 8),
+  `Key Regressor`      = c("nearest_distance_m", "nearest_distance_m", "km1 / km5 / km10 / km25", "km1 / km5 / km10 / km25", "idw_exposure_10km", "nearest_distance_pre2002_m", "idw_exposure_10km", "idw_pre2002_exposure_10km"),
+  `Controls`           = c("Treatment covariates", "ZIPCODE FE", "None", "None", "Treatment covariates", "ZIPCODE FE", "ZIPCODE FE", "ZIPCODE FE"),
+  `Facility Sample`    = c("All", "All", "All", "All", "All (top 10)", "Pre-2002 only", "All (top 10)", "Pre-2002 only (top 10)"),
+  `Notes`              = c(
+    "Baseline OLS across all PFAS outcomes",
+    "Absorbs zip-level confounders; coefficient reported in km",
+    "Binary: facility within 1 / 5 / 10 / 25 km",
+    "results_buffer pivoted wide — one column per buffer distance",
+    "Σ exp(−d / 10 km) over 10 nearest facilities; continuous exposure index",
+    "Uses only factories opened before 2002; coefficient reported in km",
+    "IDW exposure over 10 nearest facilities with zip-level fixed effects",
+    "IDW exposure restricted to pre-2002 facilities with zip-level fixed effects"
+  )
+) |>
+  kable(align = "llllll")
+```

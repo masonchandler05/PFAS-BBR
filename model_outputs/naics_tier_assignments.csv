@@ -1,0 +1,40 @@
+"code","sector","tier","description","weight","epa_regulated","n_facilities","n_pre2002"
+"332813","metal",1,"Electroplating, plating, anodizing (chrome PFOS mist suppressant)",1,TRUE,2729,1563
+"332812","metal",1,"Metal coating, engraving, heat treating",1,TRUE,1399,612
+"325998","chemical",1,"All other misc chemical product & prep (PFAS formulation)",1,TRUE,1292,568
+"562212","waste",1,"Solid waste landfill (leachate reservoir)",1,TRUE,1233,346
+"325211","chemical",1,"Plastics material & resin mfg (fluoropolymers, PTFE)",1,TRUE,943,437
+"325510","chemical",1,"Paint & coating mfg (fluoropolymer coatings)",1,TRUE,914,432
+"488119","airport",1,"Other airport operations (AFFF firefighting foam)",1,FALSE,774,270
+"325199","chemical",1,"All other basic organic chemical mfg (fluorochemicals)",1,TRUE,738,235
+"313320","textile",1,"Fabric coating mills (water/stain repellents)",1,FALSE,164,60
+"314110","textile",1,"Carpet & rug mills (stain-repellent treatments)",1,FALSE,59,18
+"313310","textile",1,"Textile & fabric finishing mills",1,FALSE,0,0
+"322220","paper",1,"Paper bag & coated/treated paper mfg (direct grease-proofing application)",1,FALSE,0,0
+"562112","waste",2,"Hazardous waste collection",0.5,FALSE,1404,349
+"334419","electronics",2,"Other electronic component mfg",0.5,FALSE,754,521
+"334413","electronics",2,"Semiconductor & related device mfg (fluorinated etchants)",0.5,FALSE,668,352
+"562211","waste",2,"Hazardous waste treatment & disposal",0.5,FALSE,515,213
+"325611","chemical",2,"Soap & detergent mfg",0.5,FALSE,417,175
+"562219","waste",2,"Other nonhazardous waste treatment & disposal",0.5,FALSE,380,85
+"325612","chemical",2,"Polish & other sanitation good mfg",0.5,FALSE,331,182
+"324110","petroleum",2,"Petroleum refineries",0.5,FALSE,251,74
+"326113","plastics",2,"Unlaminated plastics film & sheet mfg",0.5,FALSE,245,110
+"562213","waste",2,"Solid waste combustors & incinerators",0.5,FALSE,221,49
+"322121","paper",2,"Paper (except newsprint) mills (grease-resistant)",0.5,FALSE,203,86
+"313210","textile",2,"Broadwoven fabric mills",0.5,FALSE,201,92
+"326112","plastics",2,"Plastics packaging film & sheet mfg",0.5,FALSE,147,58
+"322130","paper",2,"Paperboard mills",0.5,FALSE,131,53
+"316110","textile",2,"Leather & hide tanning & finishing (water repellents)",0.5,FALSE,93,53
+"313230","textile",2,"Nonwoven fabric mills",0.5,FALSE,79,25
+"313110","textile",2,"Fiber, yarn & thread mills",0.5,FALSE,0,0
+"313220","textile",2,"Narrow fabric mills",0.5,FALSE,0,0
+"314910","textile",2,"Textile bag & canvas mills",0.5,FALSE,0,0
+"322219","paper",2,"Other paperboard container mfg",0.5,FALSE,0,0
+"323111","printing",3,"Commercial / gravure printing",0.15,FALSE,1813,851
+"332999","metal",3,"All other misc fabricated metal product mfg",0.15,FALSE,1729,926
+"424690","wholesale",3,"Other chemical & allied products merchant wholesalers",0.15,FALSE,831,289
+"335999","electronics",3,"All other misc electrical equipment mfg",0.15,FALSE,412,248
+"324191","petroleum",3,"Petroleum lubricating oil & grease mfg",0.15,FALSE,409,179
+"323120","printing",3,"Support activities for printing",0.15,FALSE,0,0
+"333318","other",3,"Other commercial & service industry machinery mfg",0.15,FALSE,0,0

@@ -6,9 +6,9 @@ library(sp)
 # start manufacturing plant locations 
 
 # loading in datasets 
-facilities <- fread("~/Downloads/national_combined/NATIONAL_FACILITY_FILE.CSV")
-naics_codes <- fread("~/Downloads/national_combined/NATIONAL_NAICS_FILE.CSV")
-enviornmental <- fread("~/Downloads/national_combined/NATIONAL_ENVIRONMENTAL_INTEREST_FILE.CSV") 
+facilities <- fread("PFAS_Project_Data/frs/NATIONAL_FACILITY_FILE.CSV")
+naics_codes <- fread("PFAS_Project_Data/frs/NATIONAL_NAICS_FILE.CSV")
+enviornmental <- fread("PFAS_Project_Data/frs/NATIONAL_ENVIRONMENTAL_INTEREST_FILE.CSV") 
 
 #filtering enviornmental dataset to only include locations with a start date 
 enviornmental1 <- enviornmental %>%
@@ -124,8 +124,8 @@ naics_count_summary <- pfas_dataset %>%
 # start water treatment center locations 
 
 # pulling in data 
-water_flow <- read.csv("~/Downloads/2022CWNS_NATIONAL_APR2024/FLOW.csv")
-water_treatment_locations <- read.csv("~/Downloads/2022CWNS_NATIONAL_APR2024/PHYSICAL_LOCATION.csv")
+water_flow <- read.csv("PFAS_Project_Data/cwns/FLOW.csv")
+water_treatment_locations <- read.csv("PFAS_Project_Data/cwns/PHYSICAL_LOCATION.csv")
 
 # filtering water flow to only industrial flow 
 industrial_water_treatment_centers <- water_flow %>%
@@ -158,8 +158,8 @@ plot(geospace_water_treatments, pch = 20, col = "steelblue")
 library(dplyr)
 
 #load in military locations 
-dod <- read.csv("pfas_progress_june_2021.csv")
-mirta <- read.csv("~/Downloads/mirta_-223606765265040761.csv")
+dod <- read.csv("PFAS_Project_Data/military/pfas_progress_june_2021.csv")
+mirta <- read.csv("PFAS_Project_Data/military/mirta_-223606765265040761.csv")
 
 # merge together all of the same locations 
 fireSite <- mirta %>%

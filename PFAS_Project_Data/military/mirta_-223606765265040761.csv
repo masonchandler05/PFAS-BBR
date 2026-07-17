@@ -1,0 +1,738 @@
+﻿OBJECTID,SE_ANNO_CAD_DATA,Country,Feature Description,Feature Name,Controlled Unclassified Information Indicator,Is FIRRMA Site,Is Joint Base,Media Identifier,Primary Key Identifier,Globally Unique Identifier,Site Name,Site Operational Status,Site Reporting Component Code,State Name Code,x,y
+1,System.Byte[],usa,na,Army Research Office,no,yes,no,na, ,,Army Research Office,act,usa,nc,-78.89884,35.9939400000001
+2,System.Byte[],usa,na,Stratford Army Engine Plant,no,no,no,na, ,,Stratford Army Engine Plant,clsd,usa,CT,-73.12999,41.1800000000001
+3,System.Byte[],usa,na,Devens Reserve Forces Tng Area,no,no,no,na, ,,Devens Reserve Forces Tng Area,act,usar,MA,-71.65814065,42.4959652650001
+4,System.Byte[],usa,na,Fort Campbell,no,yes,no,na, ,,Fort Campbell,act,usa,TN,-87.599048631,36.5965078790001
+5,System.Byte[],usa,na,NG Snake Creek TS Miramar,no,no,no,na, ,,NG Snake Creek TS Miramar,act,armyNationalGuard,FL,-80.304796467,25.9624301060001
+6,System.Byte[],usa,na,Piñon Canyon Maneuver Site,no,yes,no,na, ,,Piñon Canyon Maneuver Site,act,usa,CO,-103.917980435,37.497708921
+7,System.Byte[],usa,na,Stewart Annex,no,no,no,na, ,,Stewart Annex,act,usa,NY,-74.094335755,41.492587347
+8,System.Byte[],usa,na,NG Sandson AASF,no,no,no,na, ,,NG Sandson AASF,act,armyNationalGuard,VA,-77.3126624229999,37.49414754
+9,System.Byte[],usa,na,NG AASF02 Birmingham,no,no,no,na, ,,NG AASF02 Birmingham,act,armyNationalGuard,AL,-86.750149349,33.5710502320001
+10,System.Byte[],usa,na,Aberdeen Proving Ground,no,yes,no,na, ,,Aberdeen Proving Ground,act,usa,MD,-76.284322185,39.3488873470001
+11,System.Byte[],usa,na,Aliamanu Military Reservation,no,no,no,na, ,,Aliamanu Military Reservation,act,usa,HI,-157.911736764,21.360912296
+12,System.Byte[],usa,na,Allen Stagefield AL,no,no,no,na, ,,Allen Stagefield AL,act,usa,AL,-85.6506347339999,31.2309994290001
+13,System.Byte[],usa,na,Anniston Army Depot,no,yes,no,na, ,,Anniston Army Depot,act,usa,AL,-85.969334083,33.653248885
+14,System.Byte[],usa,na,NG Arden Hills Army Training Site,no,no,no,na, ,,NG Arden Hills Army Training Site,act,armyNationalGuard,MN,-93.161098137,45.094897787
+15,System.Byte[],usa,na,Arlington National Cemetery,no,no,no,na, ,,Arlington National Cemetery,act,usa,VA,-77.068624208,38.876077061
+16,System.Byte[],usa,na,NG Atlanta United Ave,no,no,no,na, ,,NG Atlanta United Ave,act,armyNationalGuard,GA,-84.359876094,33.721048286
+17,System.Byte[],usa,na,NG Auburn Training Site,no,no,no,na, ,,NG Auburn Training Site,act,armyNationalGuard,ME,-70.281721536,44.0848996010001
+18,System.Byte[],usa,na,Badger AAP,no,no,no,na, ,,Badger AAP,EXCS,usa,WI,-89.7233867959999,43.3566698270001
+19,System.Byte[],usa,na,NG Bangor Training Site,no,no,no,na, ,,NG Bangor Training Site,act,armyNationalGuard,ME,-68.837384104,44.8087413120001
+20,System.Byte[],usa,na,NG Beauregard Training Range,no,no,no,na, ,,NG Beauregard Training Range,act,armyNationalGuard,LA,-92.295412775,31.4392788100001
+21,System.Byte[],usa,na,NG Beightler Armory,no,no,no,na, ,,NG Beightler Armory,act,armyNationalGuard,OH,-83.067442894,40.0892143450001
+22,System.Byte[],usa,na,NG Bend Cotef,no,no,no,na, ,,NG Bend Cotef,act,armyNationalGuard,OR,-121.128279438,44.0257926080001
+23,System.Byte[],usa,na,NG Bergstrom - (Abia),no,no,no,na, ,,NG Bergstrom - (Abia),act,armyNationalGuard,TX,-97.672094965,30.1763045930001
+24,System.Byte[],usa,na,NG Biak Training Center COUTES,no,no,no,na, ,,NG Biak Training Center COUTES,act,armyNationalGuard,OR,-121.116707723,44.2004727190001
+25,System.Byte[],usa,na,NG Bismarck RJB Complex,no,no,no,na, ,,NG Bismarck RJB Complex,act,armyNationalGuard,ND,-100.719621823,46.8300911970001
+26,System.Byte[],usa,na,Naval Research Laboratory – Blossom Point,no,yes,no,na, ,,Naval Research Laboratory – Blossom Point,act,usa,MD,-77.092251161,38.421820279
+27,System.Byte[],usa,na,Blue Grass Army Depot,no,yes,no,na, ,,Blue Grass Army Depot,act,usa,KY,-84.2174542779999,37.6989636060001
+28,System.Byte[],usa,na,NG Bog Brook Training Site,no,no,no,na, ,,NG Bog Brook Training Site,act,armyNationalGuard,ME,-70.936916171,44.3955511340001
+29,System.Byte[],usa,na,NG Bremerton,no,no,no,na, ,,NG Bremerton,act,armyNationalGuard,WA,-122.681322243,47.552709765
+30,System.Byte[],usa,na,Brown 4b Stagefield AL,no,no,no,na, ,,Brown 4b Stagefield AL,act,usa,AL,-85.9722716479999,31.3863191620001
+31,System.Byte[],usa,na,Cairns Basefield AL,no,no,no,na, ,,Cairns Basefield AL,act,usa,AL,-85.7148832829999,31.278703916
+32,System.Byte[],usa,na,NG Camp Adair Corvallis,no,no,no,na, ,,NG Camp Adair Corvallis,act,armyNationalGuard,OR,-123.270695908,44.714336368
+33,System.Byte[],usa,na,NG Camp Ashland,no,no,no,na, ,,NG Camp Ashland,act,armyNationalGuard,NE,-96.3364004379999,41.0800098300001
+34,System.Byte[],usa,na,NG Camp Atterbury,no,no,no,na, ,,NG Camp Atterbury,act,armyNationalGuard,IN,-86.046320416,39.29755013
+35,System.Byte[],usa,na,NG Camp Bowie (State),no,no,no,na, ,,NG Camp Bowie (State),act,armyNationalGuard,TX,-98.9354829759999,31.639857717
+36,System.Byte[],usa,na,Camp Dodge,no,yes,no,na, ,,Camp Dodge,act,armyNationalGuard,IA,-93.714710023,41.741475791
+37,System.Byte[],usa,na,NG Camp Fogarty Tng Site,no,no,no,na, ,,NG Camp Fogarty Tng Site,act,armyNationalGuard,RI,-71.49922255,41.615687721
+38,System.Byte[],usa,na,NG Camp Grafton,no,no,no,na, ,,NG Camp Grafton,act,armyNationalGuard,ND,-98.664246447,47.6929460210001
+39,System.Byte[],usa,na,NG Camp Gruber,no,no,no,na, ,,NG Camp Gruber,act,armyNationalGuard,OK,-95.167267083,35.698242356
+40,System.Byte[],usa,na,NG Camp Hartell,no,no,no,na, ,,NG Camp Hartell,act,armyNationalGuard,CT,-72.6658775559999,41.942099324
+41,System.Byte[],usa,na,NG Camp Joseph T Robinson,no,no,no,na, ,,NG Camp Joseph T Robinson,act,armyNationalGuard,AR,-92.3522561629999,34.9300757300001
+42,System.Byte[],usa,na,NG Camp Mabry,no,no,no,na, ,,NG Camp Mabry,act,armyNationalGuard,TX,-97.7615724509999,30.318610789
+43,System.Byte[],usa,na,Camp MacKall,no,yes,no,na, ,,Camp MacKall,act,usa,NC,-79.481604556,35.0300775220001
+44,System.Byte[],usa,na,NG Camp Maxey,no,no,no,na, ,,NG Camp Maxey,act,armyNationalGuard,TX,-95.5602882589999,33.7990870950001
+45,System.Byte[],usa,na,NG Camp Minden Training Site,no,no,no,na, ,,NG Camp Minden Training Site,act,armyNationalGuard,LA,-93.394051921,32.5589228530001
+46,System.Byte[],usa,na,Camp Navajo,no,yes,no,na, ,,Camp Navajo,act,armyNationalGuard,AZ,-111.850576733,35.194830064
+47,System.Byte[],usa,na,NG State Military Reservation Camp Pendleton,no,no,no,na, ,,NG State Military Reservation Camp Pendleton,act,armyNationalGuard,VA,-75.979342317,36.8160534990001
+48,System.Byte[],usa,na,NG Camp Perry Joint Training Center,no,no,no,na, ,,NG Camp Perry Joint Training Center,act,armyNationalGuard,OH,-83.0216458959999,41.5423679780001
+49,System.Byte[],usa,na,NG Camp Rapid,no,no,no,na, ,,NG Camp Rapid,act,armyNationalGuard,SD,-103.266961845,44.0801374910001
+50,System.Byte[],usa,na,NG Camp Nett,no,no,no,na, ,,NG Camp Nett,act,armyNationalGuard,CT,-72.187941286,41.3313898960001
+51,System.Byte[],usa,na,NG Camp Ripley,no,no,no,na, ,,NG Camp Ripley,act,armyNationalGuard,MN,-94.4231019699999,46.2096962680001
+52,System.Byte[],usa,na,NG Camp Sherman Joint Training Center,no,no,no,na, ,,NG Camp Sherman Joint Training Center,act,armyNationalGuard,OH,-82.950954791,39.355634396
+53,System.Byte[],usa,na,NG Camp Smith Tng Site,no,no,no,na, ,,NG Camp Smith Tng Site,act,armyNationalGuard,NY,-73.95068286,41.3117513440001
+54,System.Byte[],usa,na,NG Camp Swift,no,no,no,na, ,,NG Camp Swift,act,armyNationalGuard,TX,-97.294556958,30.261677386
+55,System.Byte[],usa,na,NG Camp Villere,no,no,no,na, ,,NG Camp Villere,act,armyNationalGuard,LA,-89.808812371,30.3237611280001
+56,System.Byte[],usa,na,NG Camp Williams Tomah MTA,no,no,no,na, ,,NG Camp Williams Tomah MTA,act,armyNationalGuard,WI,-90.272942324,43.930382509
+57,System.Byte[],usa,na,NG Camp Withycombe Clackamas,no,no,no,na, ,,NG Camp Withycombe Clackamas,act,armyNationalGuard,OR,-122.559681256,45.412483948
+58,System.Byte[],usa,na,Carlisle Barracks,no,no,no,na, ,,Carlisle Barracks,act,usa,PA,-77.173587506,40.209940417
+59,System.Byte[],usa,na,NG Carville Gillis Long Center,no,no,no,na, ,,NG Carville Gillis Long Center,act,armyNationalGuard,LA,-91.12895049,30.20112034
+60,System.Byte[],usa,na,Military Ocean Terminal Concord,no,yes,no,na, ,,Military Ocean Terminal Concord,act,usa,CA,-122.033255794,38.050106457
+61,System.Byte[],usa,na,NG CTA Camp Mccain,no,no,no,na, ,,NG CTA Camp Mccain,act,armyNationalGuard,MS,-89.686819004,33.7047974590001
+62,System.Byte[],usa,na,NG CTC Camp Dawson-Kingwood,no,no,no,na, ,,NG CTC Camp Dawson-Kingwood,act,armyNationalGuard,WV,-79.6837770069999,39.3792744030001
+63,System.Byte[],usa,na,NG CTC Fort Custer Trng Center,no,no,no,na, ,,NG CTC Fort Custer Trng Center,act,armyNationalGuard,MI,-85.326381877,42.292859435
+64,System.Byte[],usa,na,Camp Frank D Merrill,no,no,no,na, ,,Camp Frank D Merrill,act,usa,GA,-84.103700564,34.628538873
+65,System.Byte[],usa,na,Def Gen Supply Center,no,no,no,na, ,,Def Gen Supply Center,act,usa,VA,-77.4401485289999,37.4136061930001
+66,System.Byte[],usa,na,Defense Distrib Depot Susq,no,no,no,na, ,,Defense Distrib Depot Susq,act,usa,PA,-76.839284494,40.2081942520001
+67,System.Byte[],usa,na,Defense Supply Center Columbus,no,no,no,na, ,,Defense Supply Center Columbus,act,usa,OH,-82.898525814,39.9796102400001
+68,System.Byte[],usa,na,Tooele Army Depot ,no,yes,no,na, ,,Tooele Army Depot ,act,usa,UT,-112.343088801,40.2970514720001
+69,System.Byte[],usa,na,Destin Moreno Point,no,no,no,na, ,,Destin Moreno Point,act,usa,FL,-86.498903417,30.4110996370001
+70,System.Byte[],usa,na,Detroit Arsenal,no,yes,no,na, ,,Detroit Arsenal,act,usa,MI,-83.041334139,42.4973287650001
+71,System.Byte[],usa,na,Dillingham Mil Res,no,no,no,na, ,,Dillingham Mil Res,act,usa,HI,-158.198758593,21.5763140230001
+72,System.Byte[],usa,na,West Desert Test Center,no,yes,no,na, ,,West Desert Test Center,act,usa,UT,-113.212460854,40.1887046860001
+73,System.Byte[],usa,na,NG Duluth NG Armory,no,no,no,na, ,,NG Duluth NG Armory,act,armyNationalGuard,MN,-92.158834386,46.8337009730001
+74,System.Byte[],usa,na,NG Edgemeade TS Mtn Home,no,no,no,na, ,,NG Edgemeade TS Mtn Home,act,armyNationalGuard,ID,-115.652534664,43.144243391
+75,System.Byte[],usa,na,England Authority,no,no,no,na, ,,England Authority,act,usa,LA,-92.5405492039999,31.334875772
+76,System.Byte[],usa,na,NG Esler Field,no,no,no,na, ,,NG Esler Field,act,armyNationalGuard,LA,-92.297282678,31.397734713
+77,System.Byte[],usa,na,NG Florence Military Reservation,no,no,no,na, ,,NG Florence Military Reservation,act,armyNationalGuard,AZ,-111.348923348,33.103933258
+78,System.Byte[],usa,na,NG Floyd Edsall Training Center,no,no,no,na, ,,NG Floyd Edsall Training Center,act,armyNationalGuard,NV,-115.034175927,36.293351767
+79,System.Byte[],usa,na,Fort Walker,no,no,no,na, ,,Fort Walker,act,usa,VA,-77.2659403769999,38.0709713530001
+80,System.Byte[],usa,na,Fort Belvoir,no,yes,no,na, ,,Fort Belvoir,act,usa,VA,-77.18175468,38.6959255800001
+81,System.Byte[],usa,na,Fort Benjamin Harrison,no,no,no,na, ,,Fort Benjamin Harrison,clsd,usa,IN,-86.025865857,39.8586218950001
+82,System.Byte[],usa,na,Fort Benning,no,yes,no,na, ,,Fort Benning,act,usa,GA,-84.800503604,32.3999651170001
+83,System.Byte[],usa,na,Fort Bliss,no,yes,no,na, ,,Fort Bliss,act,usa,TX,-106.42110798,31.8084622870001
+84,System.Byte[],usa,na,Fort Bragg,no,yes,no,na, ,,Fort Bragg,act,usa,NC,-79.141254681,35.108711557
+85,System.Byte[],usa,na,Fort Buchanan,no,no,no,na, ,,Fort Buchanan,act,usar,PR,-66.11985063,18.4106470720001
+86,System.Byte[],usa,na,Fort Carson,no,yes,no,na, ,,Fort Carson,act,usa,CO,-104.826738781,38.558899126
+87,System.Byte[],usa,na,NG Fort Chaffee MTC,no,no,no,na, ,,NG Fort Chaffee MTC,act,armyNationalGuard,AR,-94.114407432,35.2413785520001
+88,System.Byte[],usa,na,Fort De Russy,no,no,no,na, ,,Fort De Russy,act,usa,HI,-157.833910094,21.28184987
+89,System.Byte[],usa,na,Fort Detrick,no,yes,no,na, ,,Fort Detrick,act,usa,MD,-77.4249809419999,39.4411789120001
+90,System.Byte[],usa,na,Fort Drum,no,yes,no,na, ,,Fort Drum,act,usa,NY,-75.5920011059999,44.124900096
+91,System.Byte[],usa,na,Fort Meade,no,yes,no,na, ,,Fort Meade,act,usa,MD,-76.744743596,39.108811001
+92,System.Byte[],usa,na,Fort Eisenhower,no,yes,no,na, ,,Fort Eisenhower,act,usa,GA,-82.237258502,33.3566879900001
+93,System.Byte[],usa,na,Fort Greely,no,yes,no,na, ,,Fort Greely,act,usa,AK,-145.715116102,63.966800682
+94,System.Byte[],usa,na,Fort Hamilton,no,no,no,na, ,,Fort Hamilton,act,usa,NY,-74.0281426929999,40.608190361
+95,System.Byte[],usa,na,Fort Cavazos,no,yes,no,na, ,,Fort Cavazos,act,usa,TX,-97.7370312689999,31.215790494
+96,System.Byte[],usa,na,Fort Huachuca,no,yes,no,na, ,,Fort Huachuca,act,usa,AZ,-110.384085043,31.53269906
+97,System.Byte[],usa,na,Fort Hunter Liggett,no,no,no,na, ,,Fort Hunter Liggett,act,usar,CA,-121.229049717,35.9036973090001
+98,System.Byte[],usa,na,NG Fort Indiantown Gap,no,no,no,na, ,,NG Fort Indiantown Gap,act,armyNationalGuard,PA,-76.63350667,40.4461435850001
+99,System.Byte[],usa,na,Fort Jackson,no,no,no,na, ,,Fort Jackson,act,usa,SC,-80.747595006,34.0355082630001
+100,System.Byte[],usa,na,Fort Knox,no,yes,no,na, ,,Fort Knox,act,usa,KY,-85.883786373,37.9073002740001
+101,System.Byte[],usa,na,Fort Leavenworth,no,yes,no,na, ,,Fort Leavenworth,act,usa,KS,-94.91410575,39.334318637
+102,System.Byte[],usa,na,Fort Gregg-Adams,no,yes,no,na, ,,Fort Gregg-Adams,act,usa,VA,-77.332654968,37.235745089
+103,System.Byte[],usa,na,Fort Leonard Wood,no,yes,no,na, ,,Fort Leonard Wood,act,usa,MO,-92.157110947,37.705539711
+104,System.Byte[],usa,na,Joint Base Lewis-McChord,no,yes,yes,na, ,,Joint Base Lewis-McChord,act,usa,WA,-122.591643654,47.0502057210001
+105,System.Byte[],usa,na,NG Fort McClellan ARNG Tng Center,no,no,no,na, ,,NG Fort McClellan ARNG Tng Center,act,armyNationalGuard,AL,-85.7881769219999,33.7335273210001
+106,System.Byte[],usa,na,Fort McCoy,no,no,no,na, ,,Fort McCoy,act,usar,WI,-90.676535009,44.0335584590001
+107,System.Byte[],usa,na,Fort Monmouth Main Post,no,no,no,na, ,,Fort Monmouth Main Post,clsd,usa,NJ,-74.043976497,40.313492884
+108,System.Byte[],usa,na,Fort Monroe,no,no,no,na, ,,Fort Monroe,care,usa,VA,-76.304806561,37.0056582780001
+109,System.Byte[],usa,na,Joint Base Myer-Henderson Hall,no,yes,no,na, ,,Joint Base Myer-Henderson Hall,act,usa,VA,-77.080328373,38.879998454
+110,System.Byte[],usa,na,NG Fort Barfoot MTC & FMS 15,no,no,no,na, ,,NG Fort Barfoot MTC & FMS 15,act,armyNationalGuard,VA,-77.910554846,37.037408971
+111,System.Byte[],usa,na,Fort Johnson,no,yes,no,na, ,,Fort Johnson,act,usa,LA,-93.075648185,31.0643405800001
+112,System.Byte[],usa,na,Fort Riley,no,yes,no,na, ,,Fort Riley,act,usa,KS,-96.820897701,39.1867684600001
+113,System.Byte[],usa,na,Fort Novosel ,no,yes,no,na, ,,Fort Novosel ,act,usa,AL,-85.7473172529999,31.403954873
+114,System.Byte[],usa,na,Fort Shafter,no,yes,no,na, ,,Fort Shafter,act,usa,HI,-157.883504121,21.3458395650001
+115,System.Byte[],usa,na,Fort Sill,no,yes,no,na, ,,Fort Sill,act,usa,OK,-98.5191803289999,34.6813451990001
+116,System.Byte[],usa,na,Fort Stewart,no,yes,no,na, ,,Fort Stewart,act,usa,GA,-81.6167684389999,31.9936303280001
+117,System.Byte[],usa,na,Fort Wainwright,no,yes,no,na, ,,Fort Wainwright,act,usa,AK,-147.708817653,64.545239667
+118,System.Byte[],usa,na,Fort Wingate Depot Activity,no,no,no,na, ,,Fort Wingate Depot Activity,clsd,usa,NM,-108.595808472,35.4768270320001
+119,System.Byte[],usa,na,NG Fort Wolters,no,no,no,na, ,,NG Fort Wolters,act,armyNationalGuard,TX,-98.0483942129999,32.849373294
+120,System.Byte[],usa,na,NG Fort Worth - Shoreview,no,no,no,na, ,,NG Fort Worth - Shoreview,act,armyNationalGuard,TX,-97.460192633,32.778259188
+121,System.Byte[],usa,na,NG Frankfort Boone NG Center,no,no,no,na, ,,NG Frankfort Boone NG Center,act,armyNationalGuard,KY,-84.914634307,38.1826747800001
+122,System.Byte[],usa,na,NG Ft Allen Rq 177,no,no,no,na, ,,NG Ft Allen Rq 177,act,armyNationalGuard,PR,-66.5040673249999,18.0068320240001
+123,System.Byte[],usa,na,NG Ft Ruger,no,no,no,na, ,,NG Ft Ruger,act,armyNationalGuard,HI,-157.805123367,21.262823693
+124,System.Byte[],usa,na,Goldberg Stagefield AL,no,no,no,na, ,,Goldberg Stagefield AL,act,usa,AL,-85.463402511,31.4151606030001
+125,System.Byte[],usa,na,NG Grand Island AASF/RC,no,no,no,na, ,,NG Grand Island AASF/RC,act,armyNationalGuard,NE,-98.29879207,40.9618174340001
+126,System.Byte[],usa,na,Grand Prairie Reserve Complex,no,no,no,na, ,,Grand Prairie Reserve Complex,act,usar,TX,-96.9564404389999,32.739958121
+127,System.Byte[],usa,na,Green River Test Complex UT,no,no,no,na, ,,Green River Test Complex UT,semi,usa,UT,-110.092321076,38.9619027260001
+128,System.Byte[],usa,na,NG Greenlief TS/UTES 01,no,no,no,na, ,,NG Greenlief TS/UTES 01,act,armyNationalGuard,NE,-98.275621136,40.545928771
+129,System.Byte[],usa,na,NG GUARNG Barrigada Complex,no,no,no,na, ,,NG GUARNG Barrigada Complex,act,armyNationalGuard,GU,144.810171347,13.474748028
+130,System.Byte[],usa,na,NG Gulfport AVCRAD,no,no,no,na, ,,NG Gulfport AVCRAD,act,armyNationalGuard,MS,-89.062874436,30.4161869530001
+131,System.Byte[],usa,na,NG Hammond Airport,no,no,no,na, ,,NG Hammond Airport,act,armyNationalGuard,LA,-90.4122817799999,30.523953422
+132,System.Byte[],usa,na,NG Havre De Grace Military Res,no,no,no,na, ,,NG Havre De Grace Military Res,act,armyNationalGuard,MD,-76.104116661,39.5326627580001
+133,System.Byte[],usa,na,Hawthorne Army Depot,no,yes,no,na, ,,Hawthorne Army Depot,act,usa,NV,-118.768579551,38.57191477
+134,System.Byte[],usa,na,Helemano Military Reservation,no,no,no,na, ,,Helemano Military Reservation,act,usa,HI,-158.020016016,21.5353170390001
+135,System.Byte[],usa,na,NG Helena Aviation RC- AASF- C12,no,no,no,na, ,,NG Helena Aviation RC- AASF- C12,act,armyNationalGuard,MT,-111.971054136,46.608478215
+136,System.Byte[],usa,na,Highbluff Stagefield AL,no,no,no,na, ,,Highbluff Stagefield AL,act,usa,AL,-85.737581957,31.150700715
+137,System.Byte[],usa,na,NG Hollidaysburg Readiness Center,no,no,no,na, ,,NG Hollidaysburg Readiness Center,act,armyNationalGuard,PA,-78.414815904,40.439086967
+138,System.Byte[],usa,na,NG Hollis Plains Training Site,no,no,no,na, ,,NG Hollis Plains Training Site,act,armyNationalGuard,ME,-70.6637497249999,43.6687900430001
+139,System.Byte[],usa,na,Holston Army Ammunition Plant,no,yes,no,na, ,,Holston Army Ammunition Plant,act,usa,TN,-82.6538040579999,36.5151651520001
+140,System.Byte[],usa,na,Hunt Stagefield AL,no,no,no,na, ,,Hunt Stagefield AL,act,usa,AL,-85.580111017,31.3801592080001
+141,System.Byte[],usa,na,Hunter Army Airfield,no,no,no,na, ,,Hunter Army Airfield,act,usa,GA,-81.153558393,32.009658571
+142,System.Byte[],usa,na,Indiana Army Ammunition Plant,no,no,no,na, ,,Indiana Army Ammunition Plant,clsd,usa,IN,-85.606005626,38.452268163
+143,System.Byte[],usa,na,NG Indianapolis 38 ID,no,no,no,na, ,,NG Indianapolis 38 ID,act,armyNationalGuard,IN,-86.228164862,39.7443784870001
+144,System.Byte[],usa,na,Iowa Army Ammunition Plant,no,yes,no,na, ,,Iowa Army Ammunition Plant,act,usa,IA,-91.245617731,40.7920119570001
+145,System.Byte[],usa,na,NG ITC Camp San Luis Obisbo,no,no,no,na, ,,NG ITC Camp San Luis Obisbo,act,armyNationalGuard,CA,-120.694492836,35.3459253730001
+146,System.Byte[],usa,na,NG Jackson Airport Armory,no,no,no,na, ,,NG Jackson Airport Armory,act,armyNationalGuard,TN,-88.912958915,35.5981462930001
+147,System.Byte[],usa,na,NG Jackson Bks,no,no,no,na, ,,NG Jackson Bks,act,armyNationalGuard,LA,-90.001799906,29.9680734830001
+148,System.Byte[],usa,na,Jefferson Proving Ground,no,no,no,na, ,,Jefferson Proving Ground,clsd,usa,IN,-85.417551085,38.950544715
+149,System.Byte[],usa,na,NG Montgomery JFHQ AFRC / CSMS 01,no,no,no,na, ,,NG Montgomery JFHQ AFRC / CSMS 01,act,armyNationalGuard,AL,-86.259359111,32.4058257610001
+150,System.Byte[],usa,na,NG Johnson City Gray,no,no,no,na, ,,NG Johnson City Gray,act,armyNationalGuard,TN,-82.48876331,36.421331018
+151,System.Byte[],usa,na,Kahuku Tng Area,no,no,no,na, ,,Kahuku Tng Area,act,usa,HI,-157.991701236,21.6554761580001
+152,System.Byte[],usa,na,NG Kalaeloa,no,no,no,na, ,,NG Kalaeloa,act,armyNationalGuard,HI,-158.062140589,21.31909753
+153,System.Byte[],usa,na,Kawaihae Mil Reserve,no,no,no,na, ,,Kawaihae Mil Reserve,act,usa,HI,-155.828747504,20.0302960120001
+154,System.Byte[],usa,na,Kilauea Mil Reserve,no,no,no,na, ,,Kilauea Mil Reserve,act,usa,HI,-155.273916408,19.4339559900001
+155,System.Byte[],usa,na,Kipapa Ammo Storage Site,no,no,no,na, ,,Kipapa Ammo Storage Site,EXCS,usa,HI,-157.997120168,21.4514028990001
+156,System.Byte[],usa,na,Lake City Army Ammunition Plant,no,yes,no,na, ,,Lake City Army Ammunition Plant,act,usa,MO,-94.2501539419999,39.096851873
+157,System.Byte[],usa,na,Lake Of The Ozarks Recreation,no,no,no,na, ,,Lake Of The Ozarks Recreation,act,usa,MO,-92.6050227599999,38.089337716
+158,System.Byte[],usa,na,NG Lane County AFRC FMS 5,no,no,no,na, ,,NG Lane County AFRC FMS 5,act,armyNationalGuard,OR,-122.975902798,44.065986288
+159,System.Byte[],usa,na,NG Lansing Joint Forces Readiness Center,no,no,no,na, ,,NG Lansing Joint Forces Readiness Center,act,armyNationalGuard,MI,-84.571315558,42.76814964
+160,System.Byte[],usa,na,NG Las Cruces,no,no,no,na, ,,NG Las Cruces,act,armyNationalGuard,NM,-106.932674631,32.2779142890001
+161,System.Byte[],usa,na,NG Lawrenceville,no,no,no,na, ,,NG Lawrenceville,act,armyNationalGuard,NJ,-74.744296721,40.270500224
+162,System.Byte[],usa,na,Letterkenny Army Depot,no,yes,no,na, ,,Letterkenny Army Depot,act,usa,PA,-77.7020538049999,40.0204236440001
+163,System.Byte[],usa,na,NG Lexington AASF No 1,no,no,no,na, ,,NG Lexington AASF No 1,act,armyNationalGuard,OK,-97.2313617199999,35.0258381800001
+164,System.Byte[],usa,na,NG Lincoln AASF/Readiness Center,no,no,no,na, ,,NG Lincoln AASF/Readiness Center,act,armyNationalGuard,NE,-96.754986344,40.8373288810001
+165,System.Byte[],usa,na,Longhorn AAP,no,no,no,na, ,,Longhorn AAP,EXCS,usa,TX,-94.1428965709999,32.682694902
+166,System.Byte[],usa,na,Louisville Stagefield AL,no,no,no,na, ,,Louisville Stagefield AL,act,usa,AL,-85.6497985029999,31.815733225
+167,System.Byte[],usa,na,NG Anthony Cometa Complex,no,no,no,na, ,,NG Anthony Cometa Complex,act,armyNationalGuard,NV,-115.200674517,36.017382044
+168,System.Byte[],usa,na,NG Macon Readiness Center,no,no,no,na, ,,NG Macon Readiness Center,act,armyNationalGuard,GA,-83.605654493,32.8613917550001
+169,System.Byte[],usa,na,NG Macon TS,no,no,no,na, ,,NG Macon TS,act,armyNationalGuard,MO,-92.490775307,39.6987033520001
+170,System.Byte[],usa,na,Makua Mil Reserve,no,no,no,na, ,,Makua Mil Reserve,act,usa,HI,-158.206661117,21.5304416870001
+171,System.Byte[],usa,na,NG Marseilles (MTA Tng Area),no,no,no,na, ,,NG Marseilles (MTA Tng Area),act,armyNationalGuard,IL,-88.679586887,41.286947868
+172,System.Byte[],usa,na,NG Martindale - AASF,no,no,no,na, ,,NG Martindale - AASF,act,armyNationalGuard,TX,-98.379430595,29.4317526240001
+173,System.Byte[],usa,na,McAlester Army Ammunition Plant,no,yes,no,na, ,,McAlester Army Ammunition Plant,act,usa,OK,-95.9396079319999,34.8220822810001
+174,System.Byte[],usa,na,NG McConnelsville Training Site,no,no,no,na, ,,NG McConnelsville Training Site,act,armyNationalGuard,OH,-81.839319575,39.6633688260001
+175,System.Byte[],usa,na,NG McNary Field Salem AASF,no,no,no,na, ,,NG McNary Field Salem AASF,act,armyNationalGuard,OR,-122.999821604,44.911737671
+176,System.Byte[],usa,na,NG Mead TS/FMS 06/Utes 02,no,no,no,na, ,,NG Mead TS/FMS 06/Utes 02,act,armyNationalGuard,NE,-96.437969981,41.1936142530001
+177,System.Byte[],usa,na,Military Ocean Terminal Sunny Point,no,yes,no,na, ,,Military Ocean Terminal Sunny Point,act,usa,NC,-77.98044286,34.005933124
+178,System.Byte[],usa,na,NG Mitchell Complex,no,no,no,na, ,,NG Mitchell Complex,act,armyNationalGuard,SD,-98.043894366,43.7618742780001
+179,System.Byte[],usa,na,NG MTA Camp Clark Nevada,no,no,no,na, ,,NG MTA Camp Clark Nevada,act,armyNationalGuard,MO,-94.291473014,37.8202972990001
+180,System.Byte[],usa,na,NG MTA Camp Crowder Neosho,no,no,no,na, ,,NG MTA Camp Crowder Neosho,act,armyNationalGuard,MO,-94.3725086319999,36.7799914300001
+181,System.Byte[],usa,na,NG MTA Camp Curtis Guil,no,no,no,na, ,,NG MTA Camp Curtis Guil,act,armyNationalGuard,MA,-71.072661177,42.544699699
+182,System.Byte[],usa,na,Joint Base Cape Cod,no,yes,yes,na, ,,Joint Base Cape Cod,act,armyNationalGuard,MA,-70.544948254,41.7004988040001
+183,System.Byte[],usa,na,NG MTA Camp Fretterd,no,no,no,na, ,,NG MTA Camp Fretterd,act,armyNationalGuard,MD,-76.845698566,39.497993369
+184,System.Byte[],usa,na,NG MTA Camp Rilea,no,no,no,na, ,,NG MTA Camp Rilea,act,armyNationalGuard,OR,-123.944216514,46.1287474270001
+185,System.Byte[],usa,na,NG MTA Camp Santiago,no,no,no,na, ,,NG MTA Camp Santiago,act,armyNationalGuard,PR,-66.2836084589999,18.0287730370001
+186,System.Byte[],usa,na,Camp Shelby,no,yes,no,na, ,,Camp Shelby,act,armyNationalGuard,MS,-89.035722509,31.120738352
+187,System.Byte[],usa,na,NG MTA Clarks Hill Reservation,no,no,no,na, ,,NG MTA Clarks Hill Reservation,act,armyNationalGuard,SC,-82.277770504,33.7944400550001
+188,System.Byte[],usa,na,NG MTA Ft Wm Henry Harrison,no,no,no,na, ,,NG MTA Ft Wm Henry Harrison,act,armyNationalGuard,MT,-112.142361167,46.6162210310001
+189,System.Byte[],usa,na,NG MTA Gunpowder Military Reservation,no,no,no,na, ,,NG MTA Gunpowder Military Reservation,act,armyNationalGuard,MD,-76.505013488,39.432377692
+190,System.Byte[],usa,na,NG MTA Limestone Hills,no,no,no,na, ,,NG MTA Limestone Hills,act,armyNationalGuard,MT,-111.579833086,46.2741056680001
+191,System.Byte[],usa,na,Camp Williams,no,yes,no,na, ,,Camp Williams,act,armyNationalGuard,UT,-112.018191024,40.4273648400001
+192,System.Byte[],usa,na,Camp Grayling,no,yes,no,na, ,,Camp Grayling,act,armyNationalGuard,MI,-84.569112124,44.7348017940001
+193,System.Byte[],usa,na,Camp Roberts,no,yes,no,na, ,,Camp Roberts,act,armyNationalGuard,CA,-120.780034945,35.781637039
+194,System.Byte[],usa,na,NG MTCH Camp Guernsey,no,no,no,na, ,,NG MTCH Camp Guernsey,act,armyNationalGuard,WY,-104.811053051,42.4035225960001
+195,System.Byte[],usa,na,NG Nashville,no,no,no,na, ,,NG Nashville,act,armyNationalGuard,TN,-86.7584264769999,36.099513018
+196,System.Byte[],usa,na,NG New Castle Readiness Center/FMS 9,no,no,no,na, ,,NG New Castle Readiness Center/FMS 9,act,armyNationalGuard,PA,-80.324787043,40.97939827
+197,System.Byte[],usa,na,NG Alcantra Armory Complex,no,no,no,na, ,,NG Alcantra Armory Complex,act,armyNationalGuard,AK,-149.374849784,61.603050544
+198,System.Byte[],usa,na,NG Buckeye TS,no,no,no,na, ,,NG Buckeye TS,act,armyNationalGuard,AZ,-112.599533903,33.453737742
+199,System.Byte[],usa,na,NG Ethan Allen AFB MTA,no,no,no,na, ,,NG Ethan Allen AFB MTA,act,armyNationalGuard,VT,-73.163556566,44.509890919
+200,System.Byte[],usa,na,NG River Road Training Site,no,no,no,na, ,,NG River Road Training Site,act,armyNationalGuard,DE,-75.60706964,39.633430516
+201,System.Byte[],usa,na,NG Youngstown Tng Site,no,no,no,na, ,,NG Youngstown Tng Site,act,armyNationalGuard,NY,-78.972691396,43.2374993450001
+202,System.Byte[],usa,na,NG Training Site,no,no,no,na, ,,NG Training Site,act,armyNationalGuard,NH,-71.122228677,43.2778035210001
+203,System.Byte[],usa,na,NG Norman CSMS,no,no,no,na, ,,NG Norman CSMS,act,armyNationalGuard,OK,-97.480818698,35.2652021160001
+204,System.Byte[],usa,na,Fort Irwin,no,yes,no,na, ,,Fort Irwin,act,usa,CA,-116.633086938,35.375099607
+205,System.Byte[],usa,na,NG Oglethorpe Armory,no,no,no,na, ,,NG Oglethorpe Armory,act,armyNationalGuard,GA,-84.309923747,33.6173832200001
+206,System.Byte[],usa,na,NG Santa Fe - Onate Complex TS,no,no,no,na, ,,NG Santa Fe - Onate Complex TS,act,armyNationalGuard,NM,-106.080944733,35.569606913
+207,System.Byte[],usa,na,NG Camp Orchard Cantonement Area,no,no,no,na, ,,NG Camp Orchard Cantonement Area,act,armyNationalGuard,ID,-116.061008109,43.2963991620001
+208,System.Byte[],usa,na,Orchard Combat Training Center,no,yes,no,na, ,,Orchard Combat Training Center,act,armyNationalGuard,ID,-116.139117738,43.227720961
+209,System.Byte[],usa,na,NG Papago Military Reservation,no,no,no,na, ,,NG Papago Military Reservation,act,armyNationalGuard,AZ,-111.960972206,33.469299968
+210,System.Byte[],usa,na,NG Williamstown,no,no,no,na, ,,NG Williamstown,act,armyNationalGuard,WV,-81.4421100449999,39.353125968
+211,System.Byte[],usa,na,Parks Reserve Forces Tng Area,no,no,no,na, ,,Parks Reserve Forces Tng Area,act,usar,CA,-121.896331401,37.7311440030001
+212,System.Byte[],usa,na,NG Picacho Aviation TS,no,no,no,na, ,,NG Picacho Aviation TS,act,armyNationalGuard,AZ,-111.488032801,32.662916619
+213,System.Byte[],usa,na,Picatinny Arsenal,no,yes,no,na, ,,Picatinny Arsenal,act,usa,NJ,-74.544607109,40.954336659
+214,System.Byte[],usa,na,Pine Bluff Arsenal,no,yes,no,na, ,,Pine Bluff Arsenal,act,usa,AR,-92.088861149,34.3332036850001
+215,System.Byte[],usa,na,Pohakuloa Training Area,no,yes,no,na, ,,Pohakuloa Training Area,act,usa,HI,-155.627038273,19.714969157
+216,System.Byte[],usa,na,NG Thunderbird Youth Academy,no,no,no,na, ,,NG Thunderbird Youth Academy,act,armyNationalGuard,OK,-95.292127167,36.2956941300001
+217,System.Byte[],usa,na,Pueblo Chemical Depot,no,yes,no,na, ,,Pueblo Chemical Depot,act,usa,CO,-104.332420218,38.3171627130001
+218,System.Byte[],usa,na,NG RW Shepherd Hope Hull,no,no,no,na, ,,NG RW Shepherd Hope Hull,act,armyNationalGuard,AL,-86.3951588039999,32.2871056020001
+219,System.Byte[],usa,na,Radford Army Ammunition Plant,no,yes,no,na, ,,Radford Army Ammunition Plant,act,usa,VA,-80.539144974,37.181516317
+220,System.Byte[],usa,na,NG Raleigh,no,no,no,na, ,,NG Raleigh,act,armyNationalGuard,NC,-78.711908589,35.8097554600001
+221,System.Byte[],usa,na,NG Camp Ravenna Joint Military Training Center,no,no,no,na, ,,NG Camp Ravenna Joint Military Training Center,act,armyNationalGuard,OH,-81.0848094529999,41.1971769900001
+222,System.Byte[],usa,na,Red River Army Depot,no,yes,no,na, ,,Red River Army Depot,act,usa,TX,-94.355671926,33.4337462620001
+223,System.Byte[],usa,na,Redstone Arsenal,no,yes,no,na, ,,Redstone Arsenal,act,usa,AL,-86.657213231,34.6327674880001
+224,System.Byte[],usa,na,Fort Detrick Forest Glen Annex,no,no,no,na, ,,Fort Detrick Forest Glen Annex,act,usa,MD,-77.055030183,39.0060471570001
+225,System.Byte[],usa,na,Fort Detrick Glen Haven Annex,no,no,no,na, ,,Fort Detrick Glen Haven Annex,act,usa,MD,-77.041262591,39.033556764
+226,System.Byte[],usa,na,NG Rickenbacker,no,no,no,na, ,,NG Rickenbacker,act,armyNationalGuard,OH,-82.951461791,39.805031295
+227,System.Byte[],usa,na,NG Rio Rancho TS,no,no,no,na, ,,NG Rio Rancho TS,act,armyNationalGuard,NM,-106.65202636,35.3734789530001
+228,System.Byte[],usa,na,Rivanna Station,no,no,no,na, ,,Rivanna Station,act,usa,VA,-78.4136813969999,38.1554879120001
+229,System.Byte[],usa,na,NG Rochester NGA and OMS 2,no,no,no,na, ,,NG Rochester NGA and OMS 2,act,armyNationalGuard,MN,-92.431667566,43.996953375
+230,System.Byte[],usa,na,Rock Island Arsenal,no,yes,no,na, ,,Rock Island Arsenal,act,usa,IL,-90.553916814,41.5170864040001
+231,System.Byte[],usa,na,Rocky Mountain Arsenal,no,no,no,na, ,,Rocky Mountain Arsenal,clsd,usa,CO,-104.83986922,39.8421307770001
+232,System.Byte[],usa,na,NG Rosemount NG Armory,no,no,no,na, ,,NG Rosemount NG Armory,act,armyNationalGuard,MN,-93.127605435,44.7477484940001
+233,System.Byte[],usa,na,Runkle Stagefield AL,no,no,no,na, ,,Runkle Stagefield AL,act,usa,AL,-86.091887862,31.3403855190001
+234,System.Byte[],usa,na,NG Saginaw,no,no,no,na, ,,NG Saginaw,act,armyNationalGuard,TX,-97.3503690049999,32.8550797770001
+235,System.Byte[],usa,na,NG Saint George/FMS 5B,no,no,no,na, ,,NG Saint George/FMS 5B,act,armyNationalGuard,UT,-113.547140898,37.033768266
+236,System.Byte[],usa,na,NG Salina KS Training Center,no,no,no,na, ,,NG Salina KS Training Center,act,armyNationalGuard,KS,-97.63800413,38.7846762930001
+237,System.Byte[],usa,na,Savanna Depot Act,no,no,no,na, ,,Savanna Depot Act,clsd,usa,IL,-90.333725595,42.2171259150001
+238,System.Byte[],usa,na,Tropic Regions Test Center,no,yes,no,na, ,,Tropic Regions Test Center,act,usa,HI,-158.095514356,21.494567551
+239,System.Byte[],usa,na,Scranton Army Ammunition Plant,no,yes,no,na, ,,Scranton Army Ammunition Plant,act,usa,PA,-75.665908803,41.404179453
+240,System.Byte[],usa,na,NG Sea Girt  NJ NGTC,no,no,no,na, ,,NG Sea Girt  NJ NGTC,act,armyNationalGuard,NJ,-74.037289965,40.12380504
+241,System.Byte[],usa,na,Seward Recreation Area,no,no,no,na, ,,Seward Recreation Area,act,usa,AK,-149.433125482,60.1333143850001
+242,System.Byte[],usa,na,NG Shelbyville,no,no,no,na, ,,NG Shelbyville,act,armyNationalGuard,IN,-85.811023644,39.5789596590001
+243,System.Byte[],usa,na,Shell Basefield AL,no,no,no,na, ,,Shell Basefield AL,act,usa,AL,-85.848981327,31.362601602
+244,System.Byte[],usa,na,Sierra Army Depot,no,no,no,na, ,,Sierra Army Depot,act,usa,CA,-120.124453351,40.206973045
+245,System.Byte[],usa,na,NG Silver Bell Army Heliport,no,no,no,na, ,,NG Silver Bell Army Heliport,act,armyNationalGuard,AZ,-111.333461828,32.5228719130001
+246,System.Byte[],usa,na,NG Sioux Falls Benson Rd Complex,no,no,no,na, ,,NG Sioux Falls Benson Rd Complex,act,armyNationalGuard,SD,-96.6773875389999,43.5891803100001
+247,System.Byte[],usa,na,Skelly Stagefield AL,no,no,no,na, ,,Skelly Stagefield AL,act,usa,AL,-86.12854194,31.284021528
+248,System.Byte[],usa,na,NG Camp Beauregard,no,no,no,na, ,,NG Camp Beauregard,act,armyNationalGuard,LA,-92.396518256,31.373373137
+249,System.Byte[],usa,na,Combat Capabilities Development Command Soldier Center,no,yes,no,na, ,,Combat Capabilities Development Command Soldier Center,act,usa,MA,-71.36242566,42.289938943
+250,System.Byte[],usa,na,NG Sparta Armory,no,no,no,na, ,,NG Sparta Armory,act,armyNationalGuard,IL,-89.7239398629999,38.1600082750001
+251,System.Byte[],usa,na,NG Spring City Readiness Center,no,no,no,na, ,,NG Spring City Readiness Center,act,armyNationalGuard,PA,-75.5558107699999,40.1899589990001
+252,System.Byte[],usa,na,NG Springfield (TS Cp Lincoln),no,no,no,na, ,,NG Springfield (TS Cp Lincoln),act,armyNationalGuard,IL,-89.6699073679999,39.8236669710001
+253,System.Byte[],usa,na,NG St Cloud AASF,no,no,no,na, ,,NG St Cloud AASF,act,armyNationalGuard,MN,-94.055790225,45.5390769470001
+254,System.Byte[],usa,na,NG St Cloud NG Armory,no,no,no,na, ,,NG St Cloud NG Armory,act,armyNationalGuard,MN,-94.177418743,45.5648760440001
+255,System.Byte[],usa,na,Stinson 5AB Stagefield AL,no,no,no,na, ,,Stinson 5AB Stagefield AL,act,usa,AL,-86.01394597,31.3595821160001
+256,System.Byte[],usa,na,NG Stones Ranch Military Res,no,no,no,na, ,,NG Stones Ranch Military Res,act,armyNationalGuard,CT,-72.2724874039999,41.3663081030001
+257,System.Byte[],usa,na,Tac X Stagefield AL,no,no,no,na, ,,Tac X Stagefield AL,act,usa,AL,-85.979084171,31.1219111120001
+258,System.Byte[],usa,na,Tobyhanna Army Depot,no,no,no,na, ,,Tobyhanna Army Depot,act,usa,PA,-75.428574308,41.197159807
+259,System.Byte[],usa,na,NG JFHQ-Kansas,no,no,no,na, ,,NG JFHQ-Kansas,act,armyNationalGuard,KS,-95.683494126,39.0205971130001
+260,System.Byte[],usa,na,Toth Stagefield AL,no,no,no,na, ,,Toth Stagefield AL,act,usa,AL,-85.558709452,31.2285845160001
+261,System.Byte[],usa,na,Tripler Army Medical Center,no,no,no,na, ,,Tripler Army Medical Center,act,usa,HI,-157.889726796,21.3617511640001
+262,System.Byte[],usa,na,NG Los Alamitos JFTB,no,no,no,na, ,,NG Los Alamitos JFTB,act,armyNationalGuard,CA,-118.052226601,33.7912117820001
+263,System.Byte[],usa,na,NG Bethany Beach Training Site,no,no,no,na, ,,NG Bethany Beach Training Site,act,armyNationalGuard,DE,-75.0633012819999,38.5475743860001
+264,System.Byte[],usa,na,NG TS Camp Johnson,no,no,no,na, ,,NG TS Camp Johnson,act,armyNationalGuard,VT,-73.164629826,44.499636507
+265,System.Byte[],usa,na,NG TS Mark Twain Natl Forest Wapp,no,no,no,na, ,,NG TS Mark Twain Natl Forest Wapp,act,armyNationalGuard,MO,-90.2799666069999,36.8915198070001
+266,System.Byte[],usa,na,NG TS Ethan Allen Range,no,no,no,na, ,,NG TS Ethan Allen Range,act,armyNationalGuard,VT,-72.896539553,44.471731236
+267,System.Byte[],usa,na,NG TS Ike Skelton Jefferson City,no,no,no,na, ,,NG TS Ike Skelton Jefferson City,act,armyNationalGuard,MO,-92.068407873,38.551479473
+268,System.Byte[],usa,na,NG TS Keaukaha Mil Res,no,no,no,na, ,,NG TS Keaukaha Mil Res,act,armyNationalGuard,HI,-155.038573172,19.706616685
+269,System.Byte[],usa,na,Joint Systems Manufacturing Center - Lima,no,yes,no,na, ,,Joint Systems Manufacturing Center - Lima,act,usa,OH,-84.134365079,40.699992556
+270,System.Byte[],usa,na,Adelphi Laboratory Center,no,yes,no,na, ,,Adelphi Laboratory Center,act,usa,MD,-76.963784932,39.031507031
+271,System.Byte[],usa,na,USA Field Station Kunia,no,no,no,na, ,,USA Field Station Kunia,act,usa,HI,-158.053686651,21.474903205
+272,System.Byte[],usa,na,Joliet USARC/JTA,no,no,no,na, ,,Joliet USARC/JTA,act,usar,IL,-88.142644875,41.424356039
+273,System.Byte[],usa,na,USMCB Camp Pendleton,no,no,no,na, ,,USMCB Camp Pendleton,act,usar,CA,-117.397261281,33.2130756810001
+274,System.Byte[],usa,na,NG Volkstone,no,no,no,na, ,,NG Volkstone,act,armyNationalGuard,WV,-79.6692500299999,39.454797802
+275,System.Byte[],usa,na,NG VTS Catoosa,no,no,no,na, ,,NG VTS Catoosa,act,armyNationalGuard,GA,-85.05921287,34.930958252
+276,System.Byte[],usa,na,NG VTS Smyrna,no,no,no,na, ,,NG VTS Smyrna,act,armyNationalGuard,TN,-86.503558297,36.017929875
+277,System.Byte[],usa,na,W Silver Spring Complex,no,no,no,na, ,,W Silver Spring Complex,act,usar,WI,-87.9772820599999,43.122804466
+278,System.Byte[],usa,na,NG WH Ford Regional Tng Ctr,no,no,no,na, ,,NG WH Ford Regional Tng Ctr,act,armyNationalGuard,KY,-87.1945779879999,37.270677753
+279,System.Byte[],usa,na,Waianae Kai Military Reservation,no,no,no,na, ,,Waianae Kai Military Reservation,act,usa,HI,-158.190953025,21.4470114010001
+280,System.Byte[],usa,na,Watervliet Arsenal,no,yes,no,na, ,,Watervliet Arsenal,act,usa,NY,-73.7073016909999,42.719485933
+281,System.Byte[],usa,na,NG West Camp,no,no,no,na, ,,NG West Camp,act,armyNationalGuard,SD,-103.306749154,44.0732116080001
+282,System.Byte[],usa,na,West Point Military Reservation,no,no,no,na, ,,West Point Military Reservation,act,usa,NY,-74.0247575239999,41.36149133
+283,System.Byte[],usa,na,NG Westminster Training Site,no,no,no,na, ,,NG Westminster Training Site,act,armyNationalGuard,VT,-72.451312018,43.085882758
+284,System.Byte[],usa,na,Wheeler Army Airfield,no,no,no,na, ,,Wheeler Army Airfield,act,usa,HI,-158.035502049,21.475507249
+285,System.Byte[],usa,na,White Sands Missile Range,no,yes,no,na, ,,White Sands Missile Range,act,usa,NM,-106.425740275,33.162452955
+286,System.Byte[],usa,na,Yuma Proving Ground,no,yes,no,na, ,,Yuma Proving Ground,act,usa,AZ,-114.353450857,33.1700688670001
+287,System.Byte[],usa,na,NG Ayer,no,no,no,na, ,,NG Ayer,act,armyNationalGuard,MA,-71.58449776,42.5489412000001
+288,System.Byte[],usa,na,NG MTA Camp Butner,no,no,no,na, ,,NG MTA Camp Butner,act,armyNationalGuard,NC,-78.801351026,36.2015433920001
+289,System.Byte[],usa,na,NG Springfield AVCRAD (New),no,no,no,na, ,,NG Springfield AVCRAD (New),act,armyNationalGuard,MO,-93.3909579039999,37.253275548
+290,System.Byte[],usa,na,Muscatatuck Urban Training Center,no,yes,no,na, ,,Muscatatuck Urban Training Center,act,armyNationalGuard,IN,-85.524743485,39.0513449370001
+291,System.Byte[],usa,na,NG Cambridge Springs Readiness Center and FMS 5,no,no,no,na, ,,NG Cambridge Springs Readiness Center and FMS 5,act,armyNationalGuard,PA,-80.047896523,41.794166063
+292,System.Byte[],usa,na,NG General Lucius D Clay National Guard Center,no,no,no,na, ,,NG General Lucius D Clay National Guard Center,act,armyNationalGuard,GA,-84.529017385,33.913615989
+293,System.Byte[],usa,na,NG Cumming,no,no,no,na, ,,NG Cumming,act,armyNationalGuard,GA,-84.113051593,34.224334045
+294,System.Byte[],usa,na,NG Jackson County AFRC,no,no,no,na, ,,NG Jackson County AFRC,act,armyNationalGuard,WV,-81.8243140009999,38.891442295
+295,System.Byte[],usa,na,NG Elkins AFRC,no,no,no,na, ,,NG Elkins AFRC,act,armyNationalGuard,WV,-79.979115462,38.954504199
+296,System.Byte[],usa,na,NG Muskogee AFRC,no,no,no,na, ,,NG Muskogee AFRC,act,armyNationalGuard,OK,-95.3735303029999,35.6603705320001
+297,System.Byte[],usa,na,NG Clarke Range Complex,no,no,no,na, ,,NG Clarke Range Complex,act,armyNationalGuard,AL,-85.950193514,33.717925877
+298,System.Byte[],usa,na,NG Collegeville FMS 4,no,no,no,na, ,,NG Collegeville FMS 4,act,armyNationalGuard,PA,-75.428419484,40.2146158050001
+299,System.Byte[],usa,na,NG Baton Rouge AFRC,no,no,no,na, ,,NG Baton Rouge AFRC,act,armyNationalGuard,LA,-91.143364121,30.3563975820001
+300,System.Byte[],usa,na,NG Knightstown,no,no,no,na, ,,NG Knightstown,act,armyNationalGuard,IN,-85.516869333,39.7713458220001
+301,System.Byte[],usa,na,Twin Cities AAP,no,no,no,na, ,,Twin Cities AAP,semi,usa,MN,-93.1771990139999,45.0995241620001
+302,System.Byte[],usa,na,Fort Gillem Enclave Site,no,no,no,na, ,,Fort Gillem Enclave Site,act,usa,GA,-84.3181541389999,33.6197743480001
+303,System.Byte[],usa,na,Riverbank AAP,no,no,no,na, ,,Riverbank AAP,clsd,usa,CA,-120.919352781,37.7168805540001
+304,System.Byte[],usa,na,Presidio of Monterey,no,no,no,na, ,,Presidio of Monterey,act,usa,CA,-121.910786019,36.6051340700001
+305,System.Byte[],usa,na,Milan AAP,no,no,no,na, ,,Milan AAP,act,usa,TN,-88.706473681,35.8736120630001
+306,System.Byte[],usa,na,NG VTS Milan,no,no,no,na, ,,NG VTS Milan,act,armyNationalGuard,TN,-88.6609624129999,35.891220667
+307,System.Byte[],usa,na,Cannon Air Force Base,no,yes,no,na, ,,Cannon Air Force Base,act,usaf,NM,-103.317512583,34.386475278
+308,System.Byte[],usa,na,Cheyenne Mountain Space Force Station,no,yes,no,na, ,,Cheyenne Mountain Space Force Station,act,usaf,CO,-104.842724347,38.7410339040001
+309,System.Byte[],usa,na,Kegelman Air Force Auxiliary Field,no,no,no,na, ,,Kegelman Air Force Auxiliary Field,act,usaf,OK,-98.1191684999999,36.7350336650001
+310,System.Byte[],usa,na,Keesler AFB,no,no,no,na, ,,Keesler AFB,act,usaf,MS,-88.924669922,30.40888346
+311,System.Byte[],usa,na,Los Angeles Air Force Base,no,yes,no,na, ,,Los Angeles Air Force Base,act,usaf,CA,-118.381099893,33.918943681
+312,System.Byte[],usa,na,Bellows,no,no,no,na, ,,Bellows,act,usaf,HI,-157.710819443,21.371329686
+313,System.Byte[],usa,na,Francis E. Warren Air Force Base,no,yes,no,na, ,,Francis E. Warren Air Force Base,act,usaf,WY,-104.863207449,41.1648033380001
+314,System.Byte[],usa,na,Whiteman Air Force Base,no,yes,no,na, ,,Whiteman Air Force Base,act,usaf,MO,-93.551851867,38.729307691
+315,System.Byte[],usa,na,USAF Academy Auxiliary Airfield,no,no,no,na, ,,USAF Academy Auxiliary Airfield,act,usaf,CO,-104.301341988,38.7602877460001
+316,System.Byte[],usa,na,Boles System Annex,no,no,no,na, ,,Boles System Annex,act,usaf,NM,-105.940305578,32.7724433980001
+317,System.Byte[],usa,na,Blakeslee Air Force Recreation Area,no,no,no,na, ,,Blakeslee Air Force Recreation Area,act,usaf,NC,-77.91796009,33.980421381
+318,System.Byte[],usa,na,Kirtland Air Force Base,no,yes,no,na, ,,Kirtland Air Force Base,act,usaf,NM,-106.540306077,35.042127072
+319,System.Byte[],usa,na,DFAS Annex,no,no,no,na, ,,DFAS Annex,act,usaf,ME,-67.895154256,46.9326569790001
+320,System.Byte[],usa,na,Eielson Air Force Base,no,yes,no,na, ,,Eielson Air Force Base,act,usaf,AK,-147.004203727,64.6488348030001
+321,System.Byte[],usa,na,Dare County Range,no,yes,no,na, ,,Dare County Range,act,usaf,NC,-75.878560454,35.7144803310001
+322,System.Byte[],usa,na,Cusick Survival Training Site,no,no,no,na, ,,Cusick Survival Training Site,act,usaf,WA,-117.362747606,48.423133007
+323,System.Byte[],usa,na,Homestead ARB,no,no,no,na, ,,Homestead ARB,act,afr,FL,-80.402343715,25.4927492300001
+324,System.Byte[],usa,na,Hanscom Air Force Base,no,yes,no,na, ,,Hanscom Air Force Base,act,usaf,MA,-71.276833314,42.458263759
+325,System.Byte[],usa,na,Grissom ARB,no,no,no,na, ,,Grissom ARB,act,afr,IN,-86.146386838,40.6525515490001
+326,System.Byte[],usa,na,Westover ARB,no,no,no,na, ,,Westover ARB,act,afr,MA,-72.53872444,42.1932703150001
+327,System.Byte[],usa,na,Yukon Weapons Range,no,no,no,na, ,,Yukon Weapons Range,act,usaf,AK,-146.894347173,64.768855128
+328,System.Byte[],usa,na,Tyndall Air Force Base,no,yes,no,na, ,,Tyndall Air Force Base,act,usaf,FL,-85.5588489799999,30.0467400800001
+329,System.Byte[],usa,na,Norwalk 2,no,no,no,na, ,,Norwalk 2,act,afr,CA,-118.070170964,33.893184972
+330,System.Byte[],usa,na,Travis System Annex No 2,no,no,no,na, ,,Travis System Annex No 2,act,usaf,CA,-121.923571565,38.3255002930001
+331,System.Byte[],usa,na,Dyess Air Force Base,no,yes,no,na, ,,Dyess Air Force Base,act,usaf,TX,-99.8380753279999,32.421140703
+332,System.Byte[],usa,na,Haarp Research Station,no,no,no,na, ,,Haarp Research Station,act,usaf,AK,-145.152894864,62.408722622
+333,System.Byte[],usa,na,New Boston Air Station,no,yes,no,na, ,,New Boston Air Station,act,usaf,NH,-71.6412522649999,42.9371701840001
+334,System.Byte[],usa,na,Ozol Defense Fuel Support Point,no,no,no,na, ,,Ozol Defense Fuel Support Point,act,usaf,CA,-122.167071595,38.0258710420001
+335,System.Byte[],usa,na,Grand Forks AFB,no,yes,no,na, ,,Grand Forks AFB,act,usaf,ND,-97.390900028,47.9544642560001
+336,System.Byte[],usa,na,St Louis Air Force Station,no,no,no,na, ,,St Louis Air Force Station,act,usaf,MO,-90.2089418959999,38.5917762380001
+337,System.Byte[],usa,na,Seymour Johnson Air Force Base,no,yes,no,na, ,,Seymour Johnson Air Force Base,act,usaf,NC,-77.962577719,35.347902495
+338,System.Byte[],usa,na,Buckley Space Force Base,no,yes,no,na, ,,Buckley Space Force Base,act,usaf,CO,-104.757689049,39.706670022
+339,System.Byte[],usa,na,Scott Air Force Base,no,yes,no,na, ,,Scott Air Force Base,act,usaf,IL,-89.852834251,38.5446305180001
+340,System.Byte[],usa,na,Wright-Patterson Air Force Base,no,yes,no,na, ,,Wright-Patterson Air Force Base,act,usaf,OH,-84.050696053,39.8174353250001
+341,System.Byte[],usa,na,Joint Base San Antonio,no,yes,yes,na, ,,Joint Base San Antonio,act,usaf,TX,-98.610899732,29.3893906120001
+342,System.Byte[],usa,na,Moody Air Force Base,no,yes,no,na, ,,Moody Air Force Base,act,usaf,GA,-83.1851573019999,30.9675033870001
+343,System.Byte[],usa,na,Mountain Home Air Force Base,no,yes,no,na, ,,Mountain Home Air Force Base,act,usaf,ID,-115.865879659,43.0489393240001
+344,System.Byte[],usa,na,Barksdale Air Force Base,no,yes,no,na, ,,Barksdale Air Force Base,act,usaf,LA,-93.59994134,32.500280957
+345,System.Byte[],usa,na,Offutt Air Force Base,no,yes,no,na, ,,Offutt Air Force Base,act,usaf,NE,-95.915609146,41.1313629480001
+346,System.Byte[],usa,na,Joint Base Langley-Eustis,no,yes,yes,na, ,,Joint Base Langley-Eustis,act,usaf,VA,-76.36286783,37.0833357610001
+347,System.Byte[],usa,na,Dover Air Force Base,no,yes,no,na, ,,Dover Air Force Base,act,usaf,DE,-75.4668826339999,39.1277656600001
+348,System.Byte[],usa,na,Laughlin AFB,no,yes,no,na, ,,Laughlin AFB,act,usaf,TX,-100.782946794,29.356740002
+349,System.Byte[],usa,na,Melrose Air Force Range,no,no,no,na, ,,Melrose Air Force Range,act,usaf,NM,-103.780357607,34.2846437160001
+350,System.Byte[],usa,na,Fairchild Air Force Base,no,yes,no,na, ,,Fairchild Air Force Base,act,usaf,WA,-117.648384744,47.6186605620001
+351,System.Byte[],usa,na,Hurlburt Field,no,no,no,na, ,,Hurlburt Field,act,usaf,FL,-86.699,30.4298444290001
+352,System.Byte[],usa,na,Eglin Air Force Base,no,yes,no,na, ,,Eglin Air Force Base,act,usaf,FL,-86.326376962,30.6071221180001
+353,System.Byte[],usa,na,Vance Air Force Base,no,yes,no,na, ,,Vance Air Force Base,act,usaf,OK,-97.911806336,36.335961309
+354,System.Byte[],usa,na,Little Rock Air Force Base,no,yes,no,na, ,,Little Rock Air Force Base,act,usaf,AR,-92.138482905,34.903991354
+355,System.Byte[],usa,na,Niagara Falls,no,no,no,na, ,,Niagara Falls,act,afr,NY,-78.949633046,43.115652631
+356,System.Byte[],usa,na,Ellsworth AFB,no,yes,no,na, ,,Ellsworth AFB,act,usaf,SD,-103.094007763,44.1570836670001
+357,System.Byte[],usa,na,Altus Air Force Base,no,yes,no,na, ,,Altus Air Force Base,act,usaf,OK,-99.274545403,34.6637655550001
+358,System.Byte[],usa,na,Bonito Lake System Annex,no,no,no,na, ,,Bonito Lake System Annex,act,usaf,NM,-106.083353388,33.341429717
+359,System.Byte[],usa,na,Saylor Creek Air Force Range,no,no,no,na, ,,Saylor Creek Air Force Range,act,usaf,ID,-115.56333156,42.740182776
+360,System.Byte[],usa,na,USAF Academy Site 2,no,no,no,na, ,,USAF Academy Site 2,act,usaf,CO,-104.870063431,38.998486487
+361,System.Byte[],usa,na,Eglin Air Force Auxiliary Field 6,no,no,no,na, ,,Eglin Air Force Auxiliary Field 6,act,usaf,FL,-86.740972055,30.6317649860001
+362,System.Byte[],usa,na,March ARB,no,no,no,na, ,,March ARB,act,afr,CA,-117.259945618,33.887978692
+363,System.Byte[],usa,na,Holloman Air Force Base,no,yes,no,na, ,049feb34-6c2d-4a6f-b3f3-2cf8e78ed47d,Holloman Air Force Base,act,usaf,NM,-106.133633242,32.918017352
+364,System.Byte[],usa,na,Los Angeles Space Force Annex No4,no,no,no,na, ,,Los Angeles Space Force Annex No4,act,usaf,CA,-118.235754982,33.858772817
+365,System.Byte[],usa,na,The Farish Memorial Recreational Annex,no,no,no,na, ,,The Farish Memorial Recreational Annex,act,usaf,CO,-104.99964488,38.999159164
+366,System.Byte[],usa,na,Travis Air Force Base,no,yes,no,na, ,,Travis Air Force Base,act,usaf,CA,-121.942808932,38.2645644090001
+367,System.Byte[],usa,na,Clear Space Force Station,no,yes,no,na, ,,Clear Space Force Station,act,usaf,AK,-149.190714696,64.288160573
+368,System.Byte[],usa,na,Shaw Air Force Base,no,yes,no,na, ,,Shaw Air Force Base,act,usaf,SC,-80.474101102,33.9771011820001
+369,System.Byte[],usa,na,Sheppard AFB,no,no,no,na, ,,Sheppard AFB,act,usaf,TX,-98.499690537,33.984556389
+370,System.Byte[],usa,na,White Bluff,no,no,no,na, ,,White Bluff,act,usaf,WA,-117.577367959,47.7029108780001
+371,System.Byte[],usa,na,Peterson Space Force Base,no,yes,no,na, ,,Peterson Space Force Base,act,usaf,CO,-104.696135201,38.822897304
+372,System.Byte[],usa,na,Joint Base Elmendorf-Richardson,no,yes,yes,na, ,,Joint Base Elmendorf-Richardson,act,usaf,AK,-149.811208092,61.2697870800001
+373,System.Byte[],usa,na,Arnold Air Force Base,no,yes,no,na, ,,Arnold Air Force Base,act,usaf,TN,-86.073934604,35.356625455
+374,System.Byte[],usa,na,Columbus Air Force Base,no,yes,no,na, ,,Columbus Air Force Base,act,usaf,MS,-88.451118752,33.6413120870001
+375,System.Byte[],usa,na,Cavalier Space Force Station,no,yes,no,na, ,,Cavalier Space Force Station,act,usaf,ND,-97.9030701569999,48.7245309300001
+376,System.Byte[],usa,na,Eglin Air Force Auxiliary Field 3 Duke Fld,no,no,no,na, ,,Eglin Air Force Auxiliary Field 3 Duke Fld,act,usaf,FL,-86.5276912149999,30.6490705510001
+377,System.Byte[],usa,na,Davis-Monthan Air Force Base,no,yes,no,na, ,,Davis-Monthan Air Force Base,act,usaf,AZ,-110.848722373,32.1608016660001
+378,System.Byte[],usa,na,The Barry M Goldwater Air Force Range,no,no,no,na, ,,The Barry M Goldwater Air Force Range,act,usaf,AZ,-113.055879422,32.6406200540001
+379,System.Byte[],usa,na,Eglin AFB Site 2 Santa Rosa Island,no,no,no,na, ,,Eglin AFB Site 2 Santa Rosa Island,act,usaf,FL,-86.7420755799999,30.3958064820001
+380,System.Byte[],usa,na,Minn-St Paul,no,no,no,na, ,,Minn-St Paul,act,afr,MN,-93.2143092159999,44.8950285120001
+381,System.Byte[],usa,na,Tinker Air Force Base,no,yes,no,na, ,,Tinker Air Force Base,act,usaf,OK,-97.390454264,35.4154028730001
+382,System.Byte[],usa,na,Cape Canaveral Space Force Station,no,yes,no,na, ,,Cape Canaveral Space Force Station,act,usaf,FL,-80.570278759,28.477357339
+383,System.Byte[],usa,na,Beale Air Force Base,no,yes,no,na, ,,Beale Air Force Base,act,usaf,CA,-121.395570767,39.1209326520001
+384,System.Byte[],usa,na,Nevada Test and Training Range,no,yes,no,na, ,,Nevada Test and Training Range,act,usaf,NV,-115.594288653,36.9283141810001
+385,System.Byte[],usa,na,Schriever Space Force Base,no,yes,no,na, ,,Schriever Space Force Base,act,usaf,CO,-104.520474444,38.8057923440001
+386,System.Byte[],usa,na,Dobbins ARB,no,no,no,na, ,,Dobbins ARB,act,afr,GA,-84.519653298,33.917248656
+387,System.Byte[],usa,na,McGhee Tyson Airport,no,no,no,na, ,,McGhee Tyson Airport,act,airNationalGuard,TN,-84.003543409,35.811594014
+388,System.Byte[],usa,na,Pillar Point Space Force Station,no,no,no,na, ,,Pillar Point Space Force Station,act,usaf,CA,-122.49801566,37.4989570340001
+389,System.Byte[],usa,na,Edwards Air Force Base,no,yes,no,na, ,,Edwards Air Force Base,act,usaf,CA,-117.848869349,34.890359963
+390,System.Byte[],usa,na,Nellis Air Force Base,no,yes,no,na, ,,Nellis Air Force Base,act,usaf,NV,-114.994831273,36.2432886030001
+391,System.Byte[],usa,na,Maxwell-Gunter AFB,no,yes,no,na, ,,Maxwell-Gunter AFB,act,usaf,AL,-86.356432464,32.382447128
+392,System.Byte[],usa,na,McConnell AFB,no,no,no,na, ,,McConnell AFB,act,usaf,KS,-97.256408026,37.6217558440001
+393,System.Byte[],usa,na,Joint Base McGuire-Dix-Lakehurst,no,yes,yes,na, ,,Joint Base McGuire-Dix-Lakehurst,act,usaf,NJ,-74.516977509,40.009106118
+394,System.Byte[],usa,na,Youngstown,no,no,no,na, ,,Youngstown,act,afr,OH,-80.676278955,41.268033159
+395,System.Byte[],usa,na,Hill Air Force Base,no,yes,no,na, ,,Hill Air Force Base,act,usaf,UT,-111.95610137,41.1015465570001
+396,System.Byte[],usa,na,Joint Base Charleston,no,yes,no,na, ,,Joint Base Charleston,act,usaf,SC,-79.964424648,32.9519682280001
+397,System.Byte[],usa,na,Patrick Space Force Base,no,yes,no,na, ,,Patrick Space Force Base,act,usaf,FL,-80.60841349,28.2335703310001
+398,System.Byte[],usa,na,Charlotte/Douglas IAP,no,no,no,na, ,,Charlotte/Douglas IAP,act,airNationalGuard,NC,-80.929882724,35.216358127
+399,System.Byte[],usa,na,W K Kellogg,no,no,no,na, ,,W K Kellogg,act,airNationalGuard,MI,-85.251409741,42.3171931190001
+400,System.Byte[],usa,na,Creech Air Force Base,no,yes,no,na, ,,Creech Air Force Base,act,usaf,NV,-115.638815319,36.648888239
+401,System.Byte[],usa,na,Poinsett Electronic Combat Range,no,no,no,na, ,,Poinsett Electronic Combat Range,act,usaf,SC,-80.481796018,33.796125488
+402,System.Byte[],usa,na,Robins AFB,no,no,no,na, ,,Robins AFB,act,usaf,GA,-83.581579146,32.617547255
+403,System.Byte[],usa,na,Joint Base Andrews,no,yes,no,na, ,,Joint Base Andrews,act,usaf,MD,-76.874469298,38.8051681100001
+404,System.Byte[],usa,na,Newington Defense Fuel Support Point,no,no,no,na, ,,Newington Defense Fuel Support Point,act,usaf,NH,-70.7959219749999,43.1061857400001
+405,System.Byte[],usa,na,Cannon AFB Site 2,no,no,no,na, ,,Cannon AFB Site 2,act,usaf,NM,-103.328244295,34.4091917110001
+406,System.Byte[],usa,na,Pittsburgh IAP ARS,no,no,no,na, ,,Pittsburgh IAP ARS,act,afr,PA,-80.211052304,40.4935810260001
+407,System.Byte[],usa,na,JBC North Yard JBCY,no,no,no,na, ,,JBC North Yard JBCY,act,usaf,SC,-79.9695646769999,32.87512744
+408,System.Byte[],usa,na,Cape Newenham Long Range Radar Site,no,yes,no,na, ,,Cape Newenham Long Range Radar Site,act,usaf,AK,-162.066652809,58.642607997
+409,System.Byte[],usa,na,Oliktok Long Range Radar Site,no,yes,no,na, ,,Oliktok Long Range Radar Site,act,usaf,AK,-149.880446976,70.4950066310001
+410,System.Byte[],usa,na,Birch Lake Recreation Annex,no,no,no,na, ,,Birch Lake Recreation Annex,act,usaf,AK,-146.646950766,64.317524194
+411,System.Byte[],usa,na,King Salmon Long Range Radar Site,no,yes,no,na, ,,King Salmon Long Range Radar Site,act,usaf,AK,-156.662974128,58.6913501350001
+412,System.Byte[],usa,na,Tin City Long Range Radar Site,no,yes,no,na, ,,Tin City Long Range Radar Site,act,usaf,AK,-167.987855033,65.5669760580001
+413,System.Byte[],usa,na,Goodfellow Air Force Base,no,yes,no,na, ,,Goodfellow Air Force Base,act,usaf,TX,-100.404486027,31.4321182210001
+414,System.Byte[],usa,na,Vandenberg Space Force Base,no,yes,no,na, ,,Vandenberg Space Force Base,act,usaf,CA,-120.557922256,34.7136907660001
+415,System.Byte[],usa,na,Fort Yukon Long Range Radar Site,no,yes,no,na, ,,Fort Yukon Long Range Radar Site,act,usaf,AK,-145.207032049,66.5600536590001
+416,System.Byte[],usa,na,Point Barrow Long Range Radar Site,no,yes,no,na, ,,Point Barrow Long Range Radar Site,act,usaf,AK,-156.625553894,71.326194974
+417,System.Byte[],usa,na,Utah Test and Training Range,no,yes,no,na, ,00f23d7b-382f-4ead-a856-4f14da3329fa,Utah Test and Training Range,act,usaf,NV,-113.536656777,40.5096630790001
+418,System.Byte[],usa,na,Air Force Maui Optical and Supercomputing Site,no,yes,no,na, ,,Air Force Maui Optical and Supercomputing Site,act,usaf,HI,-156.431659957,20.7462628960001
+419,System.Byte[],usa,na,Marine Corps Logistics Base Albany,no,yes,no,na, ,,Marine Corps Logistics Base Albany,act,usmc,GA,-84.055999288,31.551015609
+420,System.Byte[],usa,na,Yermo Area,no,no,no,na, ,,Yermo Area,act,usmc,CA,-116.870988634,34.8904075180001
+421,System.Byte[],usa,na,Marine Corps Logistics Base Barstow,no,yes,no,na, ,,Marine Corps Logistics Base Barstow,act,usmc,CA,-116.955691062,34.8623700900001
+422,System.Byte[],usa,na,Townsend Bombing Range,no,yes,no,na, ,,Townsend Bombing Range,act,usmc,GA,-81.596139024,31.5448202040001
+423,System.Byte[],usa,na,Marine Corps Air Station Beaufort,no,yes,no,na, ,,Marine Corps Air Station Beaufort,act,usmc,SC,-80.716486763,32.478183051
+424,System.Byte[],usa,na,Marine Corps Support Facility Blount Island,no,yes,no,na, ,,Marine Corps Support Facility Blount Island,act,usmc,FL,-81.52497088,30.401311451
+425,System.Byte[],usa,na,Bridgeport,no,no,no,na, ,,Bridgeport,act,usmc,CA,-119.542021518,38.374177408
+426,System.Byte[],usa,na,Marine Corps Air Station Cherry Point,no,yes,no,na, ,,Marine Corps Air Station Cherry Point,act,usmc,NC,-76.8785328119999,34.9095183250001
+427,System.Byte[],usa,na,MC Trng Area Bellows,no,no,no,na, ,,MC Trng Area Bellows,act,usmc,HI,-157.719576355,21.36126268
+428,System.Byte[],usa,na,Puuloa-Oahu,no,no,no,na, ,,Puuloa-Oahu,act,usmc,HI,-157.988068374,21.3182507610001
+429,System.Byte[],usa,na,"Marine Corps Base Hawaii, Camp H.M. Smith",no,yes,no,na, ,,"Marine Corps Base Hawaii, Camp H.M. Smith",act,usmc,HI,-157.905498233,21.38659062
+430,System.Byte[],usa,na,Pearl City Annex,no,no,no,na, ,,Pearl City Annex,act,usmc,HI,-157.971375331,21.3835576340001
+431,System.Byte[],usa,na,Marine Corps Base Hawaii,no,yes,no,na, ,,Marine Corps Base Hawaii,act,usmc,HI,-157.751182151,21.4453219930001
+432,System.Byte[],usa,na,Marine Corps Air Station New River,no,yes,no,na, ,,Marine Corps Air Station New River,act,usmc,NC,-77.4394296519999,34.6526812110001
+433,System.Byte[],usa,na,Marine Corps Base Camp Lejeune,no,yes,no,na, ,,Marine Corps Base Camp Lejeune,act,usmc,NC,-77.354072333,34.5958323350001
+434,System.Byte[],usa,na,Marine Corps Air Station Miramar,no,yes,no,na, ,,Marine Corps Air Station Miramar,act,usmc,CA,-117.086780347,32.8684186560001
+435,System.Byte[],usa,na,Brooklyn NY,no,no,no,na, ,,Brooklyn NY,act,usmcr,NY,-73.878179416,40.5825344400001
+436,System.Byte[],usa,na,Syracuse MCRC,no,no,no,na, ,,Syracuse MCRC,act,usmcr,NY,-76.1249378639999,43.0962829850001
+437,System.Byte[],usa,na,Marine Corps Base Quantico,no,yes,no,na, ,,Marine Corps Base Quantico,act,usmc,VA,-77.476354785,38.5581663610001
+438,System.Byte[],usa,na,Former NTC,no,no,no,na, ,,Former NTC,act,usmc,CA,-117.220710892,32.7287659950001
+439,System.Byte[],usa,na,MCRD San Diego,no,no,no,na, ,,MCRD San Diego,act,usmc,CA,-117.196875487,32.740784976
+440,System.Byte[],usa,na,Harbor Drive,no,no,no,na, ,,Harbor Drive,act,usmc,CA,-117.208008246,32.7294233870001
+441,System.Byte[],usa,na,Marine Corps Air Ground Combat Center Twentynine Palms,no,yes,no,na, ,,Marine Corps Air Ground Combat Center Twentynine Palms,act,usmc,CA,-116.21084116,34.4619202540001
+442,System.Byte[],usa,na,Marine Corps Air Station Yuma,no,yes,no,na, ,,Marine Corps Air Station Yuma,act,usmc,AZ,-114.602250322,32.6454038850001
+443,System.Byte[],usa,na,Barry Goldwater Range,no,no,no,na, ,,Barry Goldwater Range,act,usmc,AZ,-114.083234156,32.4982803250001
+444,System.Byte[],usa,na,Chocolate Mountain Aerial Gunnery Range,no,yes,no,na, ,,Chocolate Mountain Aerial Gunnery Range,act,usmc,CA,-115.309143261,33.3118611200001
+445,System.Byte[],usa,na,Naval Air Station Whidbey Island,no,yes,no,na, ,,Naval Air Station Whidbey Island,act,usn,WA,-122.662022739,48.338798313
+446,System.Byte[],usa,na,Elizabeth Rvr Channel,no,no,no,na, ,,Elizabeth Rvr Channel,act,usn,VA,-76.332452867,36.8672606540001
+447,System.Byte[],usa,na,Hickam Petrol Strg Ann,no,no,no,na, ,,Hickam Petrol Strg Ann,act,usn,HI,-158.033998887,21.4552756250001
+448,System.Byte[],usa,na,Kamokala Ridge,no,no,no,na, ,,Kamokala Ridge,act,usn,HI,-159.754313606,22.039014246
+449,System.Byte[],usa,na,CSO Barbers Point HI,no,no,no,na, ,,CSO Barbers Point HI,care,usn,HI,-158.05192429,21.3218672890001
+450,System.Byte[],usa,na,Makaha Ridge,no,no,no,na, ,,Makaha Ridge,act,usn,HI,-159.7253807,22.13039002
+451,System.Byte[],usa,na,Pacific Missile Range Facility,no,yes,no,na, ,,Pacific Missile Range Facility,act,usn,HI,-159.760106694,21.9902051780001
+452,System.Byte[],usa,na,Jim Creek,no,no,no,na, ,,Jim Creek,act,usn,WA,-121.922010695,48.2048020990001
+453,System.Byte[],usa,na,NNSY St Helena,no,no,no,na, ,,NNSY St Helena,act,usn,VA,-76.289265701,36.82554588
+454,System.Byte[],usa,na,St Juliens Creek East,no,no,no,na, ,,St Juliens Creek East,act,usn,VA,-76.31017359,36.787959755
+455,System.Byte[],usa,na,Joint Base Pearl Harbor-Hickam,no,yes,yes,na, ,,Joint Base Pearl Harbor-Hickam,act,usn,HI,-157.949497628,21.3388531900001
+456,System.Byte[],usa,na,NAVSUPPACT Norfolk NSY,no,no,no,na, ,,NAVSUPPACT Norfolk NSY,act,usn,VA,-76.301545961,36.814745891
+457,System.Byte[],usa,na,Naval Station Great Lakes IL,no,no,no,na, ,,Naval Station Great Lakes IL,act,usn,IL,-87.837631497,42.313448695
+458,System.Byte[],usa,na,Naval Submarine Base New London,no,yes,no,na, ,,Naval Submarine Base New London,act,usn,CT,-72.086309214,41.399470335
+459,System.Byte[],usa,na,Allegany Ballistics Lab,no,no,no,na, ,,Allegany Ballistics Lab,act,usn,WV,-78.8457345419999,39.5492530380001
+460,System.Byte[],usa,na,Naval Station Newport,no,yes,no,na, ,,Naval Station Newport,act,usn,RI,-71.324633293,41.5198083400001
+461,System.Byte[],usa,na,Naval Air Station Oceana Dam Neck Annex,no,yes,no,na, ,,Naval Air Station Oceana Dam Neck Annex,act,usn,VA,-75.965718986,36.7887831190001
+462,System.Byte[],usa,na,Gould Island RI,no,no,no,na, ,,Gould Island RI,act,usn,RI,-71.344908189,41.537007483
+463,System.Byte[],usa,na,NWIRP Bedford MA,no,no,no,na, ,,NWIRP Bedford MA,clsd,usn,MA,-71.2893045719999,42.4753672200001
+464,System.Byte[],usa,na,Northwest Chesapeake VA,no,no,no,na, ,,Northwest Chesapeake VA,act,usn,VA,-76.267485484,36.559098551
+465,System.Byte[],usa,na,Cheatham Annex,no,no,no,na, ,,Cheatham Annex,act,usn,VA,-76.614384716,37.286948104
+466,System.Byte[],usa,na,NNSY South Gate,no,no,no,na, ,,NNSY South Gate,act,usn,VA,-76.295358467,36.8037099520001
+467,System.Byte[],usa,na,Portsmouth Naval Shipyard,no,yes,no,na, ,,Portsmouth Naval Shipyard,act,usn,ME,-70.734253979,43.0801052680001
+468,System.Byte[],usa,na,Naval Weapons Station Yorktown,no,no,no,na, ,,Naval Weapons Station Yorktown,act,usn,VA,-76.58559021,37.2448058200001
+469,System.Byte[],usa,na,Det Phil Pny Annex,no,no,no,na, ,,Det Phil Pny Annex,act,usn,PA,-75.181989895,39.8934671230001
+470,System.Byte[],usa,na,NAVSUPPACT Mechanicsburg PA,no,no,no,na, ,,NAVSUPPACT Mechanicsburg PA,act,usn,PA,-76.986597535,40.2276677140001
+471,System.Byte[],usa,na,Waterfront,no,no,no,na, ,,Waterfront,act,usn,NJ,-74.0726523869999,40.4207361480001
+472,System.Byte[],usa,na,Fort Sheridan,no,no,no,na, ,,Fort Sheridan,act,usn,IL,-87.804548833,42.208915163
+473,System.Byte[],usa,na,Joint Expeditionary Base Little Creek-Fort Story,no,yes,yes,na, ,,Joint Expeditionary Base Little Creek-Fort Story,act,usn,VA,-76.159965708,36.9174145600001
+474,System.Byte[],usa,na,Craney Island,no,no,no,na, ,,Craney Island,act,usn,VA,-76.370377348,36.888127438
+475,System.Byte[],usa,na,NSA Saratoga Springs NY,no,no,no,na, ,,NSA Saratoga Springs NY,act,usn,NY,-73.821314948,43.079828267
+476,System.Byte[],usa,na,Lafayette Rvr Complex,no,no,no,na, ,,Lafayette Rvr Complex,act,usn,VA,-76.302338887,36.9022678490001
+477,System.Byte[],usa,na,Pittsburgh IAP ANG,no,no,no,na, ,,Pittsburgh IAP ANG,act,airNationalGuard,PA,-80.2105003249999,40.493034375
+478,System.Byte[],usa,na,Naval Support Activity Crane,no,yes,no,na, ,,Naval Support Activity Crane,act,usn,IN,-86.797133768,38.868256952
+479,System.Byte[],usa,na,Bratenahl,no,no,no,na, ,,Bratenahl,act,usn,OH,-81.626173719,41.542462906
+480,System.Byte[],usa,na,Naval Weapons Station Earle NJ,no,no,no,na, ,,Naval Weapons Station Earle NJ,act,usn,NJ,-74.1807822339999,40.2478652570001
+481,System.Byte[],usa,na,Fort Adams RI,no,no,no,na, ,,Fort Adams RI,act,usn,RI,-71.339935876,41.4753432860001
+482,System.Byte[],usa,na,Naval Station Norfolk,no,yes,no,na, ,,Naval Station Norfolk,act,usn,VA,-76.2987175489999,36.942072771
+483,System.Byte[],usa,na,Naval Air Station Oceana,no,yes,no,na, ,,Naval Air Station Oceana,act,usn,VA,-76.030985218,36.8137227340001
+484,System.Byte[],usa,na,Yorktown Fuel Depot,no,no,no,na, ,,Yorktown Fuel Depot,act,usn,VA,-76.48604196,37.2159079690001
+485,System.Byte[],usa,na,NAVMEDCEN Portsmouth VA,no,no,no,na, ,,NAVMEDCEN Portsmouth VA,act,usn,VA,-76.3080043639999,36.8461264740001
+486,System.Byte[],usa,na,SDA Area,no,no,no,na, ,,SDA Area,act,usn,VA,-76.316638127,36.9200430550001
+487,System.Byte[],usa,na,Redington Township,no,no,no,na, ,,Redington Township,act,usn,ME,-70.479128261,44.985718267
+488,System.Byte[],usa,na,NAVSUPPACT Hampton Roads VA,no,no,no,na, ,,NAVSUPPACT Hampton Roads VA,act,usn,VA,-76.299221374,36.926413113
+489,System.Byte[],usa,na,Fire Fighters School,no,no,no,na, ,,Fire Fighters School,act,usn,VA,-76.322734627,36.9215583920001
+490,System.Byte[],usa,na,GL Camp JPJ,no,no,no,na, ,,GL Camp JPJ,act,usn,IL,-87.853920177,42.3003478910001
+491,System.Byte[],usa,na,ALF Fentress Chesapke,no,no,no,na, ,,ALF Fentress Chesapke,act,usn,VA,-76.130789991,36.7000576350001
+492,System.Byte[],usa,na,Naval Support Activity Philadelphia,no,yes,no,na, ,,Naval Support Activity Philadelphia,act,usn,PA,-75.094581272,40.0413030720001
+493,System.Byte[],usa,na,Glenview,no,no,no,na, ,,Glenview,act,usn,IL,-87.836545042,42.0917332080001
+494,System.Byte[],usa,na,Selfridge ANGB,no,no,no,na, ,,Selfridge ANGB,act,airNationalGuard,MI,-82.831430386,42.6115836060001
+495,System.Byte[],usa,na,Naval Base Guam,no,yes,yes,na, ,,Naval Base Guam,act,usn,GU,144.648548979,13.428655045
+496,System.Byte[],usa,na,Andersen Air Force Base,no,yes,no,na, ,,Andersen Air Force Base,act,usn,GU,144.8981435,13.596922954
+497,System.Byte[],usa,na,Sea Plane Base,no,no,no,na, ,,Sea Plane Base,act,usn,WA,-122.600716395,48.302372285
+498,System.Byte[],usa,na,Naval Weapons Systems Training Facility Boardman,no,yes,no,na, ,,Naval Weapons Systems Training Facility Boardman,act,usn,OR,-119.691205874,45.7195895180001
+499,System.Byte[],usa,na,Naval Logistics Support Activity - Ketchikan,no,yes,no,na, ,,Naval Logistics Support Activity - Ketchikan,act,usn,AK,-131.760401966,55.5414582590001
+500,System.Byte[],usa,na,Manchester,no,no,no,na, ,,Manchester,act,usn,WA,-122.545637948,47.566108425
+501,System.Byte[],usa,na,OLF Coupeville,no,no,no,na, ,,OLF Coupeville,act,usn,WA,-122.632010069,48.189411933
+502,System.Byte[],usa,na,Kodiak Tracking Station,no,yes,no,na, ,,Kodiak Tracking Station,act,usn,AK,-152.333051736,57.8203189070001
+503,System.Byte[],usa,na,NARL Barrow Camp Tr1,no,no,no,na, ,,NARL Barrow Camp Tr1,act,usn,AK,-161.914029813,70.2881880840001
+504,System.Byte[],usa,na,Naval Base Kitsap Bangor,no,yes,no,na, ,,Naval Base Kitsap Bangor,act,usn,WA,-122.714839767,47.7233921480001
+505,System.Byte[],usa,na,Naval Base Kitsap - Keyport,no,yes,no,na, ,,Naval Base Kitsap - Keyport,act,usn,WA,-122.621300327,47.6974761550001
+506,System.Byte[],usa,na,Naval Base Kitsap Bremerton WA,no,no,no,na, ,,Naval Base Kitsap Bremerton WA,act,usn,WA,-122.652079629,47.555770022
+507,System.Byte[],usa,na,Naval Surface Warfare Center Carderock Division – Acoustic Research Detachment,no,yes,no,na, ,,Naval Surface Warfare Center Carderock Division – Acoustic Research Detachment,act,usn,ID,-116.56279862,47.976098187
+508,System.Byte[],usa,na,CNI NAVMAG Indian Island,no,no,no,na, ,,CNI NAVMAG Indian Island,act,usn,WA,-122.726218709,48.053235145
+509,System.Byte[],usa,na,NAVSTA Everett WA,no,no,no,na, ,,NAVSTA Everett WA,act,usn,WA,-122.259703844,47.9726733530001
+510,System.Byte[],usa,na,Marysville WA,no,no,no,na, ,,Marysville WA,act,usn,WA,-122.171056043,48.1237034580001
+511,System.Byte[],usa,na,Corry Station,no,no,no,na, ,,Corry Station,act,usn,FL,-87.2955545199999,30.40206147
+512,System.Byte[],usa,na,NAS Jacksonville FL,no,no,no,na, ,,NAS Jacksonville FL,act,usn,FL,-81.684988936,30.219505493
+513,System.Byte[],usa,na,NOLF Evergreen,no,no,no,na, ,,NOLF Evergreen,act,usn,AL,-87.039693877,31.417363245
+514,System.Byte[],usa,na,NOLF Santa Rosa,no,no,no,na, ,,NOLF Santa Rosa,act,usn,FL,-86.938805966,30.609278096
+515,System.Byte[],usa,na,OLF Bravo,no,no,no,na, ,,OLF Bravo,act,usn,MS,-88.8313648129999,32.7971364140001
+516,System.Byte[],usa,na,Naval Air Station Joint Reserve Base New Orleans,no,yes,no,na, ,,Naval Air Station Joint Reserve Base New Orleans,act,usnr,LA,-90.020701628,29.831313283
+517,System.Byte[],usa,na,West Bank,no,no,no,na, ,,West Bank,act,usn,LA,-90.0359526519999,29.950269125
+518,System.Byte[],usa,na,OLF Bronson,no,no,no,na, ,,OLF Bronson,act,usn,FL,-87.4131189559999,30.3836012830001
+519,System.Byte[],usa,na,Saufley Field,no,no,no,na, ,,Saufley Field,act,usn,FL,-87.341374316,30.4704706260001
+520,System.Byte[],usa,na,Naval Air Station Meridian,no,yes,no,na, ,,Naval Air Station Meridian,act,usn,MS,-88.56944971,32.5532066640001
+521,System.Byte[],usa,na,Northside Mid-South,no,no,no,na, ,,Northside Mid-South,act,usn,TN,-89.8598192869999,35.3428145600001
+522,System.Byte[],usa,na,Naval Logistics Support Annex Orlando,no,yes,no,na, ,,Naval Logistics Support Annex Orlando,act,usn,FL,-81.196795977,28.5840910540001
+523,System.Byte[],usa,na,NAS Kingsville TX,no,no,no,na, ,,NAS Kingsville TX,act,usn,TX,-97.810102703,27.5009248060001
+524,System.Byte[],usa,na,Trumbo Point Annex,no,no,no,na, ,,Trumbo Point Annex,act,usn,FL,-81.791211265,24.564361494
+525,System.Byte[],usa,na,NAS Pensacola FL,no,no,no,na, ,,NAS Pensacola FL,act,usn,FL,-87.328642514,30.348201096
+526,System.Byte[],usa,na,ALF Orange,no,no,no,na, ,,ALF Orange,act,usn,TX,-98.043246645,27.896100059
+527,System.Byte[],usa,na,Yankee Target Range,no,no,no,na, ,,Yankee Target Range,act,usn,TX,-98.723869782,28.24618775
+528,System.Byte[],usa,na,Woolmarket (De Soto),no,no,no,na, ,,Woolmarket (De Soto),act,usn,MS,-88.9718210939999,30.5417021230001
+529,System.Byte[],usa,na,Truman Annex,no,no,no,na, ,,Truman Annex,act,usn,FL,-81.8047375199999,24.5465711530001
+530,System.Byte[],usa,na,CBC Gulfport MS,no,no,no,na, ,,CBC Gulfport MS,act,usn,MS,-89.1263993009999,30.377948105
+531,System.Byte[],usa,na,Barin Field,no,no,no,na, ,,Barin Field,act,usn,AL,-87.632275068,30.3914743080001
+532,System.Byte[],usa,na,NOLF Spencer,no,no,no,na, ,,NOLF Spencer,act,usn,FL,-87.139780096,30.625337228
+533,System.Byte[],usa,na,NAS Whiting Field Milton FL,no,no,no,na, ,,NAS Whiting Field Milton FL,act,usn,FL,-87.019622412,30.711098393
+534,System.Byte[],usa,na,NOLF Choctaw,no,no,no,na, ,,NOLF Choctaw,act,usn,FL,-86.9569005289999,30.5061992190001
+535,System.Byte[],usa,na,Naval Air Station Corpus Christi,no,yes,no,na, ,,Naval Air Station Corpus Christi,act,usn,TX,-97.279307531,27.692424488
+536,System.Byte[],usa,na,Naval Support Activity Panama City,no,yes,no,na, ,,Naval Support Activity Panama City,act,usn,FL,-85.749867756,30.1655366140001
+537,System.Byte[],usa,na,NAVSUPPFAC Beaufort SC,no,no,no,na, ,,NAVSUPPFAC Beaufort SC,act,usn,SC,-80.681987459,32.3890008720001
+538,System.Byte[],usa,na,FLC Fuel Depot Heckscher,no,no,no,na, ,,FLC Fuel Depot Heckscher,act,usn,FL,-81.627444646,30.400193546
+539,System.Byte[],usa,na,NOLF Silverhill,no,no,no,na, ,,NOLF Silverhill,act,usn,AL,-87.809531917,30.5618072450001
+540,System.Byte[],usa,na,NOLF Brewton,no,no,no,na, ,,NOLF Brewton,act,usn,AL,-87.064469297,31.0486462330001
+541,System.Byte[],usa,na,NOLF Summerdale,no,no,no,na, ,,NOLF Summerdale,act,usn,AL,-87.646200533,30.507973699
+542,System.Byte[],usa,na,NSWC Carderock Div,no,no,no,na, ,,NSWC Carderock Div,act,usn,TN,-90.141376328,35.088346841
+543,System.Byte[],usa,na,Naval Submarine Base Kings Bay,no,yes,no,na, ,,Naval Submarine Base Kings Bay,act,usn,GA,-81.538052175,30.7904479750001
+544,System.Byte[],usa,na,NAS Fort Worth JRB TX,no,no,no,na, ,,NAS Fort Worth JRB TX,act,usnr,TX,-97.429380076,32.7755794
+545,System.Byte[],usa,na,NAVSTA Mayport FL,no,no,no,na, ,,NAVSTA Mayport FL,act,usn,FL,-81.416383101,30.3844139730001
+546,System.Byte[],usa,na,NOLF Holley,no,no,no,na, ,,NOLF Holley,act,usn,FL,-86.892527243,30.425382218
+547,System.Byte[],usa,na,NOLF Wolf,no,no,no,na, ,,NOLF Wolf,act,usn,AL,-87.541040723,30.344332611
+548,System.Byte[],usa,na,OLF Whitehouse,no,no,no,na, ,,OLF Whitehouse,act,usn,FL,-81.878077892,30.3565998190001
+549,System.Byte[],usa,na,NAVSUPPACT Midsouth Memphis TN,no,no,no,na, ,,NAVSUPPACT Midsouth Memphis TN,act,usn,TN,-89.870783795,35.331424226
+550,System.Byte[],usa,na,Naval Base Ventura County – Point Mugu Operating Facility,no,yes,no,na, ,,Naval Base Ventura County – Point Mugu Operating Facility,act,usn,CA,-119.110013772,34.1123267880001
+551,System.Byte[],usa,na,Broadway Complex,no,no,no,na, ,,Broadway Complex,act,usn,CA,-117.172020559,32.7136525760001
+552,System.Byte[],usa,na,Navy Annex,no,no,no,na, ,,Navy Annex,act,usn,CA,-121.860796966,36.591649519
+553,System.Byte[],usa,na,Long Beach Fuel Complex,no,no,no,na, ,,Long Beach Fuel Complex,act,usn,CA,-118.233472045,33.7417448090001
+554,System.Byte[],usa,na,San Pedro Fuel Depot,no,no,no,na, ,,San Pedro Fuel Depot,act,usn,CA,-118.301614446,33.772001222
+555,System.Byte[],usa,na,National City,no,no,no,na, ,,National City,act,usn,CA,-117.113270451,32.6720920870001
+556,System.Byte[],usa,na,Holtville Carrier LS,no,no,no,na, ,,Holtville Carrier LS,act,usn,CA,-115.258177991,32.838556947
+557,System.Byte[],usa,na,San Nicolas Island,no,no,no,na, ,,San Nicolas Island,act,usn,CA,-119.505952863,33.247854756
+558,System.Byte[],usa,na,NAVWPNSTA Seal Beach,no,no,no,na, ,,NAVWPNSTA Seal Beach,act,usn,CA,-118.064221577,33.7504513170001
+559,System.Byte[],usa,na,Imperial Beach NOLF,no,no,no,na, ,,Imperial Beach NOLF,act,usn,CA,-117.112008448,32.5624022430001
+560,System.Byte[],usa,na,Silver Strand South,no,no,no,na, ,,Silver Strand South,act,usn,CA,-117.128170944,32.5969675490001
+561,System.Byte[],usa,na,Target 101 Shade Tree,no,no,no,na, ,,Target 101 Shade Tree,act,usn,CA,-115.717503126,32.9334804000001
+562,System.Byte[],usa,na,San Clemente IS NALF,no,no,no,na, ,,San Clemente IS NALF,act,usn,CA,-118.477643085,32.880514094
+563,System.Byte[],usa,na,Old Town Site 1,no,no,no,na, ,,Old Town Site 1,act,usn,CA,-117.197008871,32.7486743430001
+564,System.Byte[],usa,na,Santa Cruz Island,no,no,no,na, ,,Santa Cruz Island,act,usn,CA,-119.633221863,33.9948018900001
+565,System.Byte[],usa,na,CSO NAS Alameda,no,no,no,na, ,,CSO NAS Alameda,care,usn,CA,-119.701990641,36.7808216230001
+566,System.Byte[],usa,na,NAVPMOSSP Magna Utah,no,no,no,na, ,,NAVPMOSSP Magna Utah,act,usn,UT,-112.07330428,40.6783887020001
+567,System.Byte[],usa,na,Warner Springs Rts,no,no,no,na, ,,Warner Springs Rts,act,usn,CA,-116.699232629,33.3271796860001
+568,System.Byte[],usa,na,NAVSUPPACT Monterey CA,no,no,no,na, ,,NAVSUPPACT Monterey CA,act,usn,CA,-121.873405389,36.59734315
+569,System.Byte[],usa,na,Amphib Base Coronado West,no,no,no,na, ,,Amphib Base Coronado West,act,usn,CA,-117.167654101,32.6713189660001
+570,System.Byte[],usa,na,Naval Air Weapons Station China Lake,no,yes,no,na, ,,Naval Air Weapons Station China Lake,act,usn,CA,-117.643919103,35.9343533160001
+571,System.Byte[],usa,na,Naval Base Ventura County – Port Hueneme Operating Facility,no,yes,no,na, ,,Naval Base Ventura County – Port Hueneme Operating Facility,act,usn,CA,-119.208411479,34.162904487
+572,System.Byte[],usa,na,South Point,no,no,no,na, ,,South Point,act,usn,CA,-117.240517356,32.667777486
+573,System.Byte[],usa,na,Fallbrook California,no,no,no,na, ,,Fallbrook California,act,usn,CA,-117.283194567,33.3588835080001
+574,System.Byte[],usa,na,Dryside,no,no,no,na, ,,Dryside,act,usn,CA,-117.121366469,32.6866990080001
+575,System.Byte[],usa,na,Sewage Evaporation Pond,no,no,no,na, ,,Sewage Evaporation Pond,act,usn,CA,-119.883529044,36.243764679
+576,System.Byte[],usa,na,NAVPMOSSP Mtn View,no,no,no,na, ,,NAVPMOSSP Mtn View,act,usn,CA,-122.028398714,37.4129145640001
+577,System.Byte[],usa,na,Mission Gorge Rec Area,no,no,no,na, ,,Mission Gorge Rec Area,act,usn,CA,-117.087412044,32.810760949
+578,System.Byte[],usa,na,Camp Morena,no,no,no,na, ,,Camp Morena,act,usn,CA,-116.518634935,32.711835949
+579,System.Byte[],usa,na,Camp Michael Monsoor,no,no,no,na, ,,Camp Michael Monsoor,act,usn,CA,-116.438850707,32.671438946
+580,System.Byte[],usa,na,Naval Weapons Station Seal Beach Detachment Norco,no,yes,no,na, ,,Naval Weapons Station Seal Beach Detachment Norco,act,usn,CA,-117.569462918,33.923767668
+581,System.Byte[],usa,na,NAVBASE Coronado,no,no,no,na, ,,NAVBASE Coronado,act,usn,CA,-117.207088699,32.70002011
+582,System.Byte[],usa,na,Amphib Base Coronado East,no,no,no,na, ,,Amphib Base Coronado East,act,usn,CA,-117.15331659,32.660464194
+583,System.Byte[],usa,na,Naval Base San Diego,no,yes,no,na, ,,Naval Base San Diego,act,usn,CA,-117.123008843,32.675702648
+584,System.Byte[],usa,na,Balboa Hospital,no,no,no,na, ,,Balboa Hospital,act,usn,CA,-117.145051329,32.726266589
+585,System.Byte[],usa,na,NAVOBSSTA Flagstaff AZ,no,no,no,na, ,,NAVOBSSTA Flagstaff AZ,act,usn,AZ,-111.739884263,35.186583962
+586,System.Byte[],usa,na,Arlington Service Ctr,no,no,no,na, ,,Arlington Service Ctr,act,usn,VA,-77.079335021,38.86773485
+587,System.Byte[],usa,na,Naval Research Laboratory – Tilghman,no,yes,no,na, ,,Naval Research Laboratory – Tilghman,act,usn,MD,-76.343553263,38.678346354
+588,System.Byte[],usa,na,Gambrills MD,no,no,no,na, ,,Gambrills MD,act,usn,MD,-76.676276447,39.0567083220001
+589,System.Byte[],usa,na,Naval Support Activity Wash,no,no,no,na, ,,Naval Support Activity Wash,act,usn,DC,-76.995082748,38.8740252850001
+590,System.Byte[],usa,na,Naval Air Station Patuxent River,no,yes,no,na, ,,Naval Air Station Patuxent River,act,usn,MD,-76.420255728,38.2819912050001
+591,System.Byte[],usa,na,Webster Field,no,no,no,na, ,,Webster Field,act,usn,MD,-76.4278532829999,38.144847827
+592,System.Byte[],usa,na,NAVSUPPACT Bethesda MD,no,no,no,na, ,,NAVSUPPACT Bethesda MD,act,usn,MD,-77.090386415,39.001920071
+593,System.Byte[],usa,na,Naval Observatory,no,no,no,na, ,,Naval Observatory,act,usn,DC,-77.067034747,38.9214264600001
+594,System.Byte[],usa,na,Naval Support Facility Carderock,no,yes,no,na, ,,Naval Support Facility Carderock,act,usn,MD,-77.19280623,38.9744769500001
+595,System.Byte[],usa,na,Upper Yard Annapolis,no,no,no,na, ,,Upper Yard Annapolis,act,usn,MD,-76.493939386,38.9893773960001
+596,System.Byte[],usa,na,Naval Support Facility Dahlgren,no,yes,no,na, ,,Naval Support Facility Dahlgren,act,usn,VA,-77.032543943,38.339823193
+597,System.Byte[],usa,na,Chesapeake Bay Detach,no,no,no,na, ,,Chesapeake Bay Detach,act,usn,MD,-76.533775407,38.65838876
+598,System.Byte[],usa,na,Naval Research Laboratory,no,yes,no,na, ,,Naval Research Laboratory,act,usn,DC,-77.0244870559999,38.8242568360001
+599,System.Byte[],usa,na,Pumpkin Neck,no,no,no,na, ,,Pumpkin Neck,act,usn,VA,-77.042194882,38.301987298
+600,System.Byte[],usa,na,NMIC Suitland,no,no,no,na, ,,NMIC Suitland,act,usn,MD,-76.936692153,38.84884485
+601,System.Byte[],usa,na,Naval Support Facility Indian Head,no,yes,no,na, ,,Naval Support Facility Indian Head,act,usn,MD,-77.183515249,38.584982548
+602,System.Byte[],usa,na,Stump Neck Area,no,no,no,na, ,,Stump Neck Area,act,usn,MD,-77.20917968,38.548411367
+603,System.Byte[],usa,na,NAVACAD North Severn,no,no,no,na, ,,NAVACAD North Severn,act,usn,MD,-76.4693636219999,38.993435242
+604,System.Byte[],usa,na,NRC Solomons,no,no,no,na, ,,NRC Solomons,act,usn,MD,-76.471054813,38.3364243780001
+605,System.Byte[],usa,na,Fallon Range Complex,no,yes,no,na, ,,Fallon Range Complex,act,usn,NV,-118.704559583,39.422305296
+606,System.Byte[],usa,na,Naval Base Point Loma,no,yes,no,na, ,,Naval Base Point Loma,act,usn,CA,-117.250670182,32.700942108
+607,System.Byte[],usa,na,NAF El Centro,no,no,no,na, ,,NAF El Centro,act,usn,CA,-115.66815355,32.825394896
+608,System.Byte[],usa,na,NAS Lemoore CA,no,no,no,na, ,,NAS Lemoore CA,act,usn,CA,-119.933991872,36.319204224
+609,System.Byte[],usa,na,Defense Advanced Research Projects Agency,no,yes,no,na, ,,Defense Advanced Research Projects Agency,act,whs,VA,-77.1086492109999,38.878751579
+610,System.Byte[],usa,na,Air Force Office of Scientific Research,no,yes,no,na, ,,Air Force Office of Scientific Research,act,whs,VA,-77.108611125,38.8808585800001
+611,System.Byte[],usa,na,Mark Center,no,yes,no,na, ,,Mark Center,act,whs,VA,-77.11735384,38.829456909
+612,System.Byte[],usa,na,Pentagon,no,yes,no,na, ,,Pentagon,act,whs,VA,-77.0555895909999,38.8707087000001
+613,System.Byte[],usa,na,NAVSUPPACT Annapolis,no,no,No,na, ,,NAVSUPPACT Annapolis,act,usn,MD,-76.483854061,38.9820372990001
+614,System.Byte[],usa,na,NALF Goliad,no,no,No,na, ,,NALF Goliad,act,usn,TX,-97.606495877,28.6161079450001
+615,System.Byte[],usa,na,Fleming Key Magazine,no,no,No,na, ,,Fleming Key Magazine,act,usn,FL,-81.7969517499999,24.5795765440001
+616,System.Byte[],usa,na,Dixie Target Range,no,no,No,na, ,,Dixie Target Range,act,usn,TX,-98.728363373,28.097384527
+617,System.Byte[],usa,na,Pineros Island,no,no,No,na, ,,Pineros Island,care,usn,PR,-65.591688174,18.251549347
+618,System.Byte[],usa,na,Vieques West PR,no,no,No,na, ,,Vieques West PR,act,usn,PR,-65.5122259359999,18.096223713
+619,System.Byte[],usa,na,NAS Key West FL,no,no,No,na, ,,NAS Key West FL,act,usn,FL,-81.691866594,24.57326019
+620,System.Byte[],usa,na,Cabeza De Perro,no,no,No,na, ,,Cabeza De Perro,care,usn,PR,-65.5777504599999,18.2482719380001
+621,System.Byte[],usa,na,Pico Del Este - AFWTF,no,no,No,na, ,,Pico Del Este - AFWTF,clsd,usn,PR,-65.7586796739999,18.268772342
+622,System.Byte[],usa,na,NSGA Sabana Seca PR,no,no,No,na, ,,NSGA Sabana Seca PR,clsd,usn,PR,-66.188148289,18.427199977
+623,System.Byte[],usa,na,Det Concord (BRAC),no,no,No,na, ,,Det Concord (BRAC),care,usn,CA,-121.979461652,37.9922479360001
+624,System.Byte[],usa,na,NAS JRB Willow Grove PA,no,no,No,na, ,,NAS JRB Willow Grove PA,care,usn,PA,-75.147899555,40.199783718
+625,System.Byte[],usa,na,CSO NAS South Weymouth,no,no,No,na, ,,CSO NAS South Weymouth,care,usn,MA,-70.933754412,42.156113621
+626,System.Byte[],usa,na,NAS Brunswick ME,no,no,No,na, ,,NAS Brunswick ME,care,usn,ME,-69.932531064,43.886292294
+627,System.Byte[],usa,na,Barry M Goldwater Range,no,no,No,na, ,,Barry M Goldwater Range,act,usaf,AZ,-112.728195466,32.8901595670001
+628,System.Byte[],usa,na,Gen Mitchell IAP,no,no,No,na, ,,Gen Mitchell IAP,act,airNationalGuard,WI,-87.887945508,42.940411295
+629,System.Byte[],usa,na,Duluth IAP,no,no,No,na, ,,Duluth IAP,act,airNationalGuard,MN,-92.172128261,46.844953812
+630,System.Byte[],usa,na,Mansfield Lahm Airport ANG 179th AW,no,no,No,na, ,,Mansfield Lahm Airport ANG 179th AW,act,airNationalGuard,OH,-82.516872058,40.8125631340001
+631,System.Byte[],usa,na,Alpena County Regional Airport,no,no,No,na, ,,Alpena County Regional Airport,act,airNationalGuard,MI,-83.5700561739999,45.084393629
+632,System.Byte[],usa,na,Point Arena Air Force Station,no,no,No,na, ,,Point Arena Air Force Station,care,usaf,CA,-123.546579136,38.8918400420001
+633,System.Byte[],usa,na,McClellan AFB,no,no,No,na, ,,McClellan AFB,clsd,usaf,CA,-121.394469926,38.664486518
+634,System.Byte[],usa,na,Malmstrom Air Force Base,no,yes,No,na, ,,Malmstrom Air Force Base,act,usaf,MT,-111.182557531,47.5058738370001
+635,System.Byte[],usa,na,Fort Smith Map,no,no,No,na, ,,Fort Smith Map,act,airNationalGuard,AR,-94.093597851,35.2565937800001
+636,System.Byte[],usa,na,Tucson IAP,no,no,No,na, ,,Tucson IAP,act,airNationalGuard,AZ,-110.949250831,32.131404054
+637,System.Byte[],usa,na,Hector IAP,no,no,No,na, ,,Hector IAP,act,airNationalGuard,ND,-96.8044233749999,46.913702958
+638,System.Byte[],usa,na,McEntire Joint National Guard Base,no,no,No,na, ,,McEntire Joint National Guard Base,act,airNationalGuard,SC,-80.800336003,33.922662428
+639,System.Byte[],usa,na,Minot Air Force Base,no,yes,No,na, ,,Minot Air Force Base,act,usaf,ND,-101.32274284,48.4153580980001
+640,System.Byte[],usa,na,Fresno Yosemite International ANG,no,no,No,na, ,,Fresno Yosemite International ANG,act,airNationalGuard,CA,-119.71000318,36.7665351220001
+641,System.Byte[],usa,na,Great Falls IAP,no,no,No,na, ,,Great Falls IAP,act,airNationalGuard,MT,-111.364979611,47.476545619
+642,System.Byte[],usa,na,Atlantic City IAP,no,no,No,na, ,,Atlantic City IAP,act,airNationalGuard,NJ,-74.4339654519999,39.706466413
+643,System.Byte[],usa,na,Montgomery Regional Airport ANGB,no,no,No,na, ,,Montgomery Regional Airport ANGB,act,airNationalGuard,AL,-86.401429123,32.3047051930001
+644,System.Byte[],usa,na,MCLAUGHLIN ANGB,no,no,No,na, ,,MCLAUGHLIN ANGB,act,airNationalGuard,WV,-81.5895194249999,38.373194428
+645,System.Byte[],usa,na,New Castle Airport,no,no,No,na, ,,New Castle Airport,act,airNationalGuard,DE,-75.596900005,39.6864814050001
+646,System.Byte[],usa,na,Jacksonville IAP,no,no,No,na, ,,Jacksonville IAP,act,airNationalGuard,FL,-81.705440283,30.4863923140001
+647,System.Byte[],usa,na,Hancock Field,no,no,No,na, ,,Hancock Field,act,airNationalGuard,NY,-76.103331409,43.102747869
+648,System.Byte[],usa,na,Bangor IAP,no,no,No,na, ,,Bangor IAP,act,airNationalGuard,ME,-68.824617312,44.8155682030001
+649,System.Byte[],usa,na,General Wayne A Downing Peoria IAP,no,no,No,na, ,,General Wayne A Downing Peoria IAP,act,airNationalGuard,IL,-89.702663711,40.6611125360001
+650,System.Byte[],usa,na,Hulman Fld,no,no,No,na, ,,Hulman Fld,act,airNationalGuard,IN,-87.294952408,39.454542755
+651,System.Byte[],usa,na,Toledo/Exp Airport,no,no,No,na, ,,Toledo/Exp Airport,act,airNationalGuard,OH,-83.789452379,41.585259723
+652,System.Byte[],usa,na,Truax ANGB,no,no,No,na, ,,Truax ANGB,act,airNationalGuard,WI,-89.336106429,43.130656102
+653,System.Byte[],usa,na,Sioux Gateway Airport (ANG),no,no,No,na, ,,Sioux Gateway Airport (ANG),act,airNationalGuard,IA,-96.373199461,42.393248815
+654,System.Byte[],usa,na,Francis S Gabreski Airport,no,no,No,na, ,,Francis S Gabreski Airport,act,airNationalGuard,NY,-72.643413255,40.83698897
+655,System.Byte[],usa,na,Volk ANGB,no,no,No,na, ,,Volk ANGB,act,airNationalGuard,WI,-90.050909455,44.2345912870001
+656,System.Byte[],usa,na,Hardwood Range,no,yes,No,na, ,,Hardwood Range,act,airNationalGuard,WI,-90.054046827,44.2345912870001
+657,System.Byte[],usa,na,Smoky Hill ANG Range,no,no,No,na, ,,Smoky Hill ANG Range,act,airNationalGuard,KS,-97.8316970669999,38.6986730150001
+658,System.Byte[],usa,na,Capital Airport,no,no,No,na, ,,Capital Airport,act,airNationalGuard,IL,-89.6677190949999,39.847893749
+659,System.Byte[],usa,na,Salt Lake City IAP,no,no,No,na, ,,Salt Lake City IAP,act,airNationalGuard,UT,-111.956659778,40.789635166
+660,System.Byte[],usa,na,Goldwater ANGB,no,no,No,na, ,,Goldwater ANGB,act,airNationalGuard,AZ,-112.011682901,33.4258330530001
+661,System.Byte[],usa,na,Portland IAP ANG,no,no,No,na, ,,Portland IAP ANG,act,airNationalGuard,OR,-122.595521933,45.5783795030001
+662,System.Byte[],usa,na,Lincoln Map,no,no,No,na, ,,Lincoln Map,act,airNationalGuard,NE,-96.7538721769999,40.841020615
+663,System.Byte[],usa,na,Rickenbacker,no,no,No,na, ,,Rickenbacker,act,airNationalGuard,OH,-82.944119491,39.81273228
+664,System.Byte[],usa,na,Quonset State Airport,no,no,No,na, ,,Quonset State Airport,act,airNationalGuard,RI,-71.420584773,41.596635012
+665,System.Byte[],usa,na,Ellington Field Joint Reserve Base,no,yes,No,na, ,,Ellington Field Joint Reserve Base,act,airNationalGuard,TX,-95.170544557,29.6165180030001
+666,System.Byte[],usa,na,Stewart IAP,no,no,No,na, ,,Stewart IAP,act,airNationalGuard,NY,-74.084345355,41.5014052820001
+667,System.Byte[],usa,na,Pease ANGB NH,no,no,No,na, ,,Pease ANGB NH,act,airNationalGuard,NH,-70.8187308,43.0890854940001
+668,System.Byte[],usa,na,Arbuckle Airfield,no,no,No,na, ,,Arbuckle Airfield,act,usaf,FL,-81.34506085,27.651653185
+669,System.Byte[],usa,na,Avon Park AF Range,no,no,No,na, ,,Avon Park AF Range,act,usaf,FL,-81.2767274879999,27.6469182000001
+670,System.Byte[],usa,na,NGA Arnold Site,no,no,No,na, ,,NGA Arnold Site,act,usaf,MO,-90.398601769,38.416180173
+671,System.Byte[],usa,na,Jacksonville FL Maint,no,no,No,na, ,,Jacksonville FL Maint,act,usmcr,FL,-81.621509073,30.405374114
+672,System.Byte[],usa,na,Dania Beach (Lauderdale),no,no,No,na, ,,Dania Beach (Lauderdale),act,usn,FL,-80.109984039,26.0920844190001
+673,System.Byte[],usa,na,Naval Research Laboratory – Stennis Space Center,no,yes,No,na, ,,Naval Research Laboratory – Stennis Space Center,act,usn,MS,-89.602669718,30.3795221940001
+674,System.Byte[],usa,na,Dredgers Key-Sigsbee,no,no,No,na, ,,Dredgers Key-Sigsbee,act,usn,FL,-81.7775970769999,24.5771025240001
+675,System.Byte[],usa,na,Forbes Field ANG,no,no,No,na, ,,Forbes Field ANG,act,airNationalGuard,KS,-95.680827253,38.960827453
+676,System.Byte[],usa,na,Air Force Plant 6,no,no,No,na, ,,Air Force Plant 6,act,usaf,GA,-84.531710533,33.9293226880001
+677,System.Byte[],usa,na,Eareckson Air Station,no,yes,No,na, ,,Eareckson Air Station,act,usaf,AK,174.107140074,52.7210369060001
+678,System.Byte[],usa,na,Kaena Point Space Force Station,no,yes,No,na, ,,Kaena Point Space Force Station,act,usaf,HI,-158.239801144,21.5647149710001
+679,System.Byte[],usa,na,Nashville IAP,no,no,No,na, ,,Nashville IAP,act,airNationalGuard,TN,-86.6749712599999,36.1110042190001
+680,System.Byte[],usa,na,Birmingham Airport,no,no,No,na, ,,Birmingham Airport,act,airNationalGuard,AL,-86.7541353129999,33.5710592230001
+681,System.Byte[],usa,na,Bradley IAP,no,no,No,na, ,,Bradley IAP,act,airNationalGuard,CT,-72.701257089,41.934991704
+682,System.Byte[],usa,na,Cheyenne Regional Airport,no,no,No,na, ,,Cheyenne Regional Airport,act,airNationalGuard,WY,-104.821155259,41.1619722720001
+683,System.Byte[],usa,na,Des Moines IAP,no,no,No,na, ,,Des Moines IAP,act,airNationalGuard,IA,-93.66603701,41.5443511980001
+684,System.Byte[],usa,na,Luis Munoz Marin IAP,no,no,No,na, ,,Luis Munoz Marin IAP,act,usaf,PR,-65.992353716,18.4435232500001
+685,System.Byte[],usa,na,Joe Foss Field,no,no,No,na, ,,Joe Foss Field,act,airNationalGuard,SD,-96.738308731,43.5727125000001
+686,System.Byte[],usa,na,Jackson IAP Thompson Field,no,no,No,na, ,,Jackson IAP Thompson Field,act,airNationalGuard,MS,-90.082488815,32.3242209420001
+687,System.Byte[],usa,na,Martin State Airport,no,no,No,na, ,,Martin State Airport,act,airNationalGuard,MD,-76.4150795429999,39.331805881
+688,System.Byte[],usa,na,Memphis IAP,no,no,No,na, ,,Memphis IAP,act,airNationalGuard,TN,-89.966549975,35.025497978
+689,System.Byte[],usa,na,Gulfport-Biloxi Regional Airport (ANG),no,no,No,na, ,,Gulfport-Biloxi Regional Airport (ANG),act,airNationalGuard,MS,-89.061208598,30.4107264580001
+690,System.Byte[],usa,na,Channel Islands ANG Station,no,no,No,na, ,,Channel Islands ANG Station,act,airNationalGuard,CA,-119.110925292,34.1394600510001
+691,System.Byte[],usa,na,Louisville IAP-Standiford FL Site 1,no,no,No,na, ,,Louisville IAP-Standiford FL Site 1,act,airNationalGuard,KY,-85.72379526,38.177988901
+692,System.Byte[],usa,na,Reno Tahoe IAP,no,no,No,na, ,,Reno Tahoe IAP,act,airNationalGuard,NV,-119.77512735,39.5001625420001
+693,System.Byte[],usa,na,Rosecrans MAP (139AG),no,no,No,na, ,,Rosecrans MAP (139AG),act,airNationalGuard,MO,-94.901792555,39.7666061040001
+694,System.Byte[],usa,na,Springfield Beckley,no,no,No,na, ,,Springfield Beckley,act,airNationalGuard,OH,-83.835479162,39.849079686
+695,System.Byte[],usa,na,Schenectady ANG MAP,no,no,No,na, ,,Schenectady ANG MAP,act,airNationalGuard,NY,-73.9219290569999,42.852984029
+696,System.Byte[],usa,na,Will Rogers World Airport,no,no,No,na, ,,Will Rogers World Airport,act,airNationalGuard,OK,-97.611672972,35.407658623
+697,System.Byte[],usa,na,Kingsley Field Cantonement Site 1,no,no,No,na, ,,Kingsley Field Cantonement Site 1,act,airNationalGuard,OR,-121.744189958,42.1603503470001
+698,System.Byte[],usa,na,Burlington IAP,no,no,No,na, ,,Burlington IAP,act,airNationalGuard,VT,-73.1454101049999,44.4739168940001
+699,System.Byte[],usa,na,Tulsa IAP,no,no,No,na, ,,Tulsa IAP,act,airNationalGuard,OK,-95.874769739,36.217012455
+700,System.Byte[],usa,na,Boise Air Terminal,no,no,No,na, ,,Boise Air Terminal,act,airNationalGuard,ID,-116.230828484,43.559524955
+701,System.Byte[],usa,na,EWVRA Shepherd Field,no,no,No,na, ,,EWVRA Shepherd Field,act,airNationalGuard,WV,-77.984611832,39.406021502
+702,System.Byte[],usa,na,Rome Research Laboratory,no,yes,No,na, ,,Rome Research Laboratory,act,usaf,NY,-75.410864665,43.221638205
+703,System.Byte[],usa,na,Savannah/Hilton Head IAP,no,no,No,na, ,,Savannah/Hilton Head IAP,act,airNationalGuard,GA,-81.190696284,32.1232505890001
+704,System.Byte[],usa,na,Ramey AF Solar Observatory Research Site,no,no,No,na, ,,Ramey AF Solar Observatory Research Site,act,usaf,PR,-67.099128809,18.509432713
+705,System.Byte[],usa,na,Verona Defense Fuel Support Point,no,no,No,na, ,,Verona Defense Fuel Support Point,act,usaf,NY,-75.591244979,43.126923548
+706,System.Byte[],usa,na,Air Force Plant 44,no,no,No,na, ,,Air Force Plant 44,act,usaf,AZ,-110.941594449,32.0975073000001
+707,System.Byte[],usa,na,Marine Corps Museum,no,no,No,na, ,,Marine Corps Museum,act,usmc,VA,-77.364727192,38.520361182
+708,System.Byte[],usa,na,Barnes Map ANG,no,no,No,na, ,,Barnes Map ANG,act,airNationalGuard,MA,-72.7179961809999,42.1693653610001
+709,System.Byte[],usa,na,Air Force Plant 42,no,yes,No,na, ,,Air Force Plant 42,act,usaf,CA,-118.0832,34.6236000000001
+710,System.Byte[],usa,na,CSO Hunters Point Annex,no,no,No,na, ,,CSO Hunters Point Annex,care,usn,CA,-122.36389,37.7277800000001
+711,System.Byte[],usa,na,Air Force Plant 4,no,no,No,na, ,,Air Force Plant 4,act,usaf,TX,-97.449038188,32.7729472730001
+712,System.Byte[],usa,na,Waikele,no,no,Yes,na, ,,Waikele,act,usn,HI,-158.01591245,21.4048566230001
+713,System.Byte[],usa,na,CSO NS Treasure Island,no,no,No,na, ,,CSO NS Treasure Island,care,usn,CA,-122.365550032,37.823213093
+714,System.Byte[],usa,na,CSO NSY Mare Island,no,no,No,na, ,,CSO NSY Mare Island,care,usn,CA,-122.270000001,38.0986100000001
+715,System.Byte[],usa,na,Site 3 NS Long Beach,no,no,No,na, ,,Site 3 NS Long Beach,care,usn,CA,-118.223198368,33.7433450300001
+716,System.Byte[],usa,na,MacDill Air Force Base,no,yes,no,na, ,,MacDill Air Force Base,act,usaf,fl,-82.500593526,27.843904121
+717,System.Byte[],usa,na,Naval Logistics Support Facility Aguada,no,yes,No,na, ,,Naval Logistics Support Facility Aguada,act,usn,PR,-67.178193127,18.399103988
+718,System.Byte[],usa,na,Naval Suffolk Facility,no,yes,no,na, ,,Naval Suffolk Facility,act,usn,va,-76.42347222,36.885524624
+719,System.Byte[],usa,na,Camp Blaz,no,yes,No,na, ,,Camp Blaz,act,usn,GU,144.844647937,13.58475822
+720,System.Byte[],usa,na,Joint Base Anacostia-Bolling,no,yes,yes,na, ,,Joint Base Anacostia-Bolling,act,usaf,dc,-77.015254043,38.844076053
+721,System.Byte[],usa,na,Army Futures Command,no,yes,no,na, ,,Army Futures Command,act,usa,tx,-97.740999954,30.2689747490001
+722,System.Byte[],usa,na,Army Research Lab – Orlando Simulations and Training Technology Center,no,yes,no,na, ,,Army Research Lab – Orlando Simulations and Training Technology Center,act,usa,fl,-81.1974689099999,28.5862016740001
+723,System.Byte[],usa,na,Barter Island Regional Radar Site,no,yes,no,na, ,,Barter Island Regional Radar Site,act,usaf,AK,-143.635750022,70.1257433050001
+724,System.Byte[],usa,na,Biometric Technology Center Defense Forensics and Biometrics,no,yes,no,na, ,,Biometric Technology Center Defense Forensics and Biometrics,act,other,wv,-80.26521959,39.3262842010001
+725,System.Byte[],usa,na,Cold Bay Regional Radar Site,no,yes,no,na, ,,Cold Bay Regional Radar Site,act,usaf,AK,-162.887138961,55.263147539
+726,System.Byte[],usa,na,Kenai Regional Radar Site,no,yes,no,na, ,,Kenai Regional Radar Site,act,usaf,ak,-151.255997795,60.559794982
+727,System.Byte[],usa,na,Kotzebue Regional Radar Site,no,yes,no,na, ,,Kotzebue Regional Radar Site,act,usaf,AK,-162.594077707,66.8473273450001
+728,System.Byte[],usa,na,Lisburne Regional Radar Site,no,yes,no,na, ,,Lisburne Regional Radar Site,act,usaf,AK,-166.108433784,68.869934185
+729,System.Byte[],usa,na,Naval Logistics Support Activity LaMoure,no,yes,no,na, ,,Naval Logistics Support Activity LaMoure,act,usn,ND,-98.335329421,46.36456228
+730,System.Byte[],usa,na,Naval Logistics Support Facility Cutler,no,yes,no,na, ,,Naval Logistics Support Facility Cutler,act,usn,ME,-67.282293983,44.6498512590001
+731,System.Byte[],usa,na,Romanzof Regional Radar Site,no,yes,no,na, ,,Romanzof Regional Radar Site,act,usaf,AK,-165.981728891,61.7850918250001
+732,System.Byte[],usa,na,Sparrevohn RRS,no,yes,no,na, ,,Sparrevohn RRS,act,usaf,AK,-155.569773589,61.0976218970001
+733,System.Byte[],usa,na,Tatalina Regional Radar Site,no,yes,no,na, ,,Tatalina Regional Radar Site,act,usaf,AK,-156.003914462,62.9186473920001
+734,System.Byte[],usa,na,Joliet AAP Elwood,no,no,no,na, ,,Joliet AAP Elwood,Excs,usa,IL,-88.0639075,41.362612793
+735,System.Byte[],usa,na,Indian Mountain Regional Radar Site,no,yes,no,na, ,a8c97dd1-051d-4529-a32f-62d299152eeb,Indian Mountain Regional Radar Site,act,usaf,AK,-153.733219074,65.98906665
+736,System.Byte[],usa,na,Luke AFB,no,yes,no,na, ,1518ed87-bcba-40c2-9445-0bedd2438d33,Luke AFB,act,usaf,AZ,-112.373095631,33.53552475
+737,System.Byte[],usa,na,Marine Corps Base Camp Pendleton,no,yes,no,na, ,27104a0e-5814-472c-89eb-dc0060862aa0,Marine Corps Base Camp Pendleton,act,usmc,CA,-117.41666586,33.3646417690001

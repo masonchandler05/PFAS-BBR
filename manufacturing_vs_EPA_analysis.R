@@ -24,20 +24,20 @@ UCMR5_logtransformed <- UCMR5_wide_filter_multiple_zip_codes %>%
   ))
 
 # SLR models 
-model <- lm(log_PFOA ~ nearest_distance_m, data = UCMR5_wide_filter_multiple_zip_codes)
+model <- lm(log_PFOA ~ nearest_distance_m, data = analysis_data)
 summary(model)
 
 model2 <- lm(log_PFBS ~ nearest_distance_m, data = analysis_data)
 summary(model2)
 
 
-model3 <- lm(PFNA ~ nearest_distance_m, data = UCMR5_wide_filter_multiple_zip_codes)
+model3 <- lm(PFNA ~ nearest_distance_m, data = analysis_data)
 summary(model3)
 
-model4 <- lm(log_PFPeA ~ nearest_distance_m, data = UCMR5_logtransformed)
+model4 <- lm(log_PFPeA ~ nearest_distance_m, data = analysis_data)
 summary(model4)
 
-model5 <- lm(log_PFBS ~ log_nearest_distance_m, data = UCMR5_logtransformed)
+model5 <- lm(log_PFBS ~ log_nearest_distance_m, data = analysis_data)
 summary(model5)
 
 mod <- lm(log_PFBS ~ nearest_distance_m + pfas_occ_Yes, data = analysis_data)
@@ -211,7 +211,7 @@ results_wide <- results_buffer %>%
      filter(term == "nearest_distance_m") %>%
      mutate(outcome = var)
    
-   # Extract model fit statistics
+   # Extract model fit statistics (including n)
    fit_part <- glance(model) %>%
      select(r.squared, adj.r.squared, nobs)
    
@@ -221,11 +221,13 @@ results_wide <- results_buffer %>%
  
  # Combine all results into one data frame
  results_fixed_effects <- bind_rows(results_list) %>%
-   select(outcome, estimate, std.error, statistic, p.value, adj.r.squared) %>%
+   select(outcome, estimate, std.error, statistic, p.value, adj.r.squared, nobs) %>%
    arrange(p.value) %>%
    mutate(
      estimate_in_km = round(1000 * estimate, 5)
-   )
+   ) %>%
+   # Remove rows with specified variables
+   filter(!outcome %in% c("log_nearest_distance_m", "log_log_PFBS"))
  
  library(dplyr)
  library(tidyr)
@@ -237,9 +239,6 @@ results_wide <- results_buffer %>%
  pfas_n <- analysis_data %>%
    summarise(across(all_of(pfas_vars), ~ sum(!is.na(.)))) %>%
    pivot_longer(cols = everything(), names_to = "PFAS_type", values_to = "n")
- 
- pfas_n
- 
  
  
 # PFOS may have negative slope since older plants produced PFOS but around 2002 this was phased out
@@ -260,10 +259,33 @@ results_wide <- results_buffer %>%
  dist_matrix_2002  <- st_distance(df2_sf, df1_sf_2002)
 
 
- # Extract nearest distance 
- UCMR5_wide_filter_multiple_zip_codes$nearest_distance_m <- apply(dist_matrix_2002, 1, min)
-
+ # summary of PFPeS
+ summary(analysis_data$PFPeS, na.rm = TRUE)
+ analysis_data$PFPeS[!is.na(analysis_data$PFPeS)]
+ summary(lm(PFPeS ~ nearest_distance_m + factor(ZIPCODE), data = analysis_data))
+ summary(lm(PFPeS ~ nearest_distance_m, data = analysis_data))
  
- model <- lm(log(PFOS) ~ nearest_distance_m + factor(ZIPCODE), data = UCMR5_wide_filter_multiple_zip_codes)
- summary(model)
+ analysis_data_PFPeS <- analysis_data %>%
+   filter(!is.na(PFPeS))
+ 
+ 
+ 
+ # Does not work correctly 
+ 
+ 
+ 
+ 
+ # Extract nearest distance 
+ # For pre-2002 analysis - create a NEW column
+ UCMR5_wide_filter_multiple_zip_codes$nearest_distance_pre2002_m <- apply(dist_matrix_2002, 1, min)
+ 
+ # Now run regression using the new column
+ model_pre2002 <- lm(log(PFOS) ~ nearest_distance_pre2002_m + factor(ZIPCODE), 
+                     data = UCMR5_wide_filter_multiple_zip_codes)
+ summary(model_pre2002)
+ 
+ # Compare with full dataset (assuming you saved the original distances)
+ model_full <- lm(log(PFOS) ~ nearest_distance_m + factor(ZIPCODE), 
+                  data = UCMR5_wide_filter_multiple_zip_codes)
+ summary(model_full)
  

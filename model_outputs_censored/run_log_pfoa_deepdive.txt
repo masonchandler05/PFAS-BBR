@@ -1,0 +1,65 @@
+sector chunk 1 / 14 
+sector chunk 2 / 14 
+sector chunk 3 / 14 
+sector chunk 4 / 14 
+sector chunk 5 / 14 
+sector chunk 6 / 14 
+sector chunk 7 / 14 
+sector chunk 8 / 14 
+sector chunk 9 / 14 
+sector chunk 10 / 14 
+sector chunk 11 / 14 
+sector chunk 12 / 14 
+sector chunk 13 / 14 
+sector chunk 14 / 14 
+Warning message:
+In fread("PFAS_Project_Data/ucmr5_full/UCMR5_All.txt", sep = "\t",  : Found and resolved improper quoting out-of-sample. First healed line 1884723: <<WI2460054	PORT WASHINGTON WATERWORKS	L	00100	100	SW	100	"T" Finished Water Sample Tap	EP			1/17/2023	100	PFBS	0.003	µg/L	EPA 533	<		SE1	AM	5	WI	>>. If the fields are not quoted (e.g. field separator does not appear within any field), try quote="" to avoid this warning.
+
+#### 1a. PFOA/PFOS detection rate by tier-weighted exposure quintile ####
+ expo_q    n pfoa_detect_rate pfos_detect_rate
+     Q1 5242       0.02880580       0.04368562
+     Q2 5241       0.05476054       0.06639954
+     Q3 5246       0.07415173       0.07967976
+     Q4 5249       0.14307487       0.12459516
+     Q5 5245       0.12583413       0.11992374
+
+#### 1b. quintile-dummy tobit (latent log PFOA vs Q1) ####
+     term estimate std.error  p.value  nobs compound
+ expo_qQ2    0.244    0.0653 1.81e-04 26200     PFOA
+ expo_qQ3    0.351    0.0670 1.65e-07 26200     PFOA
+ expo_qQ4    0.587    0.0701 5.33e-17 26200     PFOA
+ expo_qQ5    0.542    0.0687 2.95e-15 26200     PFOA
+
+#### 2. horse race (10km): PFAS-likelihood weighting vs generic density ####
+                        term estimate std.error  p.value  nobs compound
+ idw__ind_tierweighted__10km   0.0827   0.01100 5.57e-14 26200     PFOA
+    idw__ind_all_equal__10km   0.0670   0.00811 1.37e-16 26200     PFOA
+ idw__ind_tierweighted__10km  -0.0375   0.02960 2.06e-01 26200     PFOA
+    idw__ind_all_equal__10km   0.0905   0.02110 1.78e-05 26200     PFOA
+              model
+ tierweighted alone
+ equal-weight alone
+       both jointly
+       both jointly
+
+#### 3. sector-specific IDWs (10km, each alone): PFOA vs PFOS ####
+      sector estimate_PFOA estimate_PFOS p.value_PFOA p.value_PFOS
+   wholesale         0.170         0.180      1.3e-16      8.0e-14
+       waste         0.049         0.088      1.6e-04      7.8e-07
+   petroleum         0.120         0.150      3.1e-08      1.3e-06
+       metal         0.051         0.063      4.7e-08      1.7e-06
+    chemical         0.092         0.097      1.1e-17      8.5e-12
+     textile         0.350         0.320      2.8e-30      3.2e-18
+       paper         0.340         0.400      1.6e-10      7.1e-10
+ electronics         0.120         0.082      8.5e-16      1.0e-05
+    plastics         0.300         0.280      6.0e-22      6.0e-10
+    printing         0.110         0.110      2.3e-16      2.1e-10
+
+#### 4. tier-weighted 10km PFOA effect vs system-size control ####
+               model estimate std.error  p.value  nobs
+            baseline   0.0827    0.0110 5.57e-14 26200
+ + system size (L/S)   0.0828    0.0113 1.99e-13 26200
+  large systems only   0.0526    0.0141 1.96e-04 14900
+  small systems only   0.1510    0.0164 3.25e-20 11400
+
+Done.

@@ -1,0 +1,16 @@
+"location_set","n_sources","n_points_raw","n_points","n_deduped"
+"airport",1,774,774,0
+"milfire",1,305,305,0
+"milsusp",1,91,91,0
+"milbase",1,737,737,0
+"airport+milfire",2,1079,1041,38
+"airport+milsusp",2,865,852,13
+"airport+milbase",2,1511,1448,63
+"milfire+milsusp",2,396,380,16
+"milfire+milbase",2,1042,879,163
+"milsusp+milbase",2,828,791,37
+"airport+milfire+milsusp",3,1170,1106,64
+"airport+milfire+milbase",3,1816,1581,235
+"airport+milsusp+milbase",3,1602,1496,106
+"milfire+milsusp+milbase",3,1133,931,202
+"airport+milfire+milsusp+milbase",4,1907,1625,282
