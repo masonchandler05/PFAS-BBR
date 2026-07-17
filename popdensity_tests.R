@@ -34,8 +34,7 @@ cty <- counties(cb = TRUE, year = 2023) %>%
 loc_sf <- st_as_sf(dat %>% select(PWSID, FacilityID, lon, lat),
                    coords = c("lon", "lat"), crs = 4326)
 joined <- st_join(loc_sf, cty, left = TRUE) %>% st_drop_geometry()
-pop <- fread(file.path("/private/tmp/claude-501/-Users-masonchandler-Downloads-BBR",
-             "4a14d3d9-2c1f-4f05-9f91-b87ebc9ca204/scratchpad/co-est2024-alldata.csv"),
+pop <- fread("PFAS_Project_Data/census/co-est2024-alldata.csv",
              select = c("STATE", "COUNTY", "POPESTIMATE2023")) %>%
   mutate(GEOID = sprintf("%02d%03d", STATE, COUNTY))
 dens <- joined %>% left_join(pop, by = "GEOID") %>%
